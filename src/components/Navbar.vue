@@ -1,12 +1,17 @@
 <template>
     <div class="container_nav">
+        <div class="nav_name">
+            <p>Alban Choulet <a href="mailto:alban.choulet@edu.univ-fcomte.fr">alban.choulet@edu.univ-fcomte.fr</a></p>
+        </div>
         <div class="content_nav">
             <p class="pointer">Accueil</p>
-            <p class="pointer">Projets</p>
-            <p class="pointer">Compétences</p>
+            <p class="pointer">Technique</p>
+            <p class="pointer">Suivi de projet</p>
+            <p class="pointer">Intégration en entreprise</p>
             <hr>
-            <p class="pointer">Contact</p>  
+            <p class="pointer">Contact</p>
         </div>
+        <div class="nav_spacer"></div>
     </div>
 </template>
 
@@ -19,8 +24,22 @@
 <style scoped>
 .container_nav {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
+}
+
+.nav_name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* font-size: 1.2em; */
+    color: var(--secondary-color);
+}
+
+.nav_name a {
+    text-decoration: none;
+    color: var(--tertiary-color);
 }
 
 .content_nav {
@@ -42,6 +61,11 @@
     -webkit-backdrop-filter: blur(10px);
 }
 
+.nav_spacer {
+    flex: 1;
+}
+
+
 .content_nav p:hover {
     color: var(--tertiary-color);
 }
@@ -53,12 +77,10 @@
     aspect-ratio: 1;
     top: 50%;
     left: 50%;
-    background: conic-gradient(
-        from 0deg,
-        transparent 0deg,
-        var(--secondary-color) 10deg,
-        transparent 30deg
-    );
+    background: conic-gradient(from 0deg,
+            transparent 0deg,
+            var(--secondary-color) 10deg,
+            transparent 30deg);
     animation: rotate 6s linear infinite;
     z-index: 0;
 }
@@ -81,6 +103,7 @@
     from {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
