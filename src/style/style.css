@@ -1,0 +1,21 @@
+:root {
+
+    /* =========== Colors =========== */
+
+    /* Primary */
+
+    --primary-background: rgb(46,45,59);
+    --primary-background-alpha: rgba(52, 50, 65, 0.5);
+    
+    --secondary-color: rgb(238,212,177);
+    --secondary-color-alpha: rgba(238,212,177, 0.5);
+
+    --tertiary-color: rgb(192,180,194);
+    --quaternary-color: rgb(120,98,121);
+
+
+}
+
+.pointer {
+    cursor: pointer;
+}
