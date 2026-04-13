@@ -5,7 +5,7 @@
             <p class="pointer">Projets</p>
             <p class="pointer">Compétences</p>
             <hr>
-            <p class="pointer">Contact</p>
+            <p class="pointer">Contact</p>  
         </div>
     </div>
 </template>
