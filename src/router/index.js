@@ -8,7 +8,7 @@ const routes = [
     component: App,
     children: [
       { 
-        path: "home", 
+        path: "", 
         name: "home", 
         component: Home 
       }
