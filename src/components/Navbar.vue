@@ -42,13 +42,18 @@
     color: var(--tertiary-color);
 }
 
+.nav_name a:hover {
+    text-decoration: none;
+    color: var(--quaternary-color);
+}
+
 .content_nav {
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    padding: 10px 50px;
+    padding: 30px 50px;
 
     font-size: 1.2em;
     color: var(--secondary-color);

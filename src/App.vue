@@ -1,16 +1,20 @@
 <template>
-  <navbar></navbar>
-  <route-view></route-view>
+  <router-view />
 </template>
 
 
 <script setup>
-import Navbar from './components/Navbar.vue';
 
 </script>
 
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   /* background-color: rgb(215,201,164); */
   /* background-color: rgb(222,216,214); */
