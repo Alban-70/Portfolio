@@ -8,8 +8,6 @@
             <p class="pointer">Technique</p>
             <p class="pointer">Suivi de projet</p>
             <p class="pointer">Intégration en entreprise</p>
-            <hr>
-            <p class="pointer">Contact</p>
         </div>
         <div class="nav_spacer"></div>
     </div>

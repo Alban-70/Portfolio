@@ -4,14 +4,14 @@
 
     /* Primary */
 
-    --primary-background: rgb(46,45,59);
-    --primary-background-alpha: rgba(52, 50, 65, 0.5);
-    
-    --secondary-color: rgb(238,212,177);
-    --secondary-color-alpha: rgba(238,212,177, 0.5);
+    --primary-background: #0b132b;
+  --primary-background-alpha: rgba(11,19,43,0.6);
 
-    --tertiary-color: rgb(192,180,194);
-    --quaternary-color: rgb(120,98,121);
+  --secondary-color: #f8fafc;
+  --secondary-color-alpha: rgba(248,250,252,0.5);
+
+  --tertiary-color: #f472b6;   /* pink neon */
+  --quaternary-color: #8b5cf6; /* purple */
 
 
 }
