@@ -5,15 +5,13 @@
     /* Primary */
 
     --primary-background: #0b132b;
-  --primary-background-alpha: rgba(11,19,43,0.6);
+    --primary-background-alpha: rgba(11,19,43,0.6);
 
-  --secondary-color: #f8fafc;
-  --secondary-color-alpha: rgba(248,250,252,0.5);
+    --secondary-color: #f8fafc;
+    --secondary-color-alpha: rgba(248,250,252,0.5);
 
-  --tertiary-color: #f472b6;   /* pink neon */
-  --quaternary-color: #8b5cf6; /* purple */
-
-
+    --tertiary-color: #f472b6;
+    --quaternary-color: #8b5cf6;
 }
 
 .pointer {

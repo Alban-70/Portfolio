@@ -1,5 +1,6 @@
 import App from "@/App.vue";
 import Home from "@/views/Home.vue";
+import Technique from "@/views/Technique.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -9,11 +10,16 @@ const routes = [
     children: [
       { 
         path: "", 
-        name: "home", 
+        name: "Home", 
         component: Home 
       }
     ],
   },
+  {
+    path: "/technique",
+    name: "Technique",
+    component: Technique
+  }
 ];
 
 const router = createRouter({

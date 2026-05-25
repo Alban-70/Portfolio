@@ -4,10 +4,10 @@
             <p>Alban Choulet <a href="mailto:alban.choulet@edu.univ-fcomte.fr">alban.choulet@edu.univ-fcomte.fr</a></p>
         </div>
         <div class="content_nav">
-            <p class="pointer">Accueil</p>
-            <p class="pointer">Technique</p>
-            <p class="pointer">Suivi de projet</p>
-            <p class="pointer">Intégration en entreprise</p>
+            <router-link class="pointer" :to="{ name: 'Home' }">Accueil</router-link>
+            <router-link class="pointer" :to="{ name: 'Technique' }">Technique</router-link>
+            <router-link class="pointer">Suivi de projet</router-link>
+            <router-link class="pointer">Intégration en entreprise</router-link>
         </div>
         <div class="nav_spacer"></div>
     </div>
@@ -68,8 +68,19 @@
     flex: 1;
 }
 
+.content_nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
 
-.content_nav p:hover {
+
+.content_nav a:hover {
     color: var(--tertiary-color);
 }
 

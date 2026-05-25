@@ -6,25 +6,18 @@
         <div class="hero_left animate_left">
             <div class="hero_eyebrow">
                 <span class="eyebrow_dot"></span>
-                PORTFOLIO · RAPPORT DE STAGE
+                PORTFOLIO
             </div>
 
             <h1>Développeur<br><em>Fullstack</em></h1>
 
             <p>
                 Ce portfolio documente mon stage chez <strong>Appup</strong>, une agence web spécialisée dans la
-                conception de sites et applications sur mesure. Vous y trouverez
+                conception de sites et applications sur mesure. Il contient
                 <span>mes projets réalisés en conditions réelles</span>,
                 <span>mes compétences techniques</span> et
                 <span>mon expérience professionnelle</span>.
             </p>
-
-            <nav class="site_nav_pills">
-                <p class="pill">Contexte</p>
-                <p class="pill">Savoir-faire</p>
-                <p class="pill">Réalisations</p>
-                <p class="pill">Bilan</p>
-            </nav>
 
             <div class="status">
                 DÉVELOPPEUR EN FORMATION · FULLSTACK · STAGE EN ENTREPRISE
@@ -73,12 +66,12 @@
                         </div>
                     </div>
                     <p class="intro">
-                        Mon stage s'est déroulé au sein d'<strong>Appup</strong>, agence spécialisée dans la création
+                        Mon stage s'est réalisé au sein d'<strong>Appup</strong>, agence spécialisée dans la création
                         de sites web et applications sur mesure pour des clients locaux et nationaux.
                     </p>
                     <div class="tags">
-                        <span class="tag">Développement web & applications</span>
-                        <span class="tag">Solutions sur mesure</span>
+                        <span class="tag pointer">Développement web & applications</span>
+                        <span class="tag pointer">Solutions sur mesure</span>
                     </div>
                 </div>
             </div>
@@ -111,9 +104,9 @@
                         </div>
                     </div>
                     <div class="tags">
-                        <span class="tag">Petite équipe</span>
-                        <span class="tag">Développement fullstack</span>
-                        <span class="tag">Suivi continu</span>
+                        <span class="tag pointer">Petite équipe</span>
+                        <span class="tag pointer">Développement fullstack</span>
+                        <span class="tag pointer">Suivi continu</span>
                     </div>
                 </div>
             </div>
@@ -126,12 +119,12 @@
                         externes spécialisés :
                     </p>
                     <div class="tags">
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">API REST</span>
-                        <span class="tag">Stripe</span>
-                        <span class="tag">AWS</span>
-                        <span class="tag">Brevo</span>
+                        <span class="tag pointer">Node.js</span>
+                        <span class="tag pointer">Git</span>
+                        <span class="tag pointer">API REST</span>
+                        <span class="tag pointer">Stripe</span>
+                        <span class="tag pointer">AWS</span>
+                        <span class="tag pointer">Brevo</span>
                     </div>
                 </div>
             </div>
@@ -179,7 +172,7 @@
                         </svg>
                     </div>
                     <div class="card_kicker">Enjeux &amp; objectifs</div>
-                    <h3>Impact concret pour l'agence</h3>
+                    <h3>Impacts concrets</h3>
                     <ul class="goals_list">
                         <li>
                             <span class="goal_num">01</span>
@@ -192,7 +185,9 @@
                             <span class="goal_num">02</span>
                             <div>
                                 <strong>Montée en compétences</strong>
-                                <p>Maîtriser architecture fullstack, intégrations tierces et déploiement cloud.</p>
+                                <p>Approfondir la maîtrise des architectures full-stack et des intégrations avec des
+                                    API externes variées,
+                                    afin de concevoir des solutions robustes et évolutives.</p>
                             </div>
                         </li>
                     </ul>
@@ -245,10 +240,10 @@
                 <h3>Architecture modulaire</h3>
                 <p>API centralisée servant de base commune à plusieurs projets. Conçue pour être réutilisée sans
                     réécriture, uniquement par configuration.</p>
-                <div class="bento_tags">
-                    <span>Node.js</span>
-                    <span>API REST</span>
-                    <span>Architecture modulaire</span>
+                <div class="tags">
+                    <span class="tag pointer">Node.js</span>
+                    <span class="tag pointer">API REST</span>
+                    <span class="tag pointer">Architecture modulaire</span>
                 </div>
             </div>
 
@@ -257,17 +252,17 @@
                 <h3>E-commerce</h3>
                 <p>Intégration de l'API dans un site marchand avec paiement en ligne, gestion de fichiers et génération
                     de PDF.</p>
-                <div class="bento_tags">
-                    <span>Paiement</span>
-                    <span>PDF</span>
-                    <span>Fichiers</span>
+                <div class="tags">
+                    <span class="tag pointer">Paiement</span>
+                    <span class="tag pointer">PDF</span>
+                    <span class="tag pointer">Fichiers</span>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- <section class="skills_section">
+    <section class="skills_section">
 
         <div class="skills_intro animate_fade">
             <div class="section_label">// SAVOIR-FAIRE GÉNÉRAUX</div>
@@ -278,95 +273,59 @@
             </p>
         </div>
 
-        <div class="skills_layout">
+        <div class="skills_layout animate_fade" style="--delay: 0.1s">
 
-            <div class="skills_col animate_fade" style="--delay: 0.1s">
-                <div class="skill_group">
-                    <div class="skill_group_header">
-                        <span class="skill_group_dot"></span>
-                        Back-end & Architecture
-                    </div>
-                    <div class="skill_items">
-                        <div class="skill_item skill_featured">
-                            <span class="skill_name">Conception d'API REST</span>
-                            <span class="skill_tag featured_tag">Détaillé p.2</span>
-                        </div>
-                        <div class="skill_item skill_featured">
-                            <span class="skill_name">Architecture modulaire Node.js</span>
-                            <span class="skill_tag featured_tag">Détaillé p.2</span>
-                        </div>
-                        <div class="skill_item">
-                            <span class="skill_name">Gestion des erreurs & logs</span>
-                        </div>
-                        <div class="skill_item">
-                            <span class="skill_name">Authentification & sécurité</span>
-                        </div>
-                    </div>
+            <div class="skill_row">
+                <div class="skill_row_label">
+                    <span class="skill_row_dot"></span>
+                    Back-end & Architecture
                 </div>
-
-                <div class="skill_group">
-                    <div class="skill_group_header">
-                        <span class="skill_group_dot"></span>
-                        Base de données
-                    </div>
-                    <div class="skill_items">
-                        <div class="skill_item skill_featured">
-                            <span class="skill_name">Modélisation relationnelle</span>
-                            <span class="skill_tag featured_tag">Détaillé p.3</span>
-                        </div>
-                        <div class="skill_item">
-                            <span class="skill_name">ORM & requêtes SQL</span>
-                        </div>
-                    </div>
+                <div class="skill_chips">
+                    <span class="chip chip_featured" data-page="p.2">Conception d'API REST</span>
+                    <span class="chip chip_featured" data-page="p.2">Architecture modulaire Node.js</span>
+                    <span class="chip">Gestion des erreurs & logs</span>
+                    <span class="chip">Authentification & sécurité</span>
                 </div>
             </div>
 
-            <div class="skills_col animate_fade" style="--delay: 0.2s">
-                <div class="skill_group">
-                    <div class="skill_group_header">
-                        <span class="skill_group_dot"></span>
-                        Front-end & Intégration
-                    </div>
-                    <div class="skill_items">
-                        <div class="skill_item skill_featured">
-                            <span class="skill_name">Développement Vue.js</span>
-                            <span class="skill_tag featured_tag">Détaillé p.4</span>
-                        </div>
-                        <div class="skill_item">
-                            <span class="skill_name">Intégration UI/UX responsive</span>
-                        </div>
-                        <div class="skill_item">
-                            <span class="skill_name">Consommation d'API REST</span>
-                        </div>
-                    </div>
+            <div class="skill_row">
+                <div class="skill_row_label">
+                    <span class="skill_row_dot"></span>
+                    Base de données
                 </div>
+                <div class="skill_chips">
+                    <span class="chip chip_featured" data-page="p.3">Modélisation relationnelle</span>
+                    <span class="chip">ORM & requêtes SQL</span>
+                </div>
+            </div>
 
-                <div class="skill_group">
-                    <div class="skill_group_header">
-                        <span class="skill_group_dot"></span>
-                        Services & Déploiement
-                    </div>
-                    <div class="skill_items">
-                        <div class="skill_item">
-                            <span class="skill_name">Paiement en ligne (Stripe)</span>
-                        </div>
-                        <div class="skill_item">
-                            <span class="skill_name">Stockage cloud (AWS S3)</span>
-                        </div>
-                        <div class="skill_item">
-                            <span class="skill_name">Emails transactionnels (Brevo)</span>
-                        </div>
-                        <div class="skill_item">
-                            <span class="skill_name">Versioning Git & collaboration</span>
-                        </div>
-                    </div>
+            <div class="skill_row">
+                <div class="skill_row_label">
+                    <span class="skill_row_dot"></span>
+                    Front-end & Intégration
+                </div>
+                <div class="skill_chips">
+                    <span class="chip chip_featured" data-page="p.4">Développement Vue.js</span>
+                    <span class="chip">Intégration UI/UX responsive</span>
+                    <span class="chip">Consommation d'API REST</span>
+                </div>
+            </div>
+
+            <div class="skill_row">
+                <div class="skill_row_label">
+                    <span class="skill_row_dot"></span>
+                    Services & Déploiement
+                </div>
+                <div class="skill_chips">
+                    <span class="chip">Paiement en ligne (Stripe)</span>
+                    <span class="chip">Stockage cloud (AWS S3)</span>
+                    <span class="chip">Emails transactionnels (Brevo)</span>
+                    <span class="chip">Versioning Git & collaboration</span>
                 </div>
             </div>
 
         </div>
-    </section> -->
-
-    
+    </section>
 
 </template>
 
@@ -437,6 +396,7 @@ onMounted(() => {
     transform: translate(0);
 }
 
+/* ── Hero ── */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -512,35 +472,6 @@ onMounted(() => {
     font-weight: 600;
 }
 
-.site_nav_pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.pill {
-    padding: 7px 16px;
-    font-size: 0.78rem;
-    font-family: monospace;
-    letter-spacing: 1px;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: var(--secondary-color);
-    opacity: 0.6;
-    cursor: pointer;
-    transition: 0.2s ease;
-    text-decoration: none;
-}
-
-.pill:hover,
-.pill.active {
-    opacity: 1;
-    border-color: var(--tertiary-color);
-    color: var(--tertiary-color);
-    background: rgba(255, 255, 255, 0.03);
-}
-
 .status {
     display: inline-block;
     padding: 9px 14px;
@@ -557,6 +488,7 @@ onMounted(() => {
     justify-content: center;
 }
 
+/* ── Terminal ── */
 .terminal {
     width: 100%;
     max-width: 480px;
@@ -675,6 +607,7 @@ onMounted(() => {
     }
 }
 
+/* ── Timeline ── */
 .timeline,
 .experience_timeline {
     position: relative;
@@ -921,6 +854,7 @@ onMounted(() => {
     transform: scale(1.05);
 }
 
+/* ── Shared section utils ── */
 .section_label {
     font-family: monospace;
     font-size: 0.78rem;
@@ -945,6 +879,7 @@ onMounted(() => {
     margin-bottom: 48px;
 }
 
+/* ── Subject section ── */
 .subject_section {
     max-width: 1200px;
     margin: 0 auto;
@@ -960,7 +895,7 @@ onMounted(() => {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .subject_card {
@@ -983,10 +918,6 @@ onMounted(() => {
     width: 100%;
 }
 
-.stripe_red {
-    background: linear-gradient(90deg, #ff5f57, transparent);
-}
-
 .stripe_accent {
     background: linear-gradient(90deg, var(--tertiary-color), transparent);
 }
@@ -1007,12 +938,6 @@ onMounted(() => {
     align-items: center;
     justify-content: center;
     margin-bottom: 18px;
-}
-
-.icon_red {
-    background: rgba(255, 95, 87, 0.12);
-    color: #ff5f57;
-    border: 1px solid rgba(255, 95, 87, 0.25);
 }
 
 .icon_accent {
@@ -1050,33 +975,6 @@ onMounted(() => {
     opacity: 0.65;
     line-height: 1.7;
     margin-bottom: 20px;
-}
-
-.problem_list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.problem_list li {
-    font-size: 0.82rem;
-    color: var(--secondary-color);
-    opacity: 0.6;
-    padding-left: 16px;
-    position: relative;
-    line-height: 1.5;
-}
-
-.problem_list li::before {
-    content: '×';
-    position: absolute;
-    left: 0;
-    color: #ff5f57;
-    opacity: 0.8;
-    font-family: monospace;
 }
 
 .subject_badge {
@@ -1131,128 +1029,7 @@ onMounted(() => {
     line-height: 1.5;
 }
 
-.skills_section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.skills_intro {
-    margin-bottom: 48px;
-}
-
-.skills_intro mark {
-    background: rgba(192, 180, 194, 0.15);
-    color: var(--tertiary-color);
-    padding: 1px 5px;
-    border-radius: 3px;
-    font-style: italic;
-}
-
-.skills_layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-}
-
-.skills_col {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.skill_group {
-    padding: 24px;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.025);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.skill_group_header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: monospace;
-    font-size: 0.73rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--quaternary-color);
-    margin-bottom: 18px;
-    opacity: 0.8;
-}
-
-.skill_group_dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--tertiary-color);
-    opacity: 0.7;
-    flex-shrink: 0;
-}
-
-.skill_items {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.skill_item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(255, 255, 255, 0.02);
-    transition: 0.2s ease;
-}
-
-.skill_item:hover {
-    border-color: rgba(255, 255, 255, 0.14);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.skill_featured {
-    border-color: rgba(192, 180, 194, 0.2);
-    background: rgba(192, 180, 194, 0.04);
-}
-
-.skill_featured:hover {
-    border-color: var(--tertiary-color);
-    box-shadow: 0 0 16px rgba(192, 180, 194, 0.08);
-}
-
-.skill_name {
-    font-size: 0.88rem;
-    color: var(--secondary-color);
-    opacity: 0.85;
-}
-
-.skill_featured .skill_name {
-    color: var(--secondary-color);
-    opacity: 1;
-    font-weight: 600;
-}
-
-.skill_tag {
-    font-family: monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
-    padding: 3px 9px;
-    border-radius: 10px;
-    white-space: nowrap;
-    flex-shrink: 0;
-}
-
-.featured_tag {
-    color: var(--tertiary-color);
-    border: 1px solid var(--tertiary-color);
-    opacity: 0.8;
-}
-
-/* ── Tech section (inchangée) ── */
+/* ── Tech section ── */
 .tech_section {
     max-width: 1200px;
     margin: 0 auto;
@@ -1289,7 +1066,7 @@ onMounted(() => {
 
 .bento_card:nth-child(3) {
     grid-column-start: 2;
-        grid-row-start: 2;
+    grid-row-start: 2;
 }
 
 .bento_services {
@@ -1380,5 +1157,118 @@ onMounted(() => {
     color: var(--secondary-color);
     opacity: 0.5;
     margin-top: 1px;
+}
+
+/* ── Skills section ── */
+.skills_section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skills_intro {
+    margin-bottom: 48px;
+}
+
+.skills_intro mark {
+    background: rgba(192, 180, 194, 0.15);
+    color: var(--tertiary-color);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-style: italic;
+}
+
+.skills_layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill_row {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.skill_row:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.skill_row_label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 220px;
+    flex-shrink: 0;
+    font-family: monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--quaternary-color);
+    opacity: 0.85;
+    padding-top: 4px;
+}
+
+.skill_row_dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--tertiary-color);
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.skill_chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 1;
+}
+
+.chip {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+    cursor: default;
+}
+
+.chip:hover {
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.chip_featured {
+    opacity: 1;
+    color: var(--secondary-color);
+    border-color: rgba(192, 180, 194, 0.35);
+    font-weight: 600;
+    position: relative;
+    padding-right: 38px;
+}
+
+.chip_featured::after {
+    content: attr(data-page);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+    color: var(--tertiary-color);
+    opacity: 0.75;
+}
+
+.chip_featured:hover {
+    border-color: var(--tertiary-color);
+    opacity: 1;
 }
 </style>
