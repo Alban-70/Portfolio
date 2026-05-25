@@ -6,8 +6,8 @@
         <div class="content_nav">
             <router-link class="pointer" :to="{ name: 'Home' }">Accueil</router-link>
             <router-link class="pointer" :to="{ name: 'Technique' }">Technique</router-link>
-            <router-link class="pointer">Suivi de projet</router-link>
-            <router-link class="pointer">Intégration en entreprise</router-link>
+            <router-link class="pointer" :to="{  }">Suivi de projet</router-link>
+            <router-link class="pointer" :to="{  }">Intégration en entreprise</router-link>
         </div>
         <div class="nav_spacer"></div>
     </div>
