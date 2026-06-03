@@ -22,7 +22,7 @@
         <div class="hero_right animate_right">
             <div class="skills_overview">
                 <div class="overview_header">
-                    <span class="overview_label">// COMPÉTENCES COUVERTES</span>
+                    <span class="overview_label">// SAVOIR-FAIRE COUVERTS</span>
                 </div>
                 <div class="overview_items">
                     <div class="overview_item" v-for="(skill, i) in subpages" :key="i"
@@ -70,7 +70,7 @@
                 <div class="sfe_items">
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_purple">
+                        <span class="sfe_c1">
                             Savoir concevoir une architecture d’API REST générique
                             basée sur des routes dynamiques.
                         </span>
@@ -78,21 +78,21 @@
 
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_pink">
+                        <span class="sfe_c2">
                             Implémenter le routage dynamique via paramètres d’URL.
                         </span>
                     </div>
 
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_green">
+                        <span class="sfe_c3">
                             Construire des requêtes SQL dynamiques.
                         </span>
                     </div>
 
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_orange">
+                        <span class="sfe_c4">
                             Sécuriser la génération de requêtes contre les injections SQL.
                         </span>
                     </div>
@@ -128,8 +128,38 @@
                     </div> -->
 
                     <p class="trace_body">
-                        La trace n°1 ci-dessus montre <span class="sfe_purple">l'architecture de l'API REST générique</span> que j'ai crée pour mon stage chez Appup. 
-                        Cette copie d'écran illustre le passage d'une requête HTTP de la part du client vers le serveur en différentes étapes 
+                        La trace n°1 ci-dessus présente <span class="sfe_c1">l'architecture de l'API REST
+                            générique</span> que j'ai créée lors de mon stage chez Appup.
+                        Cette capture d'écran illustre le parcours d'une requête HTTP envoyée par le client vers le
+                        serveur, à travers les différentes étapes indiquées par les numéros.
+                        Pour cela, j'ai <span class="sfe_c2">implémenté plusieurs routes dynamiques avec des
+                            paramètres dans l'URL</span>. L'objectif est de spécifier le nom de la table sur laquelle la
+                        requête doit être exécutée, ainsi que les différents paramètres et données nécessaires à son
+                        traitement.
+                        <br>
+                        Par la suite, la route appelle le contrôleur et la fonction correspondante (numéro 3). Le
+                        contrôleur s'appuie ensuite sur un service chargé de mettre en forme les paramètres reçus avant
+                        d'appeler la fonction présente dans le fichier associé à la table concernée.
+                        <br>
+                        Au démarrage du serveur, celui-ci vérifie les tables présentes dans la base de données et crée
+                        automatiquement un fichier pour chacune d'elles si celui-ci n'existe pas déjà. Ce fichier
+                        contient l'ensemble des attributs de la table ainsi que ceux qui sont requis pour chaque
+                        requête.
+                        <br>
+                        Une fois dans le fichier correspondant à la table ciblée, la logique liée à la base de données
+                        est exécutée. Pour cela, j'ai mis en place <span class="sfe_c3">une construction dynamique
+                            des requêtes SQL</span> à partir des champs sélectionnés, des paramètres, des filtres, etc.
+                        Grâce à cette fonctionnalité, j'ai pu <span class="sfe_c4">limiter les risques liés aux
+                            injections SQL</span>.
+                        <br>
+                        Une fois le traitement effectué, le résultat est renvoyé au client.
+                        <br><br>
+                        Cette API dynamique a pour objectif de réduire le nombre de fonctions nécessaires au traitement
+                        des requêtes. Par exemple, auparavant, je devais créer une fonction pour récupérer un article à
+                        partir de son identifiant et une autre pour le récupérer à partir de son nom. Désormais, ces
+                        différents cas sont gérés par une seule et même fonction, ce qui permet de limiter la
+                        duplication du code et d'éviter l'écriture de nombreuses requêtes spécifiques.
+                        
                     </p>
 
                 </div>
@@ -138,127 +168,111 @@
     </section>
 
     <section v-if="currentPage === 1" class="subpage_wrapper">
-        <div class="sf_layout">
-            <div class="sf_left">
-                <div class="sf_kicker">// SAVOIR-FAIRE 02</div>
+        <div class="sf_left">
+            <div class="sf_kicker">// SAVOIR-FAIRE 02</div>
 
-                <!-- Bloc SFE -->
-                <div class="sfe_block">
-                    <div class="sfe_header">
-                        <span class="sfe_label">// SAVOIR-FAIRE ÉLÉMENTAIRES</span>
-                    </div>
-                    <div class="sfe_items">
-                        <div class="sfe_item">
-                            <span class="sfe_bullet">›</span>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.</span>
-                        </div>
-                        <div class="sfe_item">
-                            <span class="sfe_bullet">›</span>
-                            <span>Purus sit amet volutpat consequat mauris nunc congue nisi vitae.</span>
-                        </div>
-                        <div class="sfe_item">
-                            <span class="sfe_bullet">›</span>
-                            <span>Faucibus a pellentesque sit amet porttitor eget dolor morbi non.</span>
-                        </div>
-                    </div>
+            <h2 class="sf_title">Intégration et consommation d'API externes</h2>
+
+            <p class="sf_desc">
+                Connexion de l'application à un service tiers afin de déléguer une fonctionnalité complexe : le paiement
+                en ligne avec Stripe. L'intégration repose sur la consommation de l'API REST de Stripe, sécurisée par des
+                clés d'API, et sur l'écoute de webhooks qui notifient le serveur en temps réel des événements de
+                paiement. Ce mécanisme permet de confirmer les commandes de façon asynchrone et fiable, sans dépendre du
+                retour de l'utilisateur dans le navigateur.
+            </p>
+
+            <div class="sfe_block">
+                <div class="sfe_header">
+                    <span class="sfe_label">// SAVOIR-FAIRE ÉLÉMENTAIRES</span>
                 </div>
 
-                <h2 class="sf_title">Intégration du paiement en ligne (Stripe)</h2>
-                <p class="sf_desc">
-                    Implémentation complète du tunnel de paiement Stripe dans une boutique e-commerce : création de
-                    sessions de paiement, gestion des webhooks et confirmation de commande côté serveur.
-                </p>
-                <div class="sf_trace_block">
-                    <div class="trace_label">
-                        <span class="trace_dot"></span>
-                        TRACE — Capture + code
+                <div class="sfe_items">
+                    <div class="sfe_item">
+                        <span class="sfe_bullet">›</span>
+                        <span class="sfe_c5">
+                            Savoir intégrer un service tiers en consommant son API REST.
+                        </span>
                     </div>
-                    <div class="trace_card">
-                        <div class="trace_header">
-                            <span class="trace_icon">◎</span>
-                            <div>
-                                <strong>Endpoint de création de session Stripe</strong>
-                                <small>src/controllers/PaymentController.js · Stage Appup</small>
-                            </div>
-                        </div>
-                        <p class="trace_body">Création d'une session Checkout Stripe sécurisée, avec passage des
-                            articles du panier, gestion des URLs de retour et écoute des webhooks pour confirmer les
-                            paiements.</p>
-                        <div class="trace_tags">
-                            <span class="trace_tag">Stripe</span>
-                            <span class="trace_tag">Webhook</span>
-                            <span class="trace_tag">Node.js</span>
-                            <span class="trace_tag">E-commerce</span>
-                        </div>
+
+                    <div class="sfe_item">
+                        <span class="sfe_bullet">›</span>
+                        <span class="sfe_c6">
+                            Mettre en place un tunnel de paiement sécurisé avec Stripe.
+                        </span>
+                    </div>
+
+                    <div class="sfe_item">
+                        <span class="sfe_bullet">›</span>
+                        <span class="sfe_c7">
+                            Traiter les événements de paiement de manière asynchrone.
+                        </span>
+                    </div>
+
+                    <div class="sfe_item">
+                        <span class="sfe_bullet">›</span>
+                        <span class="sfe_c8">
+                            Garantir la fiabilité des transactions grâce aux webhooks.
+                        </span>
                     </div>
                 </div>
             </div>
 
-            <div class="sf_right">
-                <div class="code_block">
-                    <div class="code_header">
-                        <div class="code_dots">
-                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                        </div>
-                        <span class="code_filename">src/controllers/PaymentController.js</span>
-                    </div>
-                    <pre class="code_body"><code><span style="color:#8b5cf6">const</span> <span style="color:#f8fafc">stripe</span> = <span style="color:#f472b6">require</span>(<span style="color:#a3e635">'stripe'</span>)(<span style="color:#f8fafc">process</span>.<span style="color:#f8fafc">env</span>.<span style="color:#f8fafc">STRIPE_KEY</span>);
-
-<span style="color:#8b5cf6">exports</span>.<span style="color:#f472b6">createSession</span> = <span style="color:#8b5cf6">async</span> (<span style="color:#f8fafc">req</span>, <span style="color:#f8fafc">res</span>) => {
-  <span style="color:#8b5cf6">const</span> { <span style="color:#f8fafc">items</span> } = <span style="color:#f8fafc">req</span>.<span style="color:#f8fafc">body</span>;
-  <span style="color:#8b5cf6">const</span> <span style="color:#f8fafc">session</span> = <span style="color:#8b5cf6">await</span> <span style="color:#f8fafc">stripe</span>.<span style="color:#f8fafc">checkout</span>.<span style="color:#f8fafc">sessions</span>
-    .<span style="color:#f472b6">create</span>({
-      <span style="color:#f8fafc">payment_method_types</span>: [<span style="color:#a3e635">'card'</span>],
-      <span style="color:#f8fafc">line_items</span>: <span style="color:#f8fafc">items</span>.<span style="color:#f472b6">map</span>(<span style="color:#f8fafc">i</span> => ({
-        <span style="color:#f8fafc">price_data</span>: {
-          <span style="color:#f8fafc">currency</span>: <span style="color:#a3e635">'eur'</span>,
-          <span style="color:#f8fafc">product_data</span>: { <span style="color:#f8fafc">name</span>: <span style="color:#f8fafc">i</span>.<span style="color:#f8fafc">name</span> },
-          <span style="color:#f8fafc">unit_amount</span>: <span style="color:#f8fafc">i</span>.<span style="color:#f8fafc">price</span> * <span style="color:#a3e635">100</span>,
-        },
-        <span style="color:#f8fafc">quantity</span>: <span style="color:#f8fafc">i</span>.<span style="color:#f8fafc">qty</span>,
-      })),
-      <span style="color:#f8fafc">mode</span>: <span style="color:#a3e635">'payment'</span>,
-      <span style="color:#f8fafc">success_url</span>: `${<span style="color:#f8fafc">process</span>.<span style="color:#f8fafc">env</span>.<span style="color:#f8fafc">CLIENT</span>}/success`,
-      <span style="color:#f8fafc">cancel_url</span>: `${<span style="color:#f8fafc">process</span>.<span style="color:#f8fafc">env</span>.<span style="color:#f8fafc">CLIENT</span>}/cart`,
-    });
-  <span style="color:#f8fafc">res</span>.<span style="color:#f472b6">json</span>({ <span style="color:#f8fafc">url</span>: <span style="color:#f8fafc">session</span>.<span style="color:#f8fafc">url</span> });
-};</code></pre>
+            <div class="sf_trace_block">
+                <div class="trace_label">
+                    <span class="trace_dot"></span>
+                    TRACE — Capture + description
                 </div>
-                <div class="sf_competences">
-                    <div class="comp_label">// COMPÉTENCES MISES EN JEU</div>
-                    <div class="comp_list">
-                        <div class="comp_item">
-                            <div class="comp_info"><span class="comp_name">Stripe API</span><span
-                                    class="comp_level">80%</span></div>
-                            <div class="comp_bar_wrap">
-                                <div class="comp_bar_fill" style="width:80%"></div>
-                            </div>
-                        </div>
-                        <div class="comp_item">
-                            <div class="comp_info"><span class="comp_name">Webhooks & événements</span><span
-                                    class="comp_level">70%</span></div>
-                            <div class="comp_bar_wrap">
-                                <div class="comp_bar_fill" style="width:70%"></div>
-                            </div>
-                        </div>
-                        <div class="comp_item">
-                            <div class="comp_info"><span class="comp_name">Sécurité paiement</span><span
-                                    class="comp_level">75%</span></div>
-                            <div class="comp_bar_wrap">
-                                <div class="comp_bar_fill" style="width:75%"></div>
-                            </div>
-                        </div>
-                        <div class="comp_item">
-                            <div class="comp_info"><span class="comp_name">Gestion async/await</span><span
-                                    class="comp_level">88%</span></div>
-                            <div class="comp_bar_wrap">
-                                <div class="comp_bar_fill" style="width:88%"></div>
-                            </div>
+
+                <div class="trace_card">
+                    <div class="trace_preview">
+                        <img src="../../public/trace_api_externes_horizontal.png"
+                            alt="Tableau de bord des webhooks Stripe : événements de paiement reçus et traités" />
+
+                        <div class="trace_caption">
+                            <span class="trace_number">Trace n°2</span>
+                            <span class="trace_caption_text">
+                                Réception et traitement des webhooks de paiement Stripe
+                            </span>
                         </div>
                     </div>
+
+                    <p class="trace_body">
+                        La trace n°2 ci-dessus est une capture du tableau de bord des webhooks de Stripe.
+                        <span class="sfe_c6">Stripe</span> est une entreprise spécialisée dans le paiement en ligne :
+                        plutôt que de gérer moi-même les cartes bancaires, je délègue cette tâche sensible à un expert.
+                        Mon application dialogue avec lui à travers son <span class="sfe_c5">API REST</span> — une
+                        sorte de « guichet » standardisé qui permet à deux programmes de se parler sur internet, mon
+                        application présentant à chaque échange une clé secrète pour prouver son identité (API KEY).
+                        <br>
+                        Lorsqu'un client règle sa commande, Stripe déclenche tout un enchaînement d'étapes, appelées
+                        « événements », que l'on retrouve dans la liste <strong>encadrée en orange</strong> à gauche :
+                        <code>payment_intent.succeeded</code> (le paiement a réussi), <code>charge.succeeded</code> (la
+                        carte a bien été débitée), <code>invoice.paid</code> (la facture est réglée) et enfin
+                        <code>checkout.session.completed</code> (l'achat est terminé). Les voir tous présents prouve que
+                        le <span class="sfe_c6">tunnel de paiement Stripe s'est déroulé jusqu'à son terme</span>.
+                        <br>
+                        Chaque événement est transmis à mon serveur par un <span class="sfe_c8">webhook</span>. Un
+                        webhook, c'est une notification automatique que Stripe « pousse » vers mon serveur dès qu'il se
+                        passe quelque chose — un peu comme un SMS qui prévient que la pizza est prête, au lieu de devoir
+                        rappeler la pizzeria sans arrêt. Le statut <span class="sfe_c8">200 OK</span> affiché devant
+                        chaque ligne est le code qui signifie « bien reçu, tout va bien » : il confirme que mon serveur a
+                        bien réceptionné et traité chaque notification. À droite, dans l'<strong>encadré rouge</strong>,
+                        on voit la réponse que mon application renvoie à Stripe pour chaque événement : un court message
+                        de confirmation indiquant <code>"status": "success"</code> et <code>"received": true</code>,
+                        c'est-à-dire un accusé de réception prouvant que la notification a bien été prise en compte.
+                        <br>
+                        Ce mécanisme me permet de <span class="sfe_c7">traiter les paiements de manière
+                            asynchrone</span> : la confirmation de la commande ne dépend pas de ce que fait l'utilisateur
+                        dans son navigateur, mais d'une notification envoyée directement de serveur à serveur par Stripe.
+                        <br><br>
+                        C'est ce qui <span class="sfe_c8">garantit la fiabilité des transactions</span> : même si le
+                        client ferme sa page juste après avoir payé, l'événement est tout de même reçu et la commande
+                        bien confirmée, sans qu'aucun paiement ne soit perdu.
+                    </p>
                 </div>
             </div>
         </div>
+
         <div class="sf_nav">
             <button class="sf_nav_btn" @click="goTo(0)">← Précédent</button>
             <div class="sf_dots">
@@ -270,126 +284,100 @@
     </section>
 
     <section v-if="currentPage === 2" class="subpage_wrapper">
-        <div class="sf_layout">
-            <div class="sf_left">
-                <div class="sf_kicker">// SAVOIR-FAIRE 03</div>
+        <div class="sf_left">
+            <div class="sf_kicker">// SAVOIR-FAIRE 03</div>
 
-                <!-- Bloc SFE -->
-                <div class="sfe_block">
-                    <div class="sfe_header">
-                        <span class="sfe_label">// SAVOIR-FAIRE ÉLÉMENTAIRES</span>
-                    </div>
-                    <div class="sfe_items">
-                        <div class="sfe_item">
-                            <span class="sfe_bullet">›</span>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.</span>
-                        </div>
-                        <div class="sfe_item">
-                            <span class="sfe_bullet">›</span>
-                            <span>Purus sit amet volutpat consequat mauris nunc congue nisi vitae.</span>
-                        </div>
-                        <div class="sfe_item">
-                            <span class="sfe_bullet">›</span>
-                            <span>Faucibus a pellentesque sit amet porttitor eget dolor morbi non.</span>
-                        </div>
-                    </div>
+            <h2 class="sf_title">Déploiement d'infrastructures matérielles et logicielles</h2>
+
+            <p class="sf_desc">
+                Mise en production d'une application d'affichage sur un parc d'appareils hétérogènes (Raspberry Pi,
+                bornes, PC Windows). Le déploiement repose sur une configuration unifiée par fichiers JSON, un
+                démarrage automatique adapté à chaque système d'exploitation et une administration à distance via SSH.
+            </p>
+
+            <div class="sfe_block">
+                <div class="sfe_header">
+                    <span class="sfe_label">// SAVOIR-FAIRE ÉLÉMENTAIRES</span>
                 </div>
 
-                <h2 class="sf_title">Gestion de fichiers avec AWS S3</h2>
-                <p class="sf_desc">
-                    Mise en place d'un service d'upload et de récupération de fichiers sur AWS S3 : gestion des
-                    permissions, génération d'URLs présignées et intégration dans le flux de l'application.
-                </p>
-                <div class="sf_trace_block">
-                    <div class="trace_label">
-                        <span class="trace_dot"></span>
-                        TRACE — Extrait de code
+                <div class="sfe_items">
+                    <div class="sfe_item">
+                        <span class="sfe_bullet">›</span>
+                        <span class="sfe_c9">
+                            Savoir déployer une application sur plusieurs environnements matériels (Raspberry, borne, PC).
+                        </span>
                     </div>
-                    <div class="trace_card">
-                        <div class="trace_header">
-                            <span class="trace_icon">◈</span>
-                            <div>
-                                <strong>Service d'upload S3 avec URL présignée</strong>
-                                <small>src/services/s3.service.js · Stage Appup</small>
-                            </div>
-                        </div>
-                        <p class="trace_body">Création d'un service réutilisable pour uploader des fichiers sur S3 et
-                            générer des URLs temporaires signées permettant un accès sécurisé aux ressources.</p>
-                        <div class="trace_tags">
-                            <span class="trace_tag">AWS S3</span>
-                            <span class="trace_tag">SDK</span>
-                            <span class="trace_tag">Upload</span>
-                            <span class="trace_tag">Sécurité</span>
-                        </div>
+
+                    <div class="sfe_item">
+                        <span class="sfe_bullet">›</span>
+                        <span class="sfe_c10">
+                            Centraliser le paramétrage via des fichiers de configuration JSON.
+                        </span>
+                    </div>
+
+                    <div class="sfe_item">
+                        <span class="sfe_bullet">›</span>
+                        <span class="sfe_c11">
+                            Automatiser le démarrage et la mise à jour à distance via SSH.
+                        </span>
+                    </div>
+
+                    <div class="sfe_item">
+                        <span class="sfe_bullet">›</span>
+                        <span class="sfe_c12">
+                            Assurer la robustesse du système et la reprise après incident.
+                        </span>
                     </div>
                 </div>
             </div>
 
-            <div class="sf_right">
-                <div class="code_block">
-                    <div class="code_header">
-                        <div class="code_dots">
-                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                        </div>
-                        <span class="code_filename">src/services/s3.service.js</span>
-                    </div>
-                    <pre class="code_body"><code><span style="color:#8b5cf6">const</span> { <span style="color:#f8fafc">S3Client</span>, <span style="color:#f8fafc">PutObjectCommand</span>,
-      <span style="color:#f8fafc">GetObjectCommand</span> } = <span style="color:#f472b6">require</span>(<span style="color:#a3e635">'@aws-sdk/client-s3'</span>);
-<span style="color:#8b5cf6">const</span> { <span style="color:#f8fafc">getSignedUrl</span> } = <span style="color:#f472b6">require</span>(<span style="color:#a3e635">'@aws-sdk/s3-request-presigner'</span>);
-
-<span style="color:#8b5cf6">const</span> <span style="color:#f8fafc">s3</span> = <span style="color:#8b5cf6">new</span> <span style="color:#f472b6">S3Client</span>({ <span style="color:#f8fafc">region</span>: <span style="color:#f8fafc">process</span>.<span style="color:#f8fafc">env</span>.<span style="color:#f8fafc">AWS_REGION</span> });
-
-<span style="color:#8b5cf6">exports</span>.<span style="color:#f472b6">uploadFile</span> = <span style="color:#8b5cf6">async</span> (<span style="color:#f8fafc">key</span>, <span style="color:#f8fafc">buffer</span>, <span style="color:#f8fafc">mime</span>) => {
-  <span style="color:#8b5cf6">await</span> <span style="color:#f8fafc">s3</span>.<span style="color:#f472b6">send</span>(<span style="color:#8b5cf6">new</span> <span style="color:#f472b6">PutObjectCommand</span>({
-    <span style="color:#f8fafc">Bucket</span>: <span style="color:#f8fafc">process</span>.<span style="color:#f8fafc">env</span>.<span style="color:#f8fafc">S3_BUCKET</span>,
-    <span style="color:#f8fafc">Key</span>: <span style="color:#f8fafc">key</span>,
-    <span style="color:#f8fafc">Body</span>: <span style="color:#f8fafc">buffer</span>,
-    <span style="color:#f8fafc">ContentType</span>: <span style="color:#f8fafc">mime</span>,
-  }));
-  <span style="color:#8b5cf6">return</span> <span style="color:#f472b6">getSignedUrl</span>(<span style="color:#f8fafc">s3</span>,
-    <span style="color:#8b5cf6">new</span> <span style="color:#f472b6">GetObjectCommand</span>({
-      <span style="color:#f8fafc">Bucket</span>: <span style="color:#f8fafc">process</span>.<span style="color:#f8fafc">env</span>.<span style="color:#f8fafc">S3_BUCKET</span>,
-      <span style="color:#f8fafc">Key</span>: <span style="color:#f8fafc">key</span>
-    }),
-    { <span style="color:#f8fafc">expiresIn</span>: <span style="color:#a3e635">3600</span> }
-  );
-};</code></pre>
+            <div class="sf_trace_block">
+                <div class="trace_label">
+                    <span class="trace_dot"></span>
+                    TRACE — Capture + description
                 </div>
-                <div class="sf_competences">
-                    <div class="comp_label">// COMPÉTENCES MISES EN JEU</div>
-                    <div class="comp_list">
-                        <div class="comp_item">
-                            <div class="comp_info"><span class="comp_name">AWS S3 SDK v3</span><span
-                                    class="comp_level">74%</span></div>
-                            <div class="comp_bar_wrap">
-                                <div class="comp_bar_fill" style="width:74%"></div>
-                            </div>
-                        </div>
-                        <div class="comp_item">
-                            <div class="comp_info"><span class="comp_name">URLs présignées</span><span
-                                    class="comp_level">70%</span></div>
-                            <div class="comp_bar_wrap">
-                                <div class="comp_bar_fill" style="width:70%"></div>
-                            </div>
-                        </div>
-                        <div class="comp_item">
-                            <div class="comp_info"><span class="comp_name">Gestion des permissions IAM</span><span
-                                    class="comp_level">60%</span></div>
-                            <div class="comp_bar_wrap">
-                                <div class="comp_bar_fill" style="width:60%"></div>
-                            </div>
-                        </div>
-                        <div class="comp_item">
-                            <div class="comp_info"><span class="comp_name">Traitement de fichiers Node.js</span><span
-                                    class="comp_level">82%</span></div>
-                            <div class="comp_bar_wrap">
-                                <div class="comp_bar_fill" style="width:82%"></div>
-                            </div>
+
+                <div class="trace_card">
+                    <div class="trace_preview">
+                        <img src=""
+                            alt="Capture du déploiement multi-environnements" />
+
+                        <div class="trace_caption">
+                            <span class="trace_number">Trace n°3</span>
+                            <span class="trace_caption_text">
+                                Déploiement de l'application sur un parc d'appareils multi-OS
+                            </span>
                         </div>
                     </div>
+
+                    <p class="trace_body">
+                        La trace n°3 ci-dessus présente le
+                        <span class="sfe_c9">déploiement de l'application d'affichage sur plusieurs types
+                            d'appareils</span> : des Raspberry Pi, des bornes interactives et des PC sous Windows.
+                        L'enjeu principal était de faire fonctionner un même programme sur des systèmes d'exploitation
+                        différents, sans dupliquer le code.
+                        <br>
+                        Pour cela, j'ai mis en place une
+                        <span class="sfe_c10">configuration centralisée au format JSON</span> : chaque appareil lit son
+                        propre fichier de configuration au démarrage, ce qui permet d'adapter son comportement (contenu
+                        affiché, paramètres réseau, identifiants) sans modifier l'application elle-même.
+                        <br>
+                        Le lancement de l'application est
+                        <span class="sfe_c11">automatisé au démarrage de chaque machine</span> et l'administration se
+                        fait à distance via SSH, afin de déployer les mises à jour et de superviser le parc sans
+                        intervention physique sur site.
+                        <br>
+                        Enfin, j'ai veillé à la
+                        <span class="sfe_c12">robustesse du système</span> : redémarrage automatique en cas d'erreur
+                        et reprise de l'affichage après une coupure, pour garantir un fonctionnement continu.
+                        <br><br>
+                        Ce travail m'a permis de comprendre les contraintes du déploiement en conditions réelles, où le
+                        matériel, le réseau et les systèmes d'exploitation varient d'un site à l'autre.
+                    </p>
                 </div>
             </div>
         </div>
+
         <div class="sf_nav">
             <button class="sf_nav_btn" @click="goTo(1)">← Précédent</button>
             <div class="sf_dots">
@@ -402,109 +390,118 @@
 
     <section v-if="currentPage === 3" class="subpage_wrapper">
         <div class="bilan_hero">
-            <div class="sf_kicker">// BILAN & ANALYSE</div>
-            <h2 class="sf_title">Synthèse des savoir-faire <em>généraux</em></h2>
+            <div class="sf_kicker">// BILAN & ÉVALUATION</div>
+            <h2 class="sf_title">Synthèse & évaluation des <em>savoir-faire</em></h2>
             <p class="sf_desc">
-                Analyse réflexive des compétences développées au cours du stage, évaluation de la progression
-                et identification des axes d'amélioration.
+                Pour chaque savoir-faire, une synthèse de ce qui a été réalisé — où chaque
+                <span>savoir-faire élémentaire</span> est surligné de sa propre couleur — suivie d'une évaluation
+                de mon niveau de maîtrise.
             </p>
         </div>
 
-        <div class="bilan_grid">
-            <div class="bilan_card">
-                <div class="bilan_card_top">
-                    <div class="bilan_icon green">✓</div>
-                    <h3>Points forts acquis</h3>
-                </div>
-                <ul class="bilan_list">
-                    <li>Conception d'une architecture API modulaire et réutilisable</li>
-                    <li>Intégration de services tiers (Stripe, AWS S3, Brevo)</li>
-                    <li>Gestion complète d'un projet en conditions réelles</li>
-                    <li>Communication et collaboration en petite équipe</li>
-                </ul>
+        <!-- ─────────────── SAVOIR-FAIRE 01 ─────────────── -->
+        <div class="bilan_sf">
+            <div class="bilan_sf_head">
+                <span class="bilan_sf_num">01</span>
+                <h3 class="bilan_sf_title">Conception d'une API REST générique et modulaire</h3>
             </div>
 
-            <div class="bilan_card">
-                <div class="bilan_card_top">
-                    <div class="bilan_icon purple">↗</div>
-                    <h3>Axes de progression</h3>
+            <div class="bilan_blocks">
+                <div class="bilan_card">
+                    <div class="bilan_block_label">// SYNTHÈSE</div>
+                    <p class="bilan_text">
+                        Ce premier savoir-faire portait sur le cœur de l'API. J'ai d'abord
+                        <span class="sfe_c1">conçu une architecture d'API REST générique basée sur des routes
+                            dynamiques</span>, capable de traiter n'importe quelle ressource sans réécrire de code
+                        spécifique. Pour cela, j'ai
+                        <span class="sfe_c2">implémenté le routage dynamique via des paramètres passés dans
+                            l'URL</span>, qui indiquent la table et l'opération visées. Côté base de données, j'ai appris
+                        à <span class="sfe_c3">construire des requêtes SQL dynamiques</span> à partir des champs et
+                        filtres reçus, et surtout à
+                        <span class="sfe_c4">sécuriser leur génération contre les injections SQL</span> grâce à des
+                        requêtes paramétrées.
+                    </p>
                 </div>
-                <ul class="bilan_list">
-                    <li>Approfondissement des tests automatisés (Jest, Vitest)</li>
-                    <li>Meilleure maîtrise du déploiement CI/CD</li>
-                    <li>Documentation technique plus systématique</li>
-                    <li>Exploration des architectures microservices</li>
-                </ul>
-            </div>
 
-            <div class="bilan_card bilan_card_wide">
-                <div class="bilan_card_top">
-                    <div class="bilan_icon pink">◈</div>
-                    <h3>Analyse globale</h3>
-                </div>
-                <p class="bilan_text">
-                    Ce stage m'a permis de confronter mes connaissances théoriques à des contraintes réelles :
-                    délais clients, code maintenable, intégration de services externes. La conception de l'API
-                    modulaire a été particulièrement formatrice — elle m'a imposé de penser en termes de
-                    réutilisabilité et de scalabilité dès la phase de conception.
-                </p>
-                <p class="bilan_text">
-                    L'environnement en petite équipe a favorisé une autonomie rapide et une prise de responsabilité
-                    sur l'ensemble du cycle de développement, du design de la base de données jusqu'au déploiement.
-                </p>
-                <div class="bilan_global_tags">
-                    <span>Autonomie ++</span>
-                    <span>Fullstack confirmé</span>
-                    <span>Esprit produit</span>
-                    <span>Rigueur technique</span>
+                <div class="bilan_card">
+                    <div class="bilan_block_label">// ÉVALUATION</div>
+                    <p class="bilan_text">
+                        C'est le savoir-faire que je maîtrise le mieux : l'architecture générique fonctionne en
+                        production et m'a fait gagner un temps considérable. Je suis à l'aise avec le routage dynamique
+                        et les requêtes paramétrées. Il me reste à approfondir l'optimisation des requêtes complexes
+                        (jointures, performances) sur de gros volumes de données. 
+                    </p>
+                    <span class="bilan_level bilan_level_high">Niveau : maîtrisé</span>
                 </div>
             </div>
         </div>
 
-        <div class="radar_section">
-            <div class="radar_label">// AUTO-ÉVALUATION FINALE</div>
-            <div class="radar_bars">
-                <div class="radar_item">
-                    <div class="radar_name">Conception d'API</div>
-                    <div class="radar_bar_wrap">
-                        <div class="radar_bar_fill" style="width:85%;background:#f472b6"></div>
-                    </div>
-                    <div class="radar_score">85/100</div>
+        <!-- ─────────────── SAVOIR-FAIRE 02 ─────────────── -->
+        <div class="bilan_sf">
+            <div class="bilan_sf_head">
+                <span class="bilan_sf_num">02</span>
+                <h3 class="bilan_sf_title">Intégration et consommation d'API externes</h3>
+            </div>
+
+            <div class="bilan_blocks">
+                <div class="bilan_card">
+                    <div class="bilan_block_label">// SYNTHÈSE</div>
+                    <p class="bilan_text">
+                        Ce savoir-faire concernait l'ouverture de l'application vers l'extérieur. J'ai appris à
+                        <span class="sfe_c5">intégrer un service tiers en consommant son API REST</span>, en
+                        m'authentifiant par clés d'API. Concrètement, j'ai
+                        <span class="sfe_c6">mis en place un tunnel de paiement sécurisé avec Stripe</span>, puis j'ai
+                        <span class="sfe_c7">traité les événements de paiement de manière asynchrone</span> : la
+                        confirmation de commande ne dépend plus du navigateur du client. Enfin, j'ai
+                        <span class="sfe_c8">garanti la fiabilité des transactions grâce aux webhooks</span>, qui
+                        notifient mon serveur en temps réel.
+                    </p>
                 </div>
-                <div class="radar_item">
-                    <div class="radar_name">Intégration services tiers</div>
-                    <div class="radar_bar_wrap">
-                        <div class="radar_bar_fill" style="width:78%;background:#8b5cf6"></div>
-                    </div>
-                    <div class="radar_score">78/100</div>
+
+                <div class="bilan_card">
+                    <div class="bilan_block_label">// ÉVALUATION</div>
+                    <p class="bilan_text">
+                        Je me sens solide sur la consommation d'API et la logique des webhooks, que j'ai vu fonctionner
+                        de bout en bout. La sécurité du paiement (vérification de la signature des webhooks, gestion fine
+                        des erreurs et des remboursements) mérite d'être approfondie pour un usage réellement
+                        professionnel.
+                    </p>
+                    <span class="bilan_level bilan_level_mid">Niveau : bien engagé</span>
                 </div>
-                <div class="radar_item">
-                    <div class="radar_name">Base de données</div>
-                    <div class="radar_bar_wrap">
-                        <div class="radar_bar_fill" style="width:72%;background:#a3e635"></div>
-                    </div>
-                    <div class="radar_score">72/100</div>
+            </div>
+        </div>
+
+        <!-- ─────────────── SAVOIR-FAIRE 03 ─────────────── -->
+        <div class="bilan_sf">
+            <div class="bilan_sf_head">
+                <span class="bilan_sf_num">03</span>
+                <h3 class="bilan_sf_title">Déploiement d'infrastructures matérielles et logicielles</h3>
+            </div>
+
+            <div class="bilan_blocks">
+                <div class="bilan_card">
+                    <div class="bilan_block_label">// SYNTHÈSE</div>
+                    <p class="bilan_text">
+                        Ce dernier savoir-faire portait sur la mise en production. J'ai été amené à
+                        <span class="sfe_c9">déployer une application sur plusieurs environnements matériels</span>
+                        (Raspberry Pi, bornes, PC Windows). Pour gérer cette diversité, j'ai
+                        <span class="sfe_c10">centralisé le paramétrage via des fichiers de configuration JSON</span>,
+                        puis <span class="sfe_c11">automatisé le démarrage et la mise à jour à distance via SSH</span>.
+                        J'ai également veillé à
+                        <span class="sfe_c12">assurer la robustesse du système et la reprise après incident</span>
+                        (redémarrage automatique, reprise de l'affichage après une coupure).
+                    </p>
                 </div>
-                <div class="radar_item">
-                    <div class="radar_name">Frontend Vue.js</div>
-                    <div class="radar_bar_wrap">
-                        <div class="radar_bar_fill" style="width:80%;background:#f472b6"></div>
-                    </div>
-                    <div class="radar_score">80/100</div>
-                </div>
-                <div class="radar_item">
-                    <div class="radar_name">Git & collaboration</div>
-                    <div class="radar_bar_wrap">
-                        <div class="radar_bar_fill" style="width:88%;background:#8b5cf6"></div>
-                    </div>
-                    <div class="radar_score">88/100</div>
-                </div>
-                <div class="radar_item">
-                    <div class="radar_name">Tests & qualité</div>
-                    <div class="radar_bar_wrap">
-                        <div class="radar_bar_fill" style="width:55%;background:#fb923c"></div>
-                    </div>
-                    <div class="radar_score">55/100</div>
+
+                <div class="bilan_card">
+                    <div class="bilan_block_label">// ÉVALUATION</div>
+                    <p class="bilan_text">
+                        C'est le savoir-faire le plus récent pour moi : je sais déployer et configurer le parc, et
+                        l'administration à distance via SSH ne me pose plus de difficulté. En revanche, je n'ai pas
+                        encore mis en place de véritable chaîne de déploiement automatisée (CI/CD) ni de supervision
+                        centralisée du parc, ce qui constitue mon principal axe de progression.
+                    </p>
+                    <span class="bilan_level bilan_level_mid">Niveau : en cours d'acquisition</span>
                 </div>
             </div>
         </div>
@@ -530,10 +527,10 @@ const currentPage = ref(0)
 const subpages = [
     { shortTitle: 'Conception API Générique', tabLabel: 'API Générique' },
     { shortTitle: 'Intégration API externes', tabLabel: 'API Externes' },
-    { shortTitle: 'Mettre en place une borne', tabLabel: 'Borne' },
+    { shortTitle: "Déploiement d'infrastructures matérielles et logicielles", tabLabel: 'Déploiement' },
 ]
 
-const bilanTab = { tabLabel: 'Bilan & Analyse' }
+const bilanTab = { tabLabel: 'Bilan & Évaluation' }
 const allTabs = computed(() => [...subpages, bilanTab])
 
 const progressWidth = computed(() =>
@@ -543,7 +540,6 @@ const progressWidth = computed(() =>
 function goTo(i) {
     if (i >= 0 && i < allTabs.value.length) {
         currentPage.value = i
-        window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 }
 
@@ -819,14 +815,6 @@ onMounted(() => {
     padding: 60px 80px;
 }
 
-.sf_layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-    margin-bottom: 60px;
-}
-
 .sf_kicker {
     font-family: monospace;
     font-size: 0.72rem;
@@ -1001,116 +989,6 @@ onMounted(() => {
     font-family: monospace;
 }
 
-.code_block {
-    border-radius: 12px;
-    overflow: hidden;
-    background: rgba(5, 8, 20, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 28px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.code_header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.04);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.code_dots {
-    display: flex;
-    gap: 6px;
-}
-
-.code_dots .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.dot.red {
-    background: #ff5f57;
-}
-
-.dot.yellow {
-    background: #febc2e;
-}
-
-.dot.green {
-    background: #28c840;
-}
-
-.code_filename {
-    flex: 1;
-    text-align: center;
-    font-family: monospace;
-    font-size: 0.72rem;
-    color: rgba(255, 255, 255, 0.4);
-    letter-spacing: 1px;
-}
-
-.code_body {
-    padding: 20px 24px;
-    margin: 0;
-    font-family: monospace;
-    font-size: 0.82rem;
-    line-height: 1.9;
-    overflow-x: auto;
-}
-
-.code_body code {
-    color: var(--secondary-color);
-}
-
-.comp_label {
-    font-family: monospace;
-    font-size: 0.68rem;
-    letter-spacing: 2px;
-    color: var(--quaternary-color);
-    opacity: 0.6;
-    margin-bottom: 16px;
-}
-
-.comp_list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.comp_info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 6px;
-}
-
-.comp_name {
-    font-size: 0.82rem;
-    color: var(--secondary-color);
-    opacity: 0.8;
-}
-
-.comp_level {
-    font-family: monospace;
-    font-size: 0.72rem;
-    color: var(--tertiary-color);
-    opacity: 0.7;
-}
-
-.comp_bar_wrap {
-    height: 4px;
-    background: rgba(255, 255, 255, 0.07);
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.comp_bar_fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--tertiary-color), var(--quaternary-color));
-    border-radius: 2px;
-}
-
 .sf_nav {
     display: flex;
     align-items: center;
@@ -1165,15 +1043,47 @@ onMounted(() => {
     margin-bottom: 52px;
 }
 
-.bilan_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 48px;
+.bilan_sf {
+    margin-bottom: 44px;
+}
+
+.bilan_sf_head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.bilan_sf_num {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--tertiary-color);
+    background: rgba(244, 114, 182, 0.1);
+    border: 1px solid rgba(244, 114, 182, 0.25);
+}
+
+.bilan_sf_title {
+    font-size: 1.15rem;
+    color: var(--secondary-color);
+    line-height: 1.3;
+}
+
+.bilan_blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .bilan_card {
-    padding: 28px;
+    padding: 26px 28px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.07);
@@ -1181,186 +1091,110 @@ onMounted(() => {
 }
 
 .bilan_card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 24px 56px rgba(0, 0, 0, 0.45);
     border-color: rgba(255, 255, 255, 0.14);
 }
 
-.bilan_card_wide {
-    grid-column: 1 / -1;
-}
-
-.bilan_card_top {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 20px;
-}
-
-.bilan_icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    font-weight: 700;
-    flex-shrink: 0;
-}
-
-.bilan_icon.green {
-    background: rgba(40, 200, 64, 0.12);
-    color: #28c840;
-    border: 1px solid rgba(40, 200, 64, 0.25);
-}
-
-.bilan_icon.purple {
-    background: rgba(139, 92, 246, 0.12);
+.bilan_block_label {
+    font-family: monospace;
+    font-size: 0.68rem;
+    letter-spacing: 2px;
     color: var(--quaternary-color);
-    border: 1px solid rgba(139, 92, 246, 0.25);
-}
-
-.bilan_icon.pink {
-    background: rgba(244, 114, 182, 0.1);
-    color: var(--tertiary-color);
-    border: 1px solid rgba(244, 114, 182, 0.25);
-}
-
-.bilan_card_top h3 {
-    font-size: 1rem;
-    color: var(--secondary-color);
-}
-
-.bilan_list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.bilan_list li {
-    font-size: 0.87rem;
-    color: var(--secondary-color);
-    opacity: 0.65;
-    padding-left: 18px;
-    position: relative;
-    line-height: 1.5;
-}
-
-.bilan_list li::before {
-    content: '›';
-    position: absolute;
-    left: 0;
-    color: var(--tertiary-color);
-    font-weight: 700;
+    opacity: 0.7;
+    margin-bottom: 14px;
 }
 
 .bilan_text {
     font-size: 0.9rem;
     color: var(--secondary-color);
-    opacity: 0.65;
-    line-height: 1.8;
-    margin-bottom: 14px;
+    opacity: 0.8;
+    line-height: 1.9;
+    margin: 0;
 }
 
-.bilan_global_tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 18px;
-}
-
-.bilan_global_tags span {
+.bilan_level {
+    display: inline-block;
+    margin-top: 16px;
     padding: 6px 14px;
-    font-size: 0.75rem;
-    border-radius: 20px;
-    color: var(--tertiary-color);
-    border: 1px solid rgba(244, 114, 182, 0.3);
-    background: rgba(244, 114, 182, 0.05);
-    font-family: monospace;
-    letter-spacing: 0.5px;
-    transition: 0.2s ease;
-}
-
-.bilan_global_tags span:hover {
-    background: var(--tertiary-color);
-    color: #0b132b;
-}
-
-.radar_section {
-    padding: 36px;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    margin-bottom: 48px;
-}
-
-.radar_label {
-    font-family: monospace;
-    font-size: 0.68rem;
-    letter-spacing: 2px;
-    color: var(--quaternary-color);
-    opacity: 0.6;
-    margin-bottom: 28px;
-}
-
-.radar_bars {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.radar_item {
-    display: grid;
-    grid-template-columns: 220px 1fr 60px;
-    align-items: center;
-    gap: 16px;
-}
-
-.radar_name {
-    font-size: 0.85rem;
-    color: var(--secondary-color);
-    opacity: 0.75;
-}
-
-.radar_bar_wrap {
-    height: 6px;
-    background: rgba(255, 255, 255, 0.07);
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.radar_bar_fill {
-    height: 100%;
-    border-radius: 3px;
-    opacity: 0.85;
-}
-
-.radar_score {
+    border-radius: 999px;
     font-family: monospace;
     font-size: 0.72rem;
-    color: var(--secondary-color);
-    opacity: 0.5;
-    text-align: right;
+    letter-spacing: 0.5px;
 }
 
-.sfe_purple {
+.bilan_level_high {
+    color: #28c840;
+    background: rgba(40, 200, 64, 0.1);
+    border: 1px solid rgba(40, 200, 64, 0.3);
+}
+
+.bilan_level_mid {
+    color: #fb923c;
+    background: rgba(251, 146, 60, 0.1);
+    border: 1px solid rgba(251, 146, 60, 0.3);
+}
+
+/* ── 12 couleurs distinctes : une par savoir-faire élémentaire ──
+   SF 01 → c1-c4 · SF 02 → c5-c8 · SF 03 → c9-c12
+   Les mêmes classes sont réutilisées dans le bilan pour rattacher
+   chaque mention à son savoir-faire élémentaire. */
+.sfe_c1 {
     background: rgba(139, 92, 246, 0.8);
 }
 
-.sfe_pink {
+.sfe_c2 {
     background: rgba(244, 114, 182, 0.8);
 }
 
-.sfe_green {
+.sfe_c3 {
     background: rgba(34, 197, 94, 0.6);
 }
 
-.sfe_orange {
+.sfe_c4 {
     background: rgba(251, 146, 60, 0.6);
+}
+
+.sfe_c5 {
+    background: rgba(59, 130, 246, 0.78);
+}
+
+.sfe_c6 {
+    background: rgba(20, 184, 166, 0.72);
+}
+
+.sfe_c7 {
+    background: rgba(239, 68, 68, 0.7);
+}
+
+.sfe_c8 {
+    background: rgba(234, 179, 8, 0.7);
+}
+
+.sfe_c9 {
+    background: rgba(217, 70, 239, 0.72);
+}
+
+.sfe_c10 {
+    background: rgba(132, 204, 22, 0.62);
+}
+
+.sfe_c11 {
+    background: rgba(6, 182, 212, 0.72);
+}
+
+.sfe_c12 {
+    background: rgba(244, 63, 94, 0.72);
+}
+
+.trace_body code {
+    padding: 1px 6px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: monospace;
+    font-size: 0.82em;
+    color: var(--tertiary-color);
+    overflow-wrap: anywhere;
 }
 
 .sf_trace_block {
