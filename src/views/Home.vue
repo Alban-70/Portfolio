@@ -268,8 +268,9 @@
             <div class="section_label">// SAVOIR-FAIRE GÉNÉRAUX</div>
             <h2 class="section_title">Compétences mobilisées</h2>
             <p class="section_sub">
-                Synthèse des savoir-faire mis en jeu par le sujet. Les compétences
-                <mark>surlignées</mark> font l'objet d'une présentation détaillée dans les autres pages du portfolio.
+                Les <mark>8 savoir-faire</mark> développés durant le stage, répartis dans les trois autres pages du
+                portfolio. Chacun y est détaillé avec ses savoir-faire élémentaires, une trace concrète et un bilan.
+                Clique sur un savoir-faire pour ouvrir la page correspondante.
             </p>
         </div>
 
@@ -278,49 +279,51 @@
             <div class="skill_row">
                 <div class="skill_row_label">
                     <span class="skill_row_dot"></span>
-                    Back-end & Architecture
+                    Technique
                 </div>
                 <div class="skill_chips">
-                    <span class="chip chip_featured" data-page="p.2">Conception d'API REST</span>
-                    <span class="chip chip_featured" data-page="p.2">Architecture modulaire Node.js</span>
-                    <span class="chip">Gestion des erreurs & logs</span>
-                    <span class="chip">Authentification & sécurité</span>
+                    <router-link class="chip skill_link" :to="{ name: 'Technique', query: { sf: 0 } }">
+                        <span class="skill_n">01</span> Conception d'une API REST générique et modulaire
+                    </router-link>
+                    <router-link class="chip skill_link" :to="{ name: 'Technique', query: { sf: 1 } }">
+                        <span class="skill_n">02</span> Intégration et consommation d'API externes
+                    </router-link>
+                    <router-link class="chip skill_link" :to="{ name: 'Technique', query: { sf: 2 } }">
+                        <span class="skill_n">03</span> Déploiement d'infrastructures matérielles et logicielles
+                    </router-link>
                 </div>
             </div>
 
             <div class="skill_row">
                 <div class="skill_row_label">
                     <span class="skill_row_dot"></span>
-                    Base de données
+                    Suivi de projet
                 </div>
                 <div class="skill_chips">
-                    <span class="chip chip_featured" data-page="p.3">Modélisation relationnelle</span>
-                    <span class="chip">ORM & requêtes SQL</span>
+                    <router-link class="chip skill_link" :to="{ name: 'SuiviProjet', query: { sf: 0 } }">
+                        <span class="skill_n">04</span> Organiser & planifier le travail
+                    </router-link>
+                    <router-link class="chip skill_link" :to="{ name: 'SuiviProjet', query: { sf: 1 } }">
+                        <span class="skill_n">05</span> Gérer les versions & collaborer
+                    </router-link>
+                    <router-link class="chip skill_link" :to="{ name: 'SuiviProjet', query: { sf: 2 } }">
+                        <span class="skill_n">06</span> Documenter & transmettre le projet
+                    </router-link>
                 </div>
             </div>
 
             <div class="skill_row">
                 <div class="skill_row_label">
                     <span class="skill_row_dot"></span>
-                    Front-end & Intégration
+                    Intégration en entreprise
                 </div>
                 <div class="skill_chips">
-                    <span class="chip chip_featured" data-page="p.4">Développement Vue.js</span>
-                    <span class="chip">Intégration UI/UX responsive</span>
-                    <span class="chip">Consommation d'API REST</span>
-                </div>
-            </div>
-
-            <div class="skill_row">
-                <div class="skill_row_label">
-                    <span class="skill_row_dot"></span>
-                    Services & Déploiement
-                </div>
-                <div class="skill_chips">
-                    <span class="chip">Paiement en ligne (Stripe)</span>
-                    <span class="chip">Stockage cloud (AWS S3)</span>
-                    <span class="chip">Emails transactionnels (Brevo)</span>
-                    <span class="chip">Versioning Git & collaboration</span>
+                    <router-link class="chip skill_link" :to="{ name: 'IntegrationEntreprise', query: { sf: 0 } }">
+                        <span class="skill_n">07</span> Faire preuve d'autonomie & d'initiative
+                    </router-link>
+                    <router-link class="chip skill_link" :to="{ name: 'IntegrationEntreprise', query: { sf: 1 } }">
+                        <span class="skill_n">08</span> S'adapter à l'environnement technique
+                    </router-link>
                 </div>
             </div>
 
@@ -1270,5 +1273,31 @@ onMounted(() => {
 .chip_featured:hover {
     border-color: var(--tertiary-color);
     opacity: 1;
+}
+
+/* ── Savoir-faire cliquables (liens vers les pages) ── */
+.skill_link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.85;
+    border-color: rgba(192, 180, 194, 0.25);
+    transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.skill_link:hover {
+    opacity: 1;
+    border-color: var(--tertiary-color);
+    transform: translateY(-2px);
+}
+
+.skill_n {
+    font-family: monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--tertiary-color);
+    opacity: 0.85;
 }
 </style>

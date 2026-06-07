@@ -5,17 +5,18 @@
         <div class="hero_left animate_left">
             <div class="hero_eyebrow">
                 <span class="eyebrow_dot"></span>
-                TECHNIQUE
+                SUIVI DE PROJET
             </div>
-            <h1>Savoir-faire<br><em>Techniques</em></h1>
+            <h1>Suivi<br><em>de projet</em></h1>
             <p>
-                Cette section présente les compétences techniques mobilisées durant mon stage chez
+                Cette section présente les compétences mobilisées dans le
+                <strong>suivi et la conduite de projet</strong> durant mon stage chez
                 <strong>Appup</strong>.
                 Chaque sous-page documente un <span>savoir-faire élémentaire</span> appuyé sur une
                 <span>trace concrète</span>, suivi d'un <span>bilan & analyse</span> global.
             </p>
             <div class="status">
-                API REST · NODE.JS · VUE.JS · BASE DE DONNÉES · SERVICES EXTERNES
+                PLANIFICATION · GESTION DE TÂCHES · VERSIONING GIT · COLLABORATION
             </div>
         </div>
 
@@ -27,7 +28,7 @@
                 <div class="overview_items">
                     <div class="overview_item" v-for="(skill, i) in subpages" :key="i"
                         :class="{ active: currentPage === i }" @click="goTo(i)">
-                        <span class="overview_num">{{ String(i + 1).padStart(2, '0') }}</span>
+                        <span class="overview_num">{{ String(i + 4).padStart(2, '0') }}</span>
                         <span class="overview_title">{{ skill.shortTitle }}</span>
                         <span class="overview_arrow">→</span>
                     </div>
@@ -40,7 +41,7 @@
         <div class="tabs_bar">
             <button v-for="(page, i) in allTabs" :key="i" class="tab_btn" :class="{ active: currentPage === i }"
                 @click="goTo(i)">
-                <span class="tab_num">{{ String(i + 1).padStart(2, '0') }}</span>
+                <span class="tab_num">{{ String(i + 4).padStart(2, '0') }}</span>
                 <span class="tab_name">{{ page.tabLabel }}</span>
             </button>
         </div>
@@ -51,14 +52,15 @@
 
     <section v-if="currentPage === 0" class="subpage_wrapper">
         <div class="sf_left">
-            <div class="sf_kicker">// SAVOIR-FAIRE 01</div>
+            <div class="sf_kicker">// SAVOIR-FAIRE 04</div>
 
-            <h2 class="sf_title">Conception d'une API REST générique et modulaire</h2>
+            <h2 class="sf_title">Organiser & <em>planifier</em> le travail</h2>
 
             <p class="sf_desc">
-                Développement d'une API Node.js générique, organisée en modules indépendants afin de rendre chaque
-                ressource réutilisable et facilement adaptable. Chaque module dispose de ses propres routes, contrôleurs
-                et middlewares, permettant d’éviter la duplication de logique entre projets.
+                Le sujet de mon stage — concevoir une API réutilisable en Node.js — était trop vaste pour
+                être traité d'un bloc. Mon premier savoir-faire de suivi de projet a donc consisté à
+                <strong>décomposer le besoin en tâches concrètes</strong>, à les organiser dans le temps
+                et à suivre leur avancement au fil des échanges avec mon maître de stage.
             </p>
 
             <div class="sfe_block">
@@ -69,31 +71,19 @@
                 <div class="sfe_items">
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c1">
-                            Savoir concevoir une architecture d’API REST générique
-                            basée sur des routes dynamiques.
-                        </span>
+                        <span class="sfe_c1">Décomposer le besoin en tâches et fonctionnalités livrables (CRUD générique, intégration Stripe, AWS S3, Brevo…).</span>
                     </div>
-
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c2">
-                            Implémenter le routage dynamique via paramètres d’URL.
-                        </span>
+                        <span class="sfe_c2">Prioriser les tâches selon la valeur pour le projet et les dépendances techniques.</span>
                     </div>
-
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c3">
-                            Construire des requêtes SQL dynamiques.
-                        </span>
+                        <span class="sfe_c3">Estimer la charge de chaque tâche et la situer dans les jalons du stage.</span>
                     </div>
-
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c4">
-                            Sécuriser la génération de requêtes contre les injections SQL.
-                        </span>
+                        <span class="sfe_c4">Suivre l'avancement et réajuster la planification face aux imprévus.</span>
                     </div>
                 </div>
             </div>
@@ -106,57 +96,73 @@
 
                 <div class="trace_card">
                     <div class="trace_preview">
-                        <img src="../../public/trace_api_generique_horizontal.png"
-                            alt="Capture de l'architecture API" />
+                        <img src="/trace_suivi_01.png"
+                            alt="Tableau de suivi des tâches du projet API" />
 
                         <div class="trace_caption">
-                            <span class="trace_number">Trace n°1</span>
+                            <span class="trace_number">Trace n°4</span>
                             <span class="trace_caption_text">
-                                Schéma d’une API modulaire générique
+                                Tableau Trello de suivi des tâches du projet API.
                             </span>
                         </div>
                     </div>
 
                     <p class="trace_body">
-                        Le schéma en trace n°1 ci-dessus présente <span class="sfe_c1">l'architecture de l'API REST
-                            générique</span> que j'ai créée lors de mon stage chez Appup.
-                        Cette capture d'écran illustre le parcours d'une requête HTTP envoyée par le client vers le
-                        serveur, à travers les différentes étapes indiquées par les numéros.
-                        Pour cela, j'ai <span class="sfe_c2">implémenté plusieurs routes dynamiques avec des
-                            paramètres dans l'URL</span>. L'objectif est de spécifier le nom de la table sur laquelle la
-                        requête doit être exécutée, ainsi que les différents paramètres et données nécessaires à son
-                        traitement.
-                        <br>
-                        Par la suite, la route appelle le contrôleur et la fonction correspondante (numéro 3). Le
-                        contrôleur s'appuie ensuite sur un service chargé de mettre en forme les paramètres reçus avant
-                        d'appeler la fonction présente dans le fichier associé à la table concernée.
-                        <br>
-                        Au démarrage du serveur, celui-ci vérifie les tables présentes dans la base de données et crée
-                        automatiquement un fichier pour chacune d'elles si celui-ci n'existe pas déjà. Ce fichier
-                        contient l'ensemble des attributs de la table ainsi que ceux qui sont requis pour chaque
-                        requête.
-                        <br>
-                        Une fois dans le fichier correspondant à la table ciblée, la logique liée à la base de données
-                        est exécutée. Pour cela, j'ai mis en place <span class="sfe_c3">une construction dynamique
-                            des requêtes SQL</span> à partir des champs sélectionnés, des paramètres, des filtres, etc.
-                        Grâce à cette fonctionnalité, j'ai pu <span class="sfe_c4">limiter les risques liés aux
-                            injections SQL</span>.
-                        <br>
-                        Une fois le traitement effectué, le résultat est renvoyé au client.
-                        <br><br>
-                        Cette API dynamique a pour objectif de réduire le nombre de fonctions nécessaires au traitement
-                        des requêtes. Par exemple, auparavant, je devais créer une fonction pour récupérer un article à
-                        partir de son identifiant et une autre pour le récupérer à partir de son nom. Désormais, ces
-                        différents cas sont gérés par une seule et même fonction, ce qui permet de limiter la
-                        duplication du code et d'éviter l'écriture de nombreuses requêtes spécifiques.
-                        
+                        Cette capture en trace n°4 ci-dessus montre le tableau <strong>Trello</strong> sur lequel j'ai organisé le projet
+                        tout au long du stage. Trello est un outil de gestion de tâches en colonnes (méthode
+                        <em>kanban</em>) : chaque tâche est une carte que l'on déplace d'une colonne à l'autre au
+                        fil de son avancement. J'ai structuré mon tableau (colonnes encadrées en couleur ci-dessus)
+                        pour suivre une tâche depuis l'idée jusqu'à sa réalisation, et garder à tout moment une
+                        vision d'ensemble du projet.
                     </p>
 
+                    <p class="trace_body">
+                        La colonne <span class="doc_chip dc_violet">1 · Bac à sable</span> est ma réserve de tâches,
+                        l'équivalent d'un <em>backlog</em>. C'est là que je
+                        <span class="sfe_c1">décompose le besoin global en fonctionnalités livrables</span> et
+                        autonomes — système d'authentification, système de paiement, gestion des adresses,
+                        déclinaisons de produits… Plutôt que d'attaquer un sujet vaste d'un bloc, je le transforme
+                        en une liste de tâches concrètes, chacune réalisable et vérifiable indépendamment.
+                    </p>
+
+                    <p class="trace_body">
+                        Faire passer une tâche du bac à sable vers un sprint matérialise la
+                        <span class="sfe_c2">priorisation</span> : je choisis quoi traiter en premier selon la
+                        valeur pour le projet et les dépendances techniques (par exemple, l'authentification avant
+                        le paiement). Toutes les idées restent visibles dans le bac à sable, mais seules les plus
+                        prioritaires entrent dans le sprint en cours.
+                    </p>
+
+                    <p class="trace_body">
+                        Les colonnes <span class="doc_chip dc_blue">2 · Sprint to do</span>,
+                        <span class="doc_chip dc_orange">3 · Sprint en cours</span> et
+                        <span class="doc_chip dc_green">4 · Sprint done</span> assurent le
+                        <span class="sfe_c4">suivi de l'avancement</span> au quotidien : chaque carte progresse de
+                        gauche à droite, depuis les tâches planifiées pour le sprint, vers celles activement en
+                        développement, puis vers celles terminées. Ce flux visuel me permettait de savoir d'un coup
+                        d'œil où j'en étais, et de rendre compte facilement de mon avancement à mon maître de stage.
+                    </p>
+
+                    <p class="trace_body">
+                        Les pastilles de points sur les cartes (3, 5, 8, 13) correspondent à une
+                        <span class="sfe_c3">estimation de la charge</span> de chaque tâche, selon la méthode du
+                        <em>planning poker</em> : plus le nombre est élevé, plus la tâche est jugée complexe. Cette
+                        estimation aide à constituer des sprints réalistes et à ne pas surcharger une période.
+                    </p>
+
+                    <p class="trace_body">
+                        Enfin, la colonne <span class="doc_chip dc_pink">5 · Semaine 1</span> archive le travail
+                        accompli lors du premier sprint (inscription avec e-mail de confirmation, réinitialisation
+                        du mot de passe, connexion, <code>getMe</code>…). En conservant ainsi l'historique des
+                        sprints passés, le tableau garde une <strong>trace concrète du rythme et de la progression
+                        réelle</strong> du projet, sprint après sprint.
+                    </p>
                 </div>
             </div>
         </div>
+
         <div class="sf_nav">
-            <button class="sf_nav_btn" @click="goTo(0)" disabled>← Précédent</button>
+            <button class="sf_nav_btn" disabled>← Précédent</button>
             <div class="sf_dots">
                 <span v-for="(_, i) in allTabs" :key="i" class="sf_dot_item" :class="{ active: currentPage === i }"
                     @click="goTo(i)"></span>
@@ -167,16 +173,14 @@
 
     <section v-if="currentPage === 1" class="subpage_wrapper">
         <div class="sf_left">
-            <div class="sf_kicker">// SAVOIR-FAIRE 02</div>
+            <div class="sf_kicker">// SAVOIR-FAIRE 05</div>
 
-            <h2 class="sf_title">Intégration et consommation d'API externes</h2>
+            <h2 class="sf_title">Gérer les versions & <em>collaborer</em></h2>
 
             <p class="sf_desc">
-                Connexion de l'application à un service tiers afin de déléguer une fonctionnalité complexe : le paiement
-                en ligne avec Stripe. L'intégration repose sur la consommation de l'API REST de Stripe, sécurisée par des
-                clés d'API, et sur l'écoute de webhooks qui notifient le serveur en temps réel des événements de
-                paiement. Ce mécanisme permet de confirmer les commandes de façon asynchrone et fiable, sans dépendre du
-                retour de l'utilisateur dans le navigateur.
+                Tout au long du stage, j'ai utilisé <strong>Git</strong> pour versionner le développement de l'API :
+                enregistrer chaque étape fonctionnelle, synchroniser mon travail avec le dépôt distant et conserver
+                un historique lisible permettant de retrouver n'importe quel état du projet.
             </p>
 
             <div class="sfe_block">
@@ -187,30 +191,19 @@
                 <div class="sfe_items">
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c5">
-                            Savoir intégrer un service tiers en consommant son API REST.
-                        </span>
+                        <span class="sfe_c5">Versionner le code régulièrement, à chaque étape fonctionnelle aboutie.</span>
                     </div>
-
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c6">
-                            Mettre en place un tunnel de paiement sécurisé avec Stripe.
-                        </span>
+                        <span class="sfe_c6">Rédiger des messages de commit décrivant le changement apporté.</span>
                     </div>
-
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c7">
-                            Traiter les événements de paiement de manière asynchrone.
-                        </span>
+                        <span class="sfe_c7">Synchroniser le travail avec le dépôt distant (push / pull sur origin/main).</span>
                     </div>
-
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c8">
-                            Garantir la fiabilité des transactions grâce aux webhooks.
-                        </span>
+                        <span class="sfe_c8">Conserver un historique linéaire et lisible pour suivre et retracer l'évolution du projet.</span>
                     </div>
                 </div>
             </div>
@@ -223,49 +216,57 @@
 
                 <div class="trace_card">
                     <div class="trace_preview">
-                        <img src="../../public/trace_api_externes_horizontal.png"
-                            alt="Tableau de bord des webhooks Stripe : événements de paiement reçus et traités" />
+                        <img src="/trace_suivi_02.png"
+                            alt="Historique Git du projet API" />
 
                         <div class="trace_caption">
-                            <span class="trace_number">Trace n°2</span>
+                            <span class="trace_number">Trace n°5</span>
                             <span class="trace_caption_text">
-                                Réception et traitement des webhooks de paiement Stripe
+                                Historique Git du projet API, messages normalisés en « Conventional Commits ».
                             </span>
                         </div>
                     </div>
 
                     <p class="trace_body">
-                        La capture d'écran en trace n°2 ci-dessus représente le tableau de bord des webhooks de Stripe.
-                        <span class="sfe_c6">Stripe</span> est une entreprise spécialisée dans le paiement en ligne :
-                        plutôt que de gérer moi-même les cartes bancaires, je délègue cette tâche sensible à un expert.
-                        Mon application dialogue avec lui à travers son <span class="sfe_c5">API REST</span> — une
-                        sorte de « guichet » standardisé qui permet à deux programmes de se parler sur internet, mon
-                        application présentant à chaque échange une clé secrète pour prouver son identité (API KEY).
-                        <br>
-                        Lorsqu'un client règle sa commande, Stripe déclenche tout un enchaînement d'étapes, appelées
-                        « événements », que l'on retrouve dans la liste <strong>encadrée en orange</strong> à gauche :
-                        <code>payment_intent.succeeded</code> (le paiement a réussi), <code>charge.succeeded</code> (la
-                        carte a bien été débitée), <code>invoice.paid</code> (la facture est réglée) et enfin
-                        <code>checkout.session.completed</code> (l'achat est terminé). Les voir tous présents prouve que
-                        le <span class="sfe_c6">tunnel de paiement Stripe s'est déroulé jusqu'à son terme</span>.
-                        <br>
-                        Chaque événement est transmis à mon serveur par un <span class="sfe_c8">webhook</span>. Un
-                        webhook, c'est une notification automatique que Stripe « pousse » vers mon serveur dès qu'il se
-                        passe quelque chose — un peu comme un SMS qui prévient que la pizza est prête, au lieu de devoir
-                        rappeler la pizzeria sans arrêt. Le statut <span class="sfe_c8">200 OK</span> affiché devant
-                        chaque ligne est le code qui signifie « bien reçu, tout va bien » : il confirme que mon serveur a
-                        bien réceptionné et traité chaque notification. À droite, dans l'<strong>encadré rouge</strong>,
-                        on voit la réponse que mon application renvoie à Stripe pour chaque événement : un court message
-                        de confirmation indiquant <code>"status": "success"</code> et <code>"received": true</code>,
-                        c'est-à-dire un accusé de réception prouvant que la notification a bien été prise en compte.
-                        <br>
-                        Ce mécanisme me permet de <span class="sfe_c7">traiter les paiements de manière
-                            asynchrone</span> : la confirmation de la commande ne dépend pas de ce que fait l'utilisateur
-                        dans son navigateur, mais d'une notification envoyée directement de serveur à serveur par Stripe.
-                        <br><br>
-                        C'est ce qui <span class="sfe_c8">garantit la fiabilité des transactions</span> : même si le
-                        client ferme sa page juste après avoir payé, l'événement est tout de même reçu et la commande
-                        bien confirmée, sans qu'aucun paiement ne soit perdu.
+                        Cette capture en trace n°5 présente l'historique Git complet du projet API, du commit
+                        d'initialisation (<em>chore: initialisation du projet</em>) jusqu'à l'intégration des
+                        abonnements Stripe. Chaque ligne marquée d'une étoile correspond à un commit, c'est-à-dire
+                        un point de sauvegarde figé dans le temps.
+                    </p>
+
+                    <p class="trace_body">
+                        On y retrouve d'abord la <span class="sfe_c5">succession de commits enregistrés à
+                        chaque étape fonctionnelle aboutie</span> : initialisation, refactorisations
+                        successives, ajout du <em>soft delete</em>, séparation de la logique d'envoi d'email,
+                        finalisation du backend puis paiement Stripe. Cette régularité montre que je versionnais
+                        le code dès qu'une fonctionnalité était terminée, plutôt que par gros blocs irréguliers.
+                    </p>
+
+                    <p class="trace_body">
+                        Chaque commit est accompagné d'un <span class="sfe_c6">message décrivant précisément le
+                        changement apporté</span>, ce qui rend l'historique lisible sans avoir à ouvrir le code :
+                        on comprend l'intention de chaque modification d'un simple coup d'œil. Cette clarté est
+                        renforcée par la convention « Conventional Commits » détaillée plus bas.
+                    </p>
+
+                    <p class="trace_body">
+                        Enfin, le commit de tête porte le repère <code>HEAD -&gt; main, origin/main</code> : il
+                        atteste de la <span class="sfe_c7">synchronisation de mon travail local avec le dépôt
+                        distant</span> (le code poussé est bien à jour côté serveur), garantissant à la fois une
+                        sauvegarde hors de ma machine et une référence partagée. L'ensemble compose un
+                        <span class="sfe_c8">historique linéaire et lisible</span> qui retrace fidèlement toute
+                        l'évolution du projet et permet, au besoin, de revenir à n'importe quel état antérieur.
+                    </p>
+
+                    <p class="trace_body">
+                        Chaque message suit la convention <strong>« Conventional Commits »</strong> : un
+                        préfixe coloré indique d'un coup d'œil la nature du changement —
+                        <span class="cc_badge cc_feat">feat</span> pour une nouvelle fonctionnalité,
+                        <span class="cc_badge cc_refactor">refactor</span> pour une réorganisation du code
+                        sans modifier son comportement, et
+                        <span class="cc_badge cc_chore">chore</span> pour une tâche d'entretien
+                        (initialisation, nettoyage, configuration). Cette discipline rend l'historique
+                        immédiatement lisible et facilite le suivi du projet.
                     </p>
                 </div>
             </div>
@@ -283,14 +284,15 @@
 
     <section v-if="currentPage === 2" class="subpage_wrapper">
         <div class="sf_left">
-            <div class="sf_kicker">// SAVOIR-FAIRE 03</div>
+            <div class="sf_kicker">// SAVOIR-FAIRE 06</div>
 
-            <h2 class="sf_title">Déploiement d'infrastructures matérielles et logicielles</h2>
+            <h2 class="sf_title">Documenter & <em>transmettre</em> le projet</h2>
 
             <p class="sf_desc">
-                Mise en production d'une application d'affichage sur un parc d'appareils hétérogènes (Raspberry Pi,
-                bornes, PC Windows). Le déploiement repose sur une configuration unifiée par fichiers JSON, un
-                démarrage automatique adapté à chaque système d'exploitation et une administration à distance via SSH.
+                En parallèle de l'API, j'ai mis en place un <strong>système de borne</strong> : un poste Windows
+                affichant un site web en mode kiosque. Pour que l'équipe puisse l'<strong>exploiter et le
+                maintenir sans moi</strong> après le stage, j'ai rédigé une documentation complète décrivant son
+                fonctionnement et ses procédures.
             </p>
 
             <div class="sfe_block">
@@ -301,30 +303,19 @@
                 <div class="sfe_items">
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c9">
-                            Savoir déployer une application sur plusieurs environnements matériels (Raspberry, borne, PC).
-                        </span>
+                        <span class="sfe_c9">Structurer une documentation claire et navigable (sections, tableaux, procédures numérotées).</span>
                     </div>
-
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c10">
-                            Centraliser le paramétrage via des fichiers de configuration JSON.
-                        </span>
+                        <span class="sfe_c10">Décrire les procédures d'exploitation et de maintenance pas à pas (mot de passe, mise à jour du lien, modification d'un script).</span>
                     </div>
-
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c11">
-                            Automatiser le démarrage et la mise à jour à distance via SSH.
-                        </span>
+                        <span class="sfe_c11">Expliquer le fonctionnement technique du système (démarrage automatique, requête vers l'API, blocage clavier).</span>
                     </div>
-
                     <div class="sfe_item">
                         <span class="sfe_bullet">›</span>
-                        <span class="sfe_c12">
-                            Assurer la robustesse du système et la reprise après incident.
-                        </span>
+                        <span class="sfe_c12">Garantir la reprise du projet par un tiers (emplacements des fichiers, prérequis, avertissements).</span>
                     </div>
                 </div>
             </div>
@@ -337,46 +328,70 @@
 
                 <div class="trace_card">
                     <div class="trace_preview">
-                        <img src="../../public/trace_deploiement_environnement.png"
-                            alt="Fichier de configuration JSON d'un appareil : média, orientation, réseau, démarrage et arrêt automatiques" />
+                        <img src="/trace_suivi_03.png"
+                            alt="Documentation d'exploitation du système de borne" />
 
                         <div class="trace_caption">
-                            <span class="trace_number">Trace n°3</span>
+                            <span class="trace_number">Trace n°6</span>
                             <span class="trace_caption_text">
-                                Fichier de configuration JSON lu par un appareil du parc au démarrage
+                                Documentation d'exploitation du système de borne (documentation.md).
                             </span>
                         </div>
                     </div>
 
                     <p class="trace_body">
-                        La capture d'écran en trace n°3 ci-dessus est un exemple de 
-                        <span class="sfe_c10">fichier de configuration au format JSON</span> que chaque appareil lit à
-                        son démarrage. Tout le paramétrage est ainsi centralisé en un seul endroit, ce qui permet
-                        d'adapter le comportement d'une machine sans jamais modifier le code de l'application.
-                        <br>
-                        Chaque clé pilote un aspect précis du fonctionnement. Le champ <code>device</code> contient
-                        l'adresse MAC de la machine (ici <code>b8:27:eb:25:a0:3e</code>, un préfixe propre aux
-                        Raspberry Pi) : il identifie l'appareil de façon unique au sein du parc et permet de
-                        <span class="sfe_c9">cibler un environnement matériel particulier</span> parmi les Raspberry Pi,
-                        les bornes et les PC Windows. Les champs <code>typeMedia</code>, <code>url</code> et
-                        <code>orientation</code> décrivent le contenu à diffuser — ici une vidéo YouTube affichée en mode
-                        paysage : changer ce qui s'affiche sur un écran revient donc simplement à éditer ce fichier.
-                        <br>
-                        Le champ <code>lancementAuto: "on"</code> indique que l'application doit se
-                        <span class="sfe_c11">lancer automatiquement au démarrage</span> de la machine, sans aucune
-                        intervention sur site, tandis que <code>network</code> et <code>networkPassword</code> (masqué
-                        pour des raisons de sécurité) fournissent les identifiants Wi-Fi pour que l'appareil se connecte
-                        seul au bon réseau. Ces fichiers peuvent ensuite être mis à jour
-                        <span class="sfe_c11">à distance via SSH</span>, ce qui évite tout déplacement physique.
-                        <br>
-                        Enfin, <code>autoStopHour: "15:35"</code> programme l'extinction automatique de l'affichage à une
-                        heure donnée. Couplé au lancement automatique, ce mécanisme
-                        <span class="sfe_c12">assure la robustesse du système et un fonctionnement maîtrisé</span> :
-                        l'affichage démarre et s'arrête tout seul chaque jour, et reprend après une coupure sans
-                        intervention.
-                        <br><br>
-                        Grâce à ce format unique, le même programme s'exécute à l'identique sur des matériels et des
-                        systèmes d'exploitation différents : seule cette configuration change d'un appareil à l'autre.
+                        Cette capture montre la documentation que j'ai rédigée pour le système de borne — un poste
+                        Windows déployé en conditions réelles qui affiche un site web en mode kiosque. Comme ce
+                        dispositif devait rester opérationnel après mon départ, sa documentation faisait partie
+                        intégrante du projet. Elle est <span class="sfe_c9">structurée en sections claires</span>,
+                        avec des tableaux, des chemins de fichiers et des procédures numérotées étape par étape qui
+                        rendent chaque information immédiatement repérable.
+                    </p>
+
+                    <p class="trace_body">
+                        Pour faciliter la lecture, chaque encadré coloré correspond à un aspect distinct du système :
+                        <span class="doc_chip dc_violet">Types de comptes</span> distingue le compte administrateur
+                        du compte borne ;
+                        <span class="doc_chip dc_pink">Mots de passe</span> réunit les identifiants et la procédure
+                        de changement ;
+                        <span class="doc_chip dc_green">Fonctionnement côté borne</span> explique le lancement
+                        automatique au démarrage ;
+                        <span class="doc_chip dc_blue">Récupération du lien</span> détaille la requête vers l'API et
+                        sa réponse JSON ;
+                        <span class="doc_chip dc_orange">Mise à jour du lien</span> donne la marche à suivre quand
+                        l'adresse change ;
+                        <span class="doc_chip dc_cyan">Blocage de raccourcis</span> couvre l'édition et la
+                        recompilation du script clavier ;
+                        et <span class="doc_chip dc_yellow">Remarques</span> regroupe les points de vigilance.
+                        Ce découpage en encadrés permet de retrouver immédiatement la procédure recherchée.
+                    </p>
+
+                    <p class="trace_body">
+                        Au-delà de la description, elle fournit de véritables
+                        <span class="sfe_c10">procédures d'exploitation et de maintenance pas à pas</span> que
+                        n'importe qui peut suivre sans connaître le projet : modifier le mot de passe du compte
+                        Borne (déconnexion, <code>Autologon.exe</code>, validation), mettre à jour le lien affiché,
+                        ou éditer puis recompiler le script de blocage clavier selon une séquence explicite
+                        — <em>édition → recompilation → redémarrage</em>. Chaque étape précise le raccourci ou le
+                        clic exact à effectuer, pour éviter toute ambiguïté.
+                    </p>
+
+                    <p class="trace_body">
+                        Elle <span class="sfe_c11">explique aussi le fonctionnement technique</span> du dispositif,
+                        afin que le lecteur comprenne <em>pourquoi</em> il agit et pas seulement <em>comment</em> :
+                        au démarrage, le script <code>start.bat</code> s'exécute automatiquement et interroge l'URL
+                        <code>appup.fr/kiosk-link</code>, qui renvoie en JSON l'adresse du site à afficher ; le
+                        script charge alors ce site dans la borne. En parallèle, le script AutoHotkey
+                        <code>bloque.ahk</code> désactive certains raccourcis clavier pour sécuriser le mode kiosque.
+                    </p>
+
+                    <p class="trace_body">
+                        Enfin, en précisant les <span class="sfe_c12">emplacements exacts des fichiers, les
+                        prérequis et les points de vigilance</span> (redémarrage obligatoire pour appliquer un
+                        nouveau lien, réponse de l'URL toujours valide et bien formatée en JSON), cette
+                        documentation rend le système <strong>autonome de ma présence</strong> : une autre personne
+                        d'Appup peut reprendre, dépanner et faire évoluer la borne sans mon intervention. C'est
+                        précisément l'objectif d'une bonne documentation de suivi de projet.
                     </p>
                 </div>
             </div>
@@ -405,34 +420,27 @@
 
         <div class="bilan_sf">
             <div class="bilan_sf_head">
-                <span class="bilan_sf_num">01</span>
-                <h3 class="bilan_sf_title">Conception d'une API REST générique et modulaire</h3>
+                <span class="bilan_sf_num">04</span>
+                <h3 class="bilan_sf_title">Organiser & planifier le travail</h3>
             </div>
 
             <div class="bilan_blocks">
                 <div class="bilan_card">
                     <div class="bilan_block_label">// SYNTHÈSE</div>
                     <p class="bilan_text">
-                        Ce premier savoir-faire portait sur le cœur de l'API. J'ai d'abord
-                        <span class="sfe_c1">conçu une architecture d'API REST générique basée sur des routes
-                            dynamiques</span>, capable de traiter n'importe quelle ressource sans réécrire de code
-                        spécifique. Pour cela, j'ai
-                        <span class="sfe_c2">implémenté le routage dynamique via des paramètres passés dans
-                            l'URL</span>, qui indiquent la table et l'opération visées. Côté base de données, j'ai appris
-                        à <span class="sfe_c3">construire des requêtes SQL dynamiques</span> à partir des champs et
-                        filtres reçus, et surtout à
-                        <span class="sfe_c4">sécuriser leur génération contre les injections SQL</span> grâce à des
-                        requêtes paramétrées.
+                        Sur ce projet, j'ai appris à transformer un sujet vaste en un plan d'action concret :
+                        <span class="sfe_c1">décomposer le besoin</span> en tâches livrables, les
+                        <span class="sfe_c2">prioriser</span> selon leur valeur et leurs dépendances,
+                        <span class="sfe_c3">estimer leur charge</span> pour les répartir dans le temps, et
+                        <span class="sfe_c4">suivre l'avancement</span> en ajustant la planification au fil des imprévus.
                     </p>
                 </div>
 
                 <div class="bilan_card">
                     <div class="bilan_block_label">// ÉVALUATION</div>
                     <p class="bilan_text">
-                        C'est le savoir-faire que je maîtrise le mieux : l'architecture générique fonctionne en
-                        production et m'a fait gagner un temps considérable. Je suis à l'aise avec le routage dynamique
-                        et les requêtes paramétrées. Il me reste à approfondir l'optimisation des requêtes complexes
-                        (jointures, performances) sur de gros volumes de données. 
+                        Je me sens à l'aise pour découper et suivre un projet au quotidien. Mon principal axe de
+                        progression reste l'estimation de charge, que j'affine avec l'expérience pour gagner en précision.
                     </p>
                     <span class="bilan_level bilan_level_high">Niveau : maîtrisé</span>
                 </div>
@@ -441,66 +449,59 @@
 
         <div class="bilan_sf">
             <div class="bilan_sf_head">
-                <span class="bilan_sf_num">02</span>
-                <h3 class="bilan_sf_title">Intégration et consommation d'API externes</h3>
+                <span class="bilan_sf_num">05</span>
+                <h3 class="bilan_sf_title">Gérer les versions & collaborer</h3>
             </div>
 
             <div class="bilan_blocks">
                 <div class="bilan_card">
                     <div class="bilan_block_label">// SYNTHÈSE</div>
                     <p class="bilan_text">
-                        Ce savoir-faire concernait l'ouverture de l'application vers l'extérieur. J'ai appris à
-                        <span class="sfe_c5">intégrer un service tiers en consommant son API REST</span>, en
-                        m'authentifiant par clés d'API. Concrètement, j'ai
-                        <span class="sfe_c6">mis en place un tunnel de paiement sécurisé avec Stripe</span>, puis j'ai
-                        <span class="sfe_c7">traité les événements de paiement de manière asynchrone</span> : la
-                        confirmation de commande ne dépend plus du navigateur du client. Enfin, j'ai
-                        <span class="sfe_c8">garanti la fiabilité des transactions grâce aux webhooks</span>, qui
-                        notifient mon serveur en temps réel.
+                        Git est devenu un réflexe quotidien : <span class="sfe_c5">versionner le code à chaque étape
+                        fonctionnelle</span>, accompagner chaque commit d'un <span class="sfe_c6">message décrivant
+                        le changement</span>, <span class="sfe_c7">synchroniser mon travail avec le dépôt distant</span>
+                        et conserver un <span class="sfe_c8">historique linéaire et lisible</span> retraçant toute
+                        l'évolution du projet.
                     </p>
                 </div>
 
                 <div class="bilan_card">
                     <div class="bilan_block_label">// ÉVALUATION</div>
                     <p class="bilan_text">
-                        Je me sens solide sur la consommation d'API et la logique des webhooks, que j'ai vu fonctionner
-                        de bout en bout. La sécurité du paiement (vérification de la signature des webhooks, gestion fine
-                        des erreurs et des remboursements) mérite d'être approfondie pour un usage réellement
-                        professionnel.
+                        Je maîtrise le flux de travail Git au quotidien (add, commit, push, retour en arrière). Mon
+                        axe de progression est le travail collaboratif plus avancé : branches par fonctionnalité,
+                        pull requests et revue de code systématique.
                     </p>
-                    <span class="bilan_level bilan_level_mid">Niveau : bien engagé</span>
+                    <span class="bilan_level bilan_level_high">Niveau : maîtrisé</span>
                 </div>
             </div>
         </div>
 
         <div class="bilan_sf">
             <div class="bilan_sf_head">
-                <span class="bilan_sf_num">03</span>
-                <h3 class="bilan_sf_title">Déploiement d'infrastructures matérielles et logicielles</h3>
+                <span class="bilan_sf_num">06</span>
+                <h3 class="bilan_sf_title">Documenter & transmettre le projet</h3>
             </div>
 
             <div class="bilan_blocks">
                 <div class="bilan_card">
                     <div class="bilan_block_label">// SYNTHÈSE</div>
                     <p class="bilan_text">
-                        Ce dernier savoir-faire portait sur la mise en production. J'ai été amené à
-                        <span class="sfe_c9">déployer une application sur plusieurs environnements matériels</span>
-                        (Raspberry Pi, bornes, PC Windows). Pour gérer cette diversité, j'ai
-                        <span class="sfe_c10">centralisé le paramétrage via des fichiers de configuration JSON</span>,
-                        puis <span class="sfe_c11">automatisé le démarrage et la mise à jour à distance via SSH</span>.
-                        J'ai également veillé à
-                        <span class="sfe_c12">assurer la robustesse du système et la reprise après incident</span>
-                        (redémarrage automatique, reprise de l'affichage après une coupure).
+                        Pour le système de borne, j'ai produit une documentation
+                        <span class="sfe_c9">claire et structurée</span> réunissant des
+                        <span class="sfe_c10">procédures d'exploitation et de maintenance pas à pas</span>, une
+                        <span class="sfe_c11">explication du fonctionnement technique</span> (démarrage automatique,
+                        requête API, blocage clavier) et tous les éléments nécessaires à la
+                        <span class="sfe_c12">reprise du projet par un tiers</span>.
                     </p>
                 </div>
 
                 <div class="bilan_card">
                     <div class="bilan_block_label">// ÉVALUATION</div>
                     <p class="bilan_text">
-                        C'est le savoir-faire le plus récent pour moi : je sais déployer et configurer le parc, et
-                        l'administration à distance via SSH ne me pose plus de difficulté. En revanche, je n'ai pas
-                        encore mis en place de véritable chaîne de déploiement automatisée (CI/CD) ni de supervision
-                        centralisée du parc, ce qui constitue mon principal axe de progression.
+                        Je sais rédiger une documentation d'exploitation exploitable par quelqu'un d'autre que moi.
+                        Je souhaite progresser sur la documentation purement technique du code (doc des routes
+                        d'API, génération automatique).
                     </p>
                     <span class="bilan_level bilan_level_mid">Niveau : en cours d'acquisition</span>
                 </div>
@@ -527,9 +528,9 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const subpages = [
-    { shortTitle: 'Conception API Générique', tabLabel: 'API Générique' },
-    { shortTitle: 'Intégration API externes', tabLabel: 'API Externes' },
-    { shortTitle: "Déploiement d'infrastructures matérielles et logicielles", tabLabel: 'Déploiement' },
+    { shortTitle: 'Organiser & planifier le travail', tabLabel: 'Organisation' },
+    { shortTitle: 'Gérer les versions & collaborer', tabLabel: 'Versioning & collaboration' },
+    { shortTitle: 'Documenter & transmettre le projet', tabLabel: 'Documentation' },
 ]
 
 function resolveTab(v) {
@@ -916,26 +917,6 @@ onMounted(() => {
     margin-bottom: 36px;
 }
 
-.trace_label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: monospace;
-    font-size: 0.68rem;
-    letter-spacing: 2px;
-    color: var(--quaternary-color);
-    margin-bottom: 14px;
-    opacity: 0.7;
-}
-
-.trace_dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--tertiary-color);
-    box-shadow: 0 0 6px var(--tertiary-color);
-}
-
 .trace_card {
     padding: 22px;
     border-radius: 14px;
@@ -949,54 +930,12 @@ onMounted(() => {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
-.trace_header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 14px;
-}
-
-.trace_icon {
-    font-size: 1.4rem;
-    color: var(--tertiary-color);
-    opacity: 0.7;
-}
-
-.trace_header strong {
-    display: block;
-    font-size: 0.92rem;
-    color: var(--secondary-color);
-    margin-bottom: 2px;
-}
-
-.trace_header small {
-    font-family: monospace;
-    font-size: 0.68rem;
-    color: var(--secondary-color);
-    opacity: 0.45;
-}
-
 .trace_body {
     font-size: 0.85rem;
     color: var(--secondary-color);
     opacity: 0.6;
     line-height: 1.65;
     margin-bottom: 16px;
-}
-
-.trace_tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.trace_tag {
-    padding: 4px 10px;
-    font-size: 0.7rem;
-    border-radius: 20px;
-    color: var(--tertiary-color);
-    border: 1px solid rgba(244, 114, 182, 0.3);
-    font-family: monospace;
 }
 
 .sf_nav {
@@ -1203,6 +1142,85 @@ onMounted(() => {
     overflow-wrap: anywhere;
 }
 
+.cc_badge {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.82em;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.cc_feat {
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.14);
+    border: 1px solid rgba(52, 211, 153, 0.55);
+}
+
+.cc_refactor {
+    color: #a78bfa;
+    background: rgba(139, 92, 246, 0.16);
+    border: 1px solid rgba(139, 92, 246, 0.6);
+}
+
+.cc_chore {
+    color: #60a5fa;
+    background: rgba(96, 165, 250, 0.14);
+    border: 1px solid rgba(96, 165, 250, 0.55);
+}
+
+.doc_chip {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 6px;
+    font-size: 0.82em;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.dc_violet {
+    color: #a78bfa;
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.5);
+}
+
+.dc_pink {
+    color: #f472b6;
+    background: rgba(244, 114, 182, 0.12);
+    border: 1px solid rgba(244, 114, 182, 0.5);
+}
+
+.dc_green {
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.12);
+    border: 1px solid rgba(52, 211, 153, 0.5);
+}
+
+.dc_blue {
+    color: #60a5fa;
+    background: rgba(96, 165, 250, 0.12);
+    border: 1px solid rgba(96, 165, 250, 0.5);
+}
+
+.dc_orange {
+    color: #fb923c;
+    background: rgba(251, 146, 60, 0.12);
+    border: 1px solid rgba(251, 146, 60, 0.5);
+}
+
+.dc_cyan {
+    color: #22d3ee;
+    background: rgba(34, 211, 238, 0.12);
+    border: 1px solid rgba(34, 211, 238, 0.5);
+}
+
+.dc_yellow {
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.12);
+    border: 1px solid rgba(251, 191, 36, 0.5);
+}
+
 .sf_trace_block {
     position: relative;
     margin-top: 40px;
@@ -1311,57 +1329,6 @@ onMounted(() => {
         0 0 0 1px rgba(244, 114, 182, 0.08);
 }
 
-.trace_header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-
-    margin-bottom: 18px;
-}
-
-.trace_icon {
-    width: 48px;
-    height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 14px;
-
-    background:
-        linear-gradient(135deg,
-            rgba(244, 114, 182, 0.18),
-            rgba(139, 92, 246, 0.14));
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    color: var(--tertiary-color);
-    font-size: 1.1rem;
-
-    flex-shrink: 0;
-}
-
-.trace_header strong {
-    display: block;
-
-    font-size: 0.98rem;
-    font-weight: 600;
-
-    color: var(--secondary-color);
-
-    margin-bottom: 5px;
-}
-
-.trace_header small {
-    font-family: monospace;
-    font-size: 0.68rem;
-    letter-spacing: 1px;
-
-    color: var(--secondary-color);
-    opacity: 0.45;
-}
-
 .trace_body {
     position: relative;
 
@@ -1395,52 +1362,9 @@ onMounted(() => {
     opacity: 0.7;
 }
 
-.trace_tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.trace_tag {
-    padding: 6px 12px;
-
-    border-radius: 999px;
-
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(244, 114, 182, 0.18);
-
-    color: var(--tertiary-color);
-
-    font-size: 0.68rem;
-    font-family: monospace;
-    letter-spacing: 0.8px;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease,
-        border-color 0.25s ease;
-}
-
-.trace_tag:hover {
-    background: rgba(244, 114, 182, 0.14);
-    border-color: rgba(244, 114, 182, 0.35);
-
-    transform: translateY(-2px);
-}
-
 @media (max-width: 768px) {
     .trace_card {
         padding: 20px;
-    }
-
-    .trace_header {
-        align-items: flex-start;
-    }
-
-    .trace_icon {
-        width: 42px;
-        height: 42px;
-        font-size: 1rem;
     }
 
     .trace_body {
