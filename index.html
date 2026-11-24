@@ -123,11 +123,11 @@
             <p class="eyebrow" data-i18n="projects.eyebrow">02 / PROJETS</p>
             <h2 id="projects-title" data-i18n="projects.title">Projets & <span>réalisations.</span></h2>
           </div>
-          <p class="section-aside" data-i18n="projects.aside">Quatre projets, du web aux applications,<br />conçus seul ou en équipe.</p>
+          <p class="section-aside" data-i18n="projects.aside">Cinq projets, du web aux applications,<br />conçus seul, en équipe ou en entreprise.</p>
         </div>
         <div class="project-filters" role="group" aria-label="Filtrer les projets" data-i18n-aria-label="projects.filters">
           <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true"><span data-i18n="projects.all">Tous</span>
-            <span>04</span></button>
+            <span>05</span></button>
           <button type="button" class="filter-button" data-filter="web" aria-pressed="false" data-i18n="projects.web">Web</button>
           <button type="button" class="filter-button" data-filter="software" aria-pressed="false" data-i18n="projects.applications">Applications</button>
         </div>
@@ -165,9 +165,44 @@
             </div>
           </article>
 
+          <article class="project-card project-card--secondary project-card--internship" data-category="web">
+            <div class="project-preview project-preview--internship" aria-hidden="true">
+              <span class="preview-index" data-i18n="project.internship.preview">02 / STAGE · API & MULTISUPPORT</span>
+              <div class="internship-dashboard">
+                <div class="internship-api"><small>API / MEDIA</small><code>GET /contents</code><span>200 OK</span></div>
+                <div class="internship-devices">
+                  <span class="internship-device" data-i18n="project.internship.kiosk">BORNE INTERACTIVE</span>
+                  <span class="internship-device">RASPBERRY PI</span>
+                  <span class="internship-device">WINDOWS PC</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-title-line">
+                <h3 data-i18n="project.internship.cardTitle">API & affichage multimédia</h3>
+                <span class="project-type" data-i18n="project.internship.type">STAGE · APPUP</span>
+              </div>
+              <p data-i18n="project.internship.description">Développement d’une API générique intégrée à un site e-commerce et conception de solutions pour diffuser des contenus multimédias sur plusieurs supports.</p>
+              <div class="project-meta"><span data-i18n="project.internship.context">Stage chez Appup, Montbéliard · Avril — juin 2026</span></div>
+              <ul class="tag-list" aria-label="Technologies utilisées" data-i18n-aria-label="project.technologies">
+                <li>Node.js</li>
+                <li>Vue.js</li>
+                <li>PostgreSQL</li>
+                <li>Python</li>
+                <li>Bash</li>
+              </ul>
+              <div class="project-actions">
+                <a class="project-link project-link--detail" href="projets/stage-appup.html"
+                  aria-label="Découvrir le stage chez Appup" data-i18n-aria-label="project.internship.detailsLabel">
+                  <span data-i18n="project.details">Découvrir le projet</span><span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
           <article class="project-card project-card--secondary project-card--quixo" data-category="software">
             <div class="project-preview project-preview--quixo" aria-hidden="true">
-              <span class="preview-index" data-i18n="project.quixo.preview">02 / JEU DE PLATEAU</span>
+              <span class="preview-index" data-i18n="project.quixo.preview">03 / JEU DE PLATEAU</span>
               <div class="quixo-board">
                 <i></i><i></i><i class="quixo-mark"></i><i></i><i></i>
                 <i></i><i class="quixo-mark"></i><i></i><i></i><i></i>
@@ -208,7 +243,7 @@
                 alt="Capture d’écran de la boutique en ligne de casques audio."
                 data-i18n-alt="project.ecommerce.alt"
                 width="1615" height="768" loading="lazy" decoding="async" />
-              <span class="preview-index" data-i18n="project.ecommerce.preview">03 / BOUTIQUE AUDIO</span>
+              <span class="preview-index" data-i18n="project.ecommerce.preview">04 / BOUTIQUE AUDIO</span>
             </div>
             <div class="project-info">
               <div class="project-title-line">
@@ -239,7 +274,7 @@
 
           <article class="project-card project-card--secondary project-card--sport" data-category="software">
             <div class="project-preview project-preview--sport" aria-hidden="true">
-                <span class="preview-index" data-i18n="project.sport.preview">04 / SUIVI FITNESS</span>
+                <span class="preview-index" data-i18n="project.sport.preview">05 / SUIVI FITNESS</span>
                 <div class="workout-window">
                   <div class="workout-topbar"><span data-i18n="project.sport.dashboard">MON ESPACE</span><span data-i18n="project.sport.date">21 NOV. <i aria-hidden="true">●</i></span></div>
                   <div class="workout-greeting"><small data-i18n="project.sport.today">VOTRE SÉANCE DU JOUR</small><strong data-i18n="project.sport.greeting">On s'y met, Alban.</strong></div>
@@ -249,7 +284,7 @@
             </div>
             <div class="project-info">
                 <div class="project-title-line">
-                  <h3>Sport App</h3><span class="project-type" data-i18n="project.sport.type">PERSONNEL · EN SOLO</span>
+                  <h3>Sport App</h3><span class="project-type" data-i18n="project.sport.type">PERSONNEL · APPLICATION JAVA</span>
                 </div>
                 <p data-i18n="project.sport.description">Application desktop pour gérer ses profils, générer des séances aléatoires, consulter ses statistiques
                   et suivre son historique d'entraînement dans une base de données MySQL.</p>
@@ -272,6 +307,7 @@
               </div>
             </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -361,6 +397,28 @@
             </div>
           </div>
         </div>
+        <div class="skill-group skill-group--experience">
+          <div class="skill-group-title"><span>05</span>
+            <h3 data-i18n="skills.experience">Expérience</h3><span class="skill-group-caption" data-i18n="skills.experienceCaption">PROFESSIONNEL</span>
+          </div>
+          <div class="experience-entry">
+            <span class="experience-date" data-i18n="experience.internship.date">AVRIL — JUIN 2026</span>
+            <div>
+              <strong data-i18n="experience.internship.title">Stage en développement · Appup</strong>
+              <p data-i18n="experience.internship.location">Montbéliard</p>
+              <p data-i18n="experience.internship.api">Développement d’une API générique intégrée à un site e-commerce.</p>
+              <p data-i18n="experience.internship.display">Conception de solutions d’affichage pour diffuser des contenus multimédias sur différents supports : borne interactive, Raspberry Pi et PC Windows.</p>
+              <ul class="tag-list experience-tags" aria-label="Technologies utilisées pendant le stage"
+                data-i18n-aria-label="experience.internship.technologiesLabel">
+                <li>Node.js</li>
+                <li>Vue.js</li>
+                <li>PostgreSQL</li>
+                <li>Python</li>
+                <li>Bash</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -381,7 +439,7 @@
                 aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <form class="contact-form" id="contact-form" action="https://formsubmit.co/3da345c965762367072e0f47853244dc" method="POST">
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/alban.choulet1@gmail.com" method="POST">
           <p class="form-heading"><span data-i18n="contact.formHeading">TRANSMETTRE UN MESSAGE</span> <span data-i18n="contact.formNumber">FORMULAIRE 01</span></p>
           <div class="form-row">
             <div class="form-field">

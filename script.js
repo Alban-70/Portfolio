@@ -40,7 +40,7 @@ const translations = {
     "projects.eyebrow": "02 / PROJECTS",
     "projects.title": "Projects in <span>orbit.</span>",
     "projects.aside":
-      "Four projects, from web to applications,<br />built solo or as part of a team.",
+      "Five projects, from web to applications,<br />built solo, in teams or during an internship.",
     "projects.filters": "Filter projects",
     "projects.all": "All",
     "projects.web": "Web",
@@ -57,8 +57,12 @@ const translations = {
     "project.sport.detailsLabel": "Explore Sport App",
     "project.sport.githubLabel": "Sport App source code on GitHub",
     "detail.back": "Back to projects",
-    "detail.overview": "About the project",
-    "detail.features": "Key features",
+    "detail.imageZoom": "View image enlarged",
+    "detail.imageViewer": "Enlarged image preview",
+    "detail.imageClose": "Close enlarged image",
+    "detail.overview": "About the <span>project</span>",
+    "detail.features": "<span>Key</span> features",
+    "detail.internship.featuresTitle": "<span>Main</span> responsibilities",
     "detail.context": "Context",
     "detail.date": "Dates",
     "detail.format": "Project format",
@@ -123,6 +127,55 @@ const translations = {
     "detail.sport.feature2": "Generate random workouts",
     "detail.sport.feature3": "View training statistics",
     "detail.sport.feature4": "Store workout history in MySQL",
+    "detail.internship.pageTitle": "Appup Internship — Project · Alban",
+    "detail.internship.meta":
+      "Discover the API and multimedia display work completed during Alban's software development internship at Appup.",
+    "detail.internship.category": "SOFTWARE DEVELOPMENT INTERNSHIP · APPUP",
+    "detail.internship.summary":
+      "During my second-year internship, I developed a generic API for an e-commerce website and designed solutions to display multimedia content across several types of devices.",
+    "detail.internship.galleryTitle": "Project snapshots",
+    "detail.internship.galleryIntro":
+      "A look at the business information and content managed by the application.",
+    "detail.internship.imageTopics.alt":
+      "Vertical list of activity categories: tradespeople, restaurants, mechanics, hairdressers and driving schools.",
+    "detail.internship.imageTopics.caption":
+      "Vertical navigation through the displayed categories.",
+    "detail.internship.imageBusinesses.alt":
+      "Application table showing business categories, names, street addresses and postcodes.",
+    "detail.internship.imageBusinesses.caption":
+      "Business categories and location details.",
+    "detail.internship.imageHours.alt":
+      "Application table showing opening hours and existing social media accounts.",
+    "detail.internship.imageHours.caption":
+      "Opening hours and social media presence.",
+    "detail.internship.imageOnline.alt":
+      "Application table showing a business email address, logo and website, alongside an overall quality review.",
+    "detail.internship.imageOnline.caption":
+      "Contact details, website and overall review.",
+    "detail.internship.displayTitle": "Interactive kiosk <span>display</span>",
+    "detail.internship.displayDescription":
+      "The kiosk receives data from an external API available over the Internet. These values — media type, content URL, orientation, automatic launch and stop time — configure what is displayed.",
+    "detail.internship.displayImage.alt":
+      "JSON settings received from an external API over the Internet and used to configure an interactive kiosk display.",
+    "detail.internship.displayImage.caption":
+      "Example of the JSON settings received by the kiosk; network identifiers have been hidden.",
+    "detail.internship.overview":
+      "During my internship at Appup in Montbéliard, I designed and built a generic API from scratch, integrated into a clothing e-commerce website. It is not tied to any specific domain: it can handle any type of data, which makes it reusable for other projects.",
+    "detail.internship.overview2":
+      'It relies on external services: <span class="text-accent">Brevo</span> for sending emails, <span class="text-accent">Stripe</span> for online payments and <span class="text-accent">AWS</span> for file storage.',
+    "detail.internship.feature1":
+      "Design and build a generic API from scratch, integrated into an e-commerce website",
+    "detail.internship.feature4":
+      "Integrate Brevo (emails), Stripe (payments) and AWS (file storage)",
+    "detail.internship.feature2":
+      "Design multimedia content display solutions for different devices",
+    "detail.internship.feature3":
+      "Support interactive kiosks, Raspberry Pi and Windows PCs",
+    "detail.internship.context1":
+      "Second-year internship at Appup",
+      "detail.internship.context2":
+      "Montbéliard · April–June 2026",
+    "detail.internship.format": "Software development internship",
     "project.mintonette.alt":
       "Mintonette Cup screenshot showing a volleyball match during a tournament.",
     "project.mintonette.preview": "01 / TOURNAMENT PLATFORM",
@@ -131,7 +184,7 @@ const translations = {
       "A complete platform for organizing a volleyball tournament, from team management to score and standings tracking.",
     "project.mintonette.context":
       "University team project (5 students) · October 2025 – March 2026",
-    "project.quixo.preview": "02 / BOARD GAME",
+    "project.quixo.preview": "03 / BOARD GAME",
     "project.quixo.turn": "YOUR TURN",
     "project.quixo.type": "GAME · TEAM OF 5",
     "project.quixo.description":
@@ -140,12 +193,12 @@ const translations = {
       "University team project (5 students) · March – June 2025",
     "project.ecommerce.alt":
       "Screenshot of the online headphones store.",
-    "project.ecommerce.preview": "03 / AUDIO STORE",
+    "project.ecommerce.preview": "04 / AUDIO STORE",
     "project.ecommerce.type": "WEB · UNIVERSITY PROJECT",
     "project.ecommerce.description":
       "An online headphones store with a product catalogue, search, cart, order management, reviews, delivery addresses and stock administration.",
     "project.ecommerce.context": "University team project",
-    "project.sport.preview": "04 / FITNESS TRACKING",
+    "project.sport.preview": "05 / FITNESS TRACKING",
     "project.sport.dashboard": "MY SPACE",
     "project.sport.date": 'NOV 21 <i aria-hidden="true">●</i>',
     "project.sport.today": "TODAY'S WORKOUT",
@@ -159,6 +212,16 @@ const translations = {
     "project.sport.description":
       "A desktop app for managing user profiles, generating random workouts, viewing stats and tracking workout history in a MySQL database.",
     "project.sport.context": "Personal project, independently designed and developed",
+    "project.internship.preview": "02 / INTERNSHIP · API & MULTI-DEVICE",
+    "project.internship.cardTitle": "API & multimedia display",
+    "project.internship.title": "API & multimedia <span>display</span>",
+    "project.internship.type": "INTERNSHIP · APPUP",
+    "project.internship.description":
+      "Developed a generic API integrated into an e-commerce website and designed solutions to deliver multimedia content across multiple devices.",
+    "project.internship.context":
+      "Internship at Appup, Montbéliard · April — June 2026",
+    "project.internship.kiosk": "INTERACTIVE KIOSK",
+    "project.internship.detailsLabel": "Discover the Appup internship",
     "skills.eyebrow": "03 / SKILLS",
     "skills.title": "In my <span>toolbox.</span>",
     "skills.lead": "Technologies I work with, and how I work.",
@@ -179,6 +242,17 @@ const translations = {
     "skills.people": "PEOPLE",
     "skills.education": "Education",
     "skills.educationCaption": "BACKGROUND",
+    "skills.experience": "Experience",
+    "skills.experienceCaption": "PROFESSIONAL",
+    "experience.internship.date": "APRIL — JUNE 2026",
+    "experience.internship.title": "Software development internship · Appup",
+    "experience.internship.location": "Montbéliard, France",
+    "experience.internship.api":
+      "Developed a generic API integrated into an e-commerce website.",
+    "experience.internship.display":
+      "Designed display solutions for multimedia content across different devices: interactive kiosk, Raspberry Pi and Windows PC.",
+    "experience.internship.technologiesLabel":
+      "Technologies used during the internship",
     "education.bip.date": "OCT 2026 — JAN 2027",
     "education.bip.title":
       "BIP Erasmus+ · Mobile Programming & Technologies",
@@ -376,26 +450,42 @@ if (menuToggle && mainNav) {
 }
 
 /* ---------- Filtres de projets ---------- */
+/* ---------- Filtres de projets ---------- */
 const filterButtons = document.querySelectorAll(".filter-button");
 const projectCards = document.querySelectorAll(".project-card");
 const projectGrid = document.querySelector(".project-grid");
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
+if (projectGrid) {
+  const internshipCard = projectGrid.querySelector(".project-card--internship");
+  const featuredProject = projectGrid.querySelector(".project-card--featured");
 
-    filterButtons.forEach((item) => {
-      const selected = item === button;
-      item.classList.toggle("is-active", selected);
-      item.setAttribute("aria-pressed", String(selected));
-    });
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
 
-    projectGrid.classList.toggle("is-filtered", filter !== "all");
-    projectCards.forEach((card) => {
-      card.hidden = filter !== "all" && card.dataset.category !== filter;
+      filterButtons.forEach((item) => {
+        const selected = item === button;
+        item.classList.toggle("is-active", selected);
+        item.setAttribute("aria-pressed", String(selected));
+      });
+
+      projectGrid.classList.toggle("is-filtered", filter !== "all");
+      projectGrid.classList.toggle("is-filtered-web", filter === "web");
+      if (internshipCard && featuredProject) {
+        projectGrid.insertBefore(
+          internshipCard,
+          filter === "web"
+            ? projectGrid.firstElementChild
+            : featuredProject.nextElementSibling,
+        );
+      }
+
+      projectCards.forEach((card) => {
+        card.hidden = filter !== "all" && card.dataset.category !== filter;
+      });
     });
   });
-});
+}
 
 /* ---------- Défilement fluide vers les sections ---------- */
 let smoothScrollFrame = 0;
@@ -554,6 +644,64 @@ if ("IntersectionObserver" in window) {
 /* ---------- Année du pied de page ---------- */
 const yearElement = document.querySelector("#current-year");
 if (yearElement) yearElement.textContent = String(new Date().getFullYear());
+
+/* ---------- Aperçu agrandi des images du projet ---------- */
+const imageLightbox = document.querySelector("#image-lightbox");
+if (imageLightbox instanceof HTMLDialogElement) {
+  const lightboxImage = imageLightbox.querySelector("#image-lightbox-image");
+  const lightboxCaption = imageLightbox.querySelector("#image-lightbox-caption");
+
+  document.querySelectorAll(".project-detail-image-link").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const sourceImage = link.querySelector("img");
+      if (!(sourceImage instanceof HTMLImageElement)) return;
+      if (!(lightboxImage instanceof HTMLImageElement)) return;
+      if (!(lightboxCaption instanceof HTMLElement)) return;
+
+      event.preventDefault();
+      lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
+      lightboxImage.alt = sourceImage.alt;
+      lightboxCaption.textContent =
+        link.closest("figure")?.querySelector("figcaption")?.textContent?.trim() ||
+        sourceImage.alt;
+      imageLightbox.showModal();
+    });
+  });
+
+  document.addEventListener(
+    "click",
+    (event) => {
+      if (!imageLightbox.open) return;
+      if (
+        lightboxImage instanceof HTMLImageElement &&
+        event.target instanceof Node &&
+        lightboxImage.contains(event.target)
+      ) {
+        return;
+      }
+
+      imageLightbox.close();
+    },
+    true,
+  );
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      if (event.key !== "Escape" || !imageLightbox.open) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+      imageLightbox.close();
+    },
+    true,
+  );
+
+  imageLightbox.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    imageLightbox.close();
+  });
+}
 
 /* ---------- Formulaire de contact ---------- */
 const contactForm = document.querySelector("#contact-form");
