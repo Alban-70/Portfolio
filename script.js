@@ -67,6 +67,9 @@ const translations = {
     "detail.date": "Dates",
     "detail.format": "Project format",
     "detail.technologies": "Technologies",
+    "detail.mintonette.method":
+      "Agile methods with sprints, task tracking on Trello",
+    "detail.method": "Working method",
     "detail.infoLabel": "Project information",
     "detail.mintonette.pageTitle": "Mintonette Cup — Project · Alban",
     "detail.mintonette.meta":
@@ -76,12 +79,19 @@ const translations = {
     "detail.mintonette.summary":
       "A platform for managing a volleyball tournament, from team organization to score and standings tracking.",
     "detail.mintonette.overview":
-      "The project brings together tools to organize the tournament and follow its progress, from teams to results.",
+      "Mintonette Cup is a full-stack website dedicated to a volleyball tournament. The interface was first built with Vue.js and Pinia, then the backend was implemented with Node.js and PostgreSQL.",
+    "detail.mintonette.overview2":
+      "The site distinguishes three types of users: customer, vendor and administrator. Through interactive maps, customers book their seats in the stands and vendors reserve their spot at the event venue.",
     "detail.mintonette.context": "University team project · October 2025 – March 2026",
     "detail.mintonette.format": "University team project · 5 students",
-    "detail.mintonette.feature1": "Manage tournament teams",
-    "detail.mintonette.feature2": "Track match scores",
-    "detail.mintonette.feature3": "View tournament standings",
+    "detail.mintonette.feature1":
+      "Book seats in the stands using an interactive map",
+    "detail.mintonette.feature2":
+      "Reserve a vendor spot at the event venue through an interactive map",
+    "detail.mintonette.feature3":
+      "View details of the event, the competition and the different matches",
+    "detail.mintonette.feature4":
+      "Three user roles: customer, vendor and administrator",
     "detail.quixo.pageTitle": "Quixo Game — Project · Alban",
     "detail.quixo.meta":
       "Discover Quixo Game, a Java board game with console and JavaFX interfaces.",
