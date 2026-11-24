@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" data-i18n-content="meta.description"
+    content="Portfolio d'Alban, étudiant développeur passionné par l'aéronautique, le spatial et le web." />
+  <meta name="theme-color" content="#07131f" />
+  <title data-i18n-title="page.title">Alban — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu" data-i18n="skip">Aller au contenu</a>
+
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Alban, retour à l'accueil" data-i18n-aria-label="brand.label">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-text"><span>ALBAN CHOULET<span class="brand-dot">.</span>
+    </a>
+    <nav class="main-nav" id="navigation-principale" aria-label="Navigation principale"
+      data-i18n-aria-label="nav.label">
+      <a href="#apropos"><span class="nav-label" data-i18n="nav.about">À propos</span></a>
+      <a href="#projets"><span class="nav-label" data-i18n="nav.projects">Projets</span></a>
+      <a href="#competences"><span class="nav-label" data-i18n="nav.skills">Compétences</span></a>
+      <a href="#contact"><span class="nav-label" data-i18n="nav.contact">Contact</span></a>
+    </nav>
+    <div class="header-actions">
+      <button class="language-toggle" id="language-toggle" type="button" lang="en" aria-label="Switch to English">
+        EN
+      </button>
+      <a class="nav-cv header-cv" href="cv-alban.pdf" download>
+        <span data-i18n="header.cv">Télécharger mon CV</span><span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-principale"
+      aria-label="Ouvrir le menu" data-i18n-aria-label="menu.open">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="contenu">
+    <section class="hero section-shell" id="accueil" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span><span data-i18n="hero.eyebrow">ALBAN CHOULET · DÉVELOPPEUR WEB & APPLICATIONS</span></p>
+        <h1 id="hero-title" data-i18n="hero.title">DÉVELOPPEUR<br /><span>FULLSTACK</span></h1>
+        <p class="hero-intro" data-i18n="hero.intro">Étudiant en informatique, je développe des applications et des expériences web modernes,
+          utiles et accessibles, du front-end au back-end.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projets">
+            <span data-i18n="hero.projects">Explorer mes projets</span><span aria-hidden="true">↓</span>
+          </a>
+          <a class="text-link" href="#contact"><span data-i18n="hero.contact">Me contacter</span><span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta" aria-label="Profil" data-i18n-aria-label="hero.profile">
+          <span>FRONT-END · BACK-END</span>
+          <span class="meta-separator" aria-hidden="true"></span>
+          <span data-i18n="hero.availability">DISPONIBLE POUR UN STAGE · 2026</span>
+        </div>
+      </div>
+
+      <figure class="hero-portrait">
+        <div class="portrait-backdrop" aria-hidden="true">
+          <span class="route-label route-label--npm"># npm install</span>
+          <span class="route-label route-label--html">&lt;/html&gt;</span>
+          <span class="route-label route-label--java">public class PortfolioApp
+            {<br />&nbsp;&nbsp;launch();<br />}</span>
+          <span class="route-label route-label--sql">SELECT * FROM projects;</span>
+        </div>
+        <div class="portrait-placeholder" role="img" aria-label="Emplacement prévu pour une photo portrait d’Alban"
+          data-i18n-aria-label="portrait.label">
+          <!-- <img src="assets/photo-albanCHOULET_Alban_S3A1_photo_without_bg.png"> -->
+          <svg class="portrait-silhouette" viewBox="0 0 180 220" aria-hidden="true">
+            <circle cx="90" cy="63" r="37" />
+            <path d="M19 210c4-51 26-78 71-78s67 27 71 78z" />
+          </svg>
+          <span class="portrait-hint"><span data-i18n="portrait.hint">Photo à ajouter :</span> <code>assets/portrait-alban.webp</code></span>
+        </div>
+      </figure>
+    </section>
+
+    <section class="about section-shell section-space" id="apropos" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="about.eyebrow">01 / À PROPOS</p>
+        <h2 id="about-title" data-i18n="about.title">Ce qu'on ne voit pas,<br /><span>mais qui fait tout tourner</span></h2>
+      </div>
+      <div class="about-content">
+        <p class="lead" data-i18n="about.lead">
+          Je suis en formation pour devenir <strong>développeur full stack</strong>.
+        </p>
+        <p data-i18n="about.paragraph1">
+          Depuis plusieurs années, je crée différents projets, que vous pouvez découvrir dans
+          la section <a class="inline-link" href="#projets">Projets</a>. J’aime transformer des
+          problèmes complexes en tâches simples.
+        </p>
+        <p data-i18n="about.paragraph2">
+          Ma spécialité est plutôt le développement <strong>back-end</strong>. Même si les
+          utilisateurs ne voient pas cette partie, je contribue à la majorité du fonctionnement
+          des sites et des applications.
+        </p>
+        <div class="about-facts">
+          <div><span class="fact-number">01</span><span data-i18n="about.fact1">Formation<br /><strong>BUT Informatique · 3e
+                année</strong></span></div>
+          <div><span class="fact-number">02</span><span data-i18n="about.fact2">En recherche<br /><strong>Stage développeur ·
+                2026</strong></span></div>
+          <div><span class="fact-number">03</span><span data-i18n="about.fact3">Veille<br /><strong>Spatial · Web · Jeux vidéos</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section-space" id="projets" aria-labelledby="projects-title">
+      <div class="section-shell">
+        <div class="section-heading projects-heading">
+          <div>
+            <p class="eyebrow" data-i18n="projects.eyebrow">02 / PROJETS</p>
+            <h2 id="projects-title" data-i18n="projects.title">Projets & <span>réalisations.</span></h2>
+          </div>
+          <p class="section-aside" data-i18n="projects.aside">Quatre projets, du web aux applications,<br />conçus seul ou en équipe.</p>
+        </div>
+        <div class="project-filters" role="group" aria-label="Filtrer les projets" data-i18n-aria-label="projects.filters">
+          <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true"><span data-i18n="projects.all">Tous</span>
+            <span>04</span></button>
+          <button type="button" class="filter-button" data-filter="web" aria-pressed="false" data-i18n="projects.web">Web</button>
+          <button type="button" class="filter-button" data-filter="software" aria-pressed="false" data-i18n="projects.applications">Applications</button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card project-card--featured" data-category="web">
+            <div class="project-preview project-preview--mintonette">
+              <img class="project-preview-image" src="assets/mintonette-cup.webp"
+                alt="Capture d’écran de Mintonette Cup : une rencontre de volley pendant un match de tournoi."
+                data-i18n-alt="project.mintonette.alt"
+                width="1619" height="768" loading="lazy" decoding="async" />
+              <span class="preview-index" data-i18n="project.mintonette.preview">01 / PLATEFORME DE TOURNOI</span>
+            </div>
+            <div class="project-info project-info--featured">
+              <div class="project-title-line">
+                <h3>Mintonette Cup</h3><span class="project-type" data-i18n="project.mintonette.type">PROJET PHARE · WEB</span>
+              </div>
+              <p data-i18n="project.mintonette.description">Une plateforme complète pour organiser un tournoi de volley, de la gestion des équipes jusqu’au suivi des scores et des classements.</p>
+              <div class="project-meta"><span data-i18n="project.mintonette.context">Projet universitaire en équipe de 5 · Octobre 2025 – Mars 2026</span></div>
+              <ul class="tag-list" aria-label="Technologies utilisées" data-i18n-aria-label="project.technologies">
+                <li>Vue.js</li>
+                <li>Node.js</li>
+                <li>MySQL</li>
+              </ul>
+              <div class="project-actions">
+                <a class="project-link project-link--detail" href="projets/mintonette-cup.html"
+                  aria-label="Découvrir Mintonette Cup" data-i18n-aria-label="project.mintonette.detailsLabel">
+                  <span data-i18n="project.details">Découvrir le projet</span><span aria-hidden="true">↗</span>
+                </a>
+                <a class="project-link project-link--github" href="https://github.com/Alban-70/Mintonette-Cup"
+                  target="_blank" rel="noreferrer" aria-label="Code source de Mintonette Cup sur GitHub"
+                  data-i18n-aria-label="project.mintonette.githubLabel">
+                  <span data-i18n="project.github">Voir sur GitHub</span><span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--secondary project-card--quixo" data-category="software">
+            <div class="project-preview project-preview--quixo" aria-hidden="true">
+              <span class="preview-index" data-i18n="project.quixo.preview">02 / JEU DE PLATEAU</span>
+              <div class="quixo-board">
+                <i></i><i></i><i class="quixo-mark"></i><i></i><i></i>
+                <i></i><i class="quixo-mark"></i><i></i><i></i><i></i>
+                <i></i><i></i><i class="quixo-mark quixo-mark--accent"></i><i></i><i></i>
+                <i></i><i></i><i></i><i class="quixo-mark"></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <span class="quixo-caption"><span data-i18n="project.quixo.turn">À TON TOUR</span> <b>↗</b></span>
+            </div>
+            <div class="project-info">
+              <div class="project-title-line">
+                <h3>Quixo Game</h3><span class="project-type" data-i18n="project.quixo.type">JEU · ÉQUIPE DE 5</span>
+              </div>
+              <p data-i18n="project.quixo.description">Jeu de plateau développé en Java, avec gestion des tours, logique de jeu, détection des victoires,
+                interface console et interface graphique JavaFX.</p>
+              <div class="project-meta"><span data-i18n="project.quixo.context">Projet universitaire en équipe de 5 · Mars - Juin 2025</span></div>
+              <ul class="tag-list" aria-label="Technologies utilisées" data-i18n-aria-label="project.technologies">
+                <li>Java</li>
+                <li>JavaFX</li>
+              </ul>
+              <div class="project-actions">
+                <a class="project-link project-link--detail" href="projets/quixo-game.html"
+                  aria-label="Découvrir Quixo Game" data-i18n-aria-label="project.quixo.detailsLabel">
+                  <span data-i18n="project.details">Découvrir le projet</span><span aria-hidden="true">↗</span>
+                </a>
+                <a class="project-link project-link--github" href="https://github.com/Alban-70/Quixo"
+                  target="_blank" rel="noreferrer" aria-label="Code source de Quixo Game sur GitHub"
+                  data-i18n-aria-label="project.quixo.githubLabel">
+                  <span data-i18n="project.github">Voir sur GitHub</span><span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--secondary project-card--shop" data-category="web">
+            <div class="project-preview project-preview--shop">
+              <img class="project-preview-image project-preview-image--contain" src="assets/ecommerce-site.webp"
+                alt="Capture d’écran de la boutique en ligne de casques audio."
+                data-i18n-alt="project.ecommerce.alt"
+                width="1615" height="768" loading="lazy" decoding="async" />
+              <span class="preview-index" data-i18n="project.ecommerce.preview">03 / BOUTIQUE AUDIO</span>
+            </div>
+            <div class="project-info">
+              <div class="project-title-line">
+                <h3>E-Commerce Website</h3><span class="project-type" data-i18n="project.ecommerce.type">WEB · UNIVERSITAIRE</span>
+              </div>
+              <p data-i18n="project.ecommerce.description">Boutique web de casques audio avec catalogue, recherche, panier, commandes, avis, adresses de livraison
+                et administration des produits et des stocks.</p>
+              <div class="project-meta"><span data-i18n="project.ecommerce.context">Projet universitaire en équipe</span></div>
+              <ul class="tag-list" aria-label="Technologies utilisées" data-i18n-aria-label="project.technologies">
+                <li>Python</li>
+                <li>Flask</li>
+                <li>MySQL</li>
+                <li>HTML / CSS</li>
+              </ul>
+              <div class="project-actions">
+                <a class="project-link project-link--detail" href="projets/ecommerce-website.html"
+                  aria-label="Découvrir E-Commerce Website" data-i18n-aria-label="project.ecommerce.detailsLabel">
+                  <span data-i18n="project.details">Découvrir le projet</span><span aria-hidden="true">↗</span>
+                </a>
+                <a class="project-link project-link--github" href="https://github.com/Alban-70/Ecommerce_Project"
+                  target="_blank" rel="noreferrer" aria-label="Code source de E-Commerce Website sur GitHub"
+                  data-i18n-aria-label="project.ecommerce.githubLabel">
+                  <span data-i18n="project.github">Voir sur GitHub</span><span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--secondary project-card--sport" data-category="software">
+            <div class="project-preview project-preview--sport" aria-hidden="true">
+                <span class="preview-index" data-i18n="project.sport.preview">04 / SUIVI FITNESS</span>
+                <div class="workout-window">
+                  <div class="workout-topbar"><span data-i18n="project.sport.dashboard">MON ESPACE</span><span data-i18n="project.sport.date">21 NOV. <i aria-hidden="true">●</i></span></div>
+                  <div class="workout-greeting"><small data-i18n="project.sport.today">VOTRE SÉANCE DU JOUR</small><strong data-i18n="project.sport.greeting">On s'y met, Alban.</strong></div>
+                  <div class="workout-session"><span class="workout-icon">↗</span><div><small data-i18n="project.sport.generated">PROGRAMME GÉNÉRÉ</small><strong data-i18n="project.sport.workout">Renforcement<br />complet</strong></div><b>32'<small data-i18n="project.sport.minutes">MIN</small></b></div>
+                  <div class="workout-progress"><span data-i18n="project.sport.progress">PROGRESSION DE LA SEMAINE</span><b data-i18n="project.sport.sessions">3 / 4 séances</b><i><em></em></i></div>
+                </div>
+            </div>
+            <div class="project-info">
+                <div class="project-title-line">
+                  <h3>Sport App</h3><span class="project-type" data-i18n="project.sport.type">PERSONNEL · EN SOLO</span>
+                </div>
+                <p data-i18n="project.sport.description">Application desktop pour gérer ses profils, générer des séances aléatoires, consulter ses statistiques
+                  et suivre son historique d'entraînement dans une base de données MySQL.</p>
+              <div class="project-meta"><span data-i18n="project.sport.context">Projet personnel, conçu et développé seul</span></div>
+              <ul class="tag-list" aria-label="Technologies utilisées" data-i18n-aria-label="project.technologies">
+                <li>Java</li>
+                <li>JavaFX</li>
+                <li>MySQL</li>
+              </ul>
+              <div class="project-actions">
+                <a class="project-link project-link--detail" href="projets/sport-app.html"
+                  aria-label="Découvrir Sport App" data-i18n-aria-label="project.sport.detailsLabel">
+                  <span data-i18n="project.details">Découvrir le projet</span><span aria-hidden="true">↗</span>
+                </a>
+                <a class="project-link project-link--github" href="https://github.com/Alban-70/sportapp"
+                  target="_blank" rel="noreferrer" aria-label="Code source de Sport App sur GitHub"
+                  data-i18n-aria-label="project.sport.githubLabel">
+                  <span data-i18n="project.github">Voir sur GitHub</span><span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section-shell section-space" id="competences" aria-labelledby="skills-title">
+      <div class="skills-side">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="skills.eyebrow">03 / COMPÉTENCES</p>
+          <h2 id="skills-title" data-i18n="skills.title">Mon environnement <span>technique.</span></h2>
+        </div>
+        <div class="skills-intro">
+          <p class="lead" data-i18n="skills.lead">Des technologies que je pratique, et une façon de travailler.</p>
+          <p data-i18n="skills.intro">Du back-end au front-end, voici les outils que j’utilise dans mes projets, et les qualités que j’apporte à
+            une équipe.</p>
+          <div class="skill-note"><span class="skill-note-icon" aria-hidden="true">✳</span><span data-i18n="skills.current"><strong>En ce moment
+              </strong><br />J’apprends Dart / Flutter et l’intégration CI/CD.</span></div>
+        </div>
+      </div>
+      <div class="skills-groups">
+        <div class="skill-group skill-group--technical">
+          <div class="skill-group-title"><span>01</span>
+            <h3 data-i18n="skills.development">Développement</h3><span class="skill-group-caption" data-i18n="skills.technical">TECHNIQUE</span>
+          </div>
+          <ul class="skill-logos" aria-label="Technologies de développement">
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" loading="lazy" decoding="async" /><span>HTML5</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" loading="lazy" decoding="async" /><span>CSS3</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" loading="lazy" decoding="async" /><span>JavaScript</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" alt="" loading="lazy" decoding="async" /><span>Java</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg" alt="" loading="lazy" decoding="async" /><span>Node.js</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vuejs/vuejs-original.svg" alt="" loading="lazy" decoding="async" /><span>Vue.js</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" decoding="async" /><span>Python</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" loading="lazy" decoding="async" /><span>MySQL</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg" alt="" loading="lazy" decoding="async" /><span>PostgreSQL</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/flutter/flutter-original.svg" alt="" loading="lazy" decoding="async" /><span>Flutter</span></li>
+          </ul>
+        </div>
+        <div class="skill-group skill-group--tools">
+          <div class="skill-group-title"><span>02</span>
+            <h3 data-i18n="skills.tools">Outils & environnement</h3><span class="skill-group-caption" data-i18n="skills.toolsCaption">OUTILS</span>
+          </div>
+          <ul class="skill-logos" aria-label="Outils et environnement">
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" loading="lazy" decoding="async" /><span>Git</span></li>
+            <li><img class="skill-logo-github" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg" alt="" loading="lazy" decoding="async" /><span>GitHub</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jenkins/jenkins-original.svg" alt="" loading="lazy" decoding="async" /><span>Jenkins</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/trello/trello-original.svg" alt="" loading="lazy" decoding="async" /><span>Trello</span></li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="" loading="lazy" decoding="async" /><span>Docker</span></li>
+          </ul>
+        </div>
+        <div class="skill-group skill-group--soft">
+          <div class="skill-group-title"><span>03</span>
+            <h3 data-i18n="skills.soft">Savoir-être</h3><span class="skill-group-caption" data-i18n="skills.people">HUMAIN</span>
+          </div>
+          <ul class="skill-pills">
+            <li data-i18n="skills.soft.teamwork">Travail en équipe</li>
+            <li data-i18n="skills.soft.organization">Organisation</li>
+            <li data-i18n="skills.soft.curiosity">Curiosité</li>
+            <li data-i18n="skills.soft.autonomy">Autonomie</li>
+            <li data-i18n="skills.soft.communication">Communication</li>
+          </ul>
+        </div>
+        <div class="skill-group skill-group--education">
+          <div class="skill-group-title"><span>04</span>
+            <h3 data-i18n="skills.education">Formation</h3><span class="skill-group-caption" data-i18n="skills.educationCaption">PARCOURS</span>
+          </div>
+          <div class="education-entry education-entry--bip">
+            <span class="education-date" data-i18n="education.bip.date">OCT. 2026 — JANV. 2027</span>
+            <div>
+              <strong data-i18n="education.bip.title">BIP Erasmus+ · Mobile Programming & Technologies</strong>
+              <p data-i18n="education.bip.credits">Programme international · 6 ECTS</p>
+              <p data-i18n="education.bip.courses">10 semaines de cours en ligne (Flutter, sécurité des applications mobiles, Firebase et réalité augmentée), puis une semaine à la Hochschule Bremen, en Allemagne, du 18 au 22 janvier 2027.</p>
+              <p data-i18n="education.bip.team">Développement d’applications mobiles en équipes internationales de 2 à 3 étudiants, en anglais, avec des étudiants d’Allemagne, de Pologne, du Portugal et de France.</p>
+              <ul class="tag-list education-tags" aria-label="Technologies du programme"
+                data-i18n-aria-label="education.bip.technologiesLabel">
+                <li>Flutter</li>
+                <li>Firebase</li>
+              </ul>
+            </div>
+          </div>
+          <div class="education-entry"><span class="education-date">2024 — 2027</span>
+            <div><strong data-i18n="education.degree">BUT Informatique</strong>
+              <p data-i18n="education.degreeDescription">Parcours développement d’applications et sites web · IUT Belfort-Montbéliard</p>
+            </div>
+          </div>
+          <div class="education-entry"><span class="education-date">2024</span>
+            <div><strong data-i18n="education.baccalaureate">Baccalauréat général</strong>
+              <p data-i18n="education.baccalaureateDescription">Spécialités mathématiques et numérique sciences informatiques · Lycée Édouard Belin - Vesoul(70)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-space" id="contact" aria-labelledby="contact-title">
+      <div class="section-shell contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow" data-i18n="contact.eyebrow">04 / CONTACT AU SOL</p>
+          <h2 id="contact-title" data-i18n="contact.title">Une idée en tête ?<br /><span>Faisons-la décoller.</span></h2>
+          <p class="lead" data-i18n="contact.lead">Un stage, une collaboration ou juste une passion commune pour l’espace ? Ma boîte de réception
+            est ouverte.</p>
+          <a class="email-link" href="mailto:alban.choulet1@gmail.com">alban.choulet1@gmail.com <span
+              aria-hidden="true">↗</span></a>
+          <div class="contact-socials">
+            <a href="https://github.com/Alban-70" target="_blank" rel="noreferrer"><span data-i18n="contact.github">GitHub</span> <span
+                aria-hidden="true">↗</span></a>
+            <span class="social-divider" aria-hidden="true">/</span>
+            <a href="https://www.linkedin.com/in/alban-choulet/" target="_blank" rel="noreferrer"><span data-i18n="contact.linkedin">LinkedIn</span> <span
+                aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/alban.choulet1@gmail.com" method="POST">
+          <p class="form-heading"><span data-i18n="contact.formHeading">TRANSMETTRE UN MESSAGE</span> <span data-i18n="contact.formNumber">FORMULAIRE 01</span></p>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="prenom" data-i18n="contact.firstName">Votre prénom</label>
+              <input id="prenom" name="firstName" type="text" autocomplete="given-name" placeholder="Ex. Camille"
+                data-i18n-placeholder="contact.firstNamePlaceholder" required />
+            </div>
+            <div class="form-field">
+              <label for="nom" data-i18n="contact.name">Votre nom</label>
+              <input id="nom" name="lastName" type="text" autocomplete="family-name" placeholder="Ex. Martin"
+                data-i18n-placeholder="contact.namePlaceholder" required />
+            </div>
+          </div>
+          <label for="email" data-i18n="contact.email">Votre adresse e-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="camille@exemple.fr"
+            data-i18n-placeholder="contact.emailPlaceholder" required />
+          <label for="sujet" data-i18n="contact.subject">Objet</label>
+          <input id="sujet" name="_subject" type="text" placeholder="Ex. Demande de stage"
+            data-i18n-placeholder="contact.subjectPlaceholder" required />
+          <label for="message" data-i18n="contact.message">Votre message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Parlons de votre projet..."
+              data-i18n-placeholder="contact.messagePlaceholder" required></textarea>
+          <button class="button button-primary form-submit" type="submit"><span data-i18n="contact.submit">Envoyer le message</span><span
+              aria-hidden="true">↗</span></button>
+          <p class="form-hint" id="form-status" role="status" aria-live="polite" data-i18n="contact.formHint">En envoyant ce formulaire, vos informations sont transmises à FormSubmit pour acheminer votre message. Les envois peuvent être conservés 30 jours.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <a class="back-to-top" href="#accueil" aria-label="Revenir en haut de la page" data-i18n-aria-label="backToTop">
+    <span aria-hidden="true">↑</span>
+  </a>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <a class="brand footer-brand" href="#accueil"><span class="brand-mark" aria-hidden="true">A</span><span>ALBAN<span
+            class="brand-dot">.</span></span></a>
+      <p data-i18n="footer.tagline">Imaginé avec curiosité, réalisé avec attention.</p>
+      <a class="footer-cv" href="cv-alban.pdf" download><span data-i18n="footer.cv">CV PDF</span> <span aria-hidden="true">↓</span></a>
+      <span class="footer-copy">© <span id="current-year">2026</span> ALBAN</span>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" data-i18n-content="detail.quixo.meta"
+    content="Découvrez Quixo Game, un jeu de plateau en Java avec des interfaces console et JavaFX." />
+  <meta name="theme-color" content="#07131f" />
+  <title data-i18n-title="detail.quixo.pageTitle">Quixo Game — Projet · Alban</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu" data-i18n="skip">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html#accueil" aria-label="Alban, retour à l'accueil"
+      data-i18n-aria-label="brand.label">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-text"><span>ALBAN CHOULET<span class="brand-dot">.</span></span></span>
+    </a>
+    <nav class="main-nav" id="navigation-principale" aria-label="Navigation principale"
+      data-i18n-aria-label="nav.label">
+      <a href="../index.html#apropos"><span class="nav-label" data-i18n="nav.about">À propos</span></a>
+      <a href="../index.html#projets"><span class="nav-label" data-i18n="nav.projects">Projets</span></a>
+      <a href="../index.html#competences"><span class="nav-label" data-i18n="nav.skills">Compétences</span></a>
+      <a href="../index.html#contact"><span class="nav-label" data-i18n="nav.contact">Contact</span></a>
+    </nav>
+    <div class="header-actions">
+      <button class="language-toggle" id="language-toggle" type="button" lang="en" aria-label="Switch to English">EN</button>
+      <a class="nav-cv header-cv" href="../cv-alban.pdf" download>
+        <span data-i18n="header.cv">Télécharger mon CV</span><span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-principale"
+      aria-label="Ouvrir le menu" data-i18n-aria-label="menu.open">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="contenu" class="project-detail-page">
+    <article class="section-shell project-detail-shell">
+      <a class="project-detail-back" href="../index.html#projets"><span aria-hidden="true">←</span>
+        <span data-i18n="detail.back">Retour aux projets</span></a>
+      <header class="project-detail-heading">
+        <p class="eyebrow" data-i18n="detail.quixo.category">JEU DE PLATEAU · PROJET UNIVERSITAIRE</p>
+        <h1 data-i18n="detail.quixo.title">Quixo Game</h1>
+        <p class="lead" data-i18n="detail.quixo.summary">
+          Un jeu de plateau en Java avec gestion des tours, logique de jeu et détection des victoires, en console et avec JavaFX.
+        </p>
+        <div class="project-detail-links">
+          <a class="project-link project-link--github" href="https://github.com/Alban-70/Quixo"
+            target="_blank" rel="noreferrer"><span data-i18n="project.github">Voir sur GitHub</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </header>
+
+      <figure class="project-preview project-preview--quixo project-detail-visual" aria-hidden="true">
+        <span class="preview-index" data-i18n="project.quixo.preview">02 / JEU DE PLATEAU</span>
+        <div class="quixo-board">
+          <i></i><i></i><i class="quixo-mark"></i><i></i><i></i>
+          <i></i><i class="quixo-mark"></i><i></i><i></i><i></i>
+          <i></i><i></i><i class="quixo-mark quixo-mark--accent"></i><i></i><i></i>
+          <i></i><i></i><i></i><i class="quixo-mark"></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <span class="quixo-caption"><span data-i18n="project.quixo.turn">À TON TOUR</span> <b>↗</b></span>
+      </figure>
+
+      <div class="project-detail-layout">
+        <div class="project-detail-copy">
+          <section aria-labelledby="detail-overview">
+            <h2 id="detail-overview" data-i18n="detail.overview">Présentation du projet</h2>
+            <p data-i18n="detail.quixo.overview">
+              Le jeu combine la logique du plateau, la gestion des tours et la détection des conditions de victoire. Il est disponible avec deux interfaces.
+            </p>
+          </section>
+          <section aria-labelledby="detail-features">
+            <h2 id="detail-features" data-i18n="detail.features">Fonctionnalités principales</h2>
+            <ul class="project-detail-features">
+              <li data-i18n="detail.quixo.feature1">Implémentation des règles et de la logique du plateau</li>
+              <li data-i18n="detail.quixo.feature2">Gestion des tours et détection des victoires</li>
+              <li data-i18n="detail.quixo.feature3">Interface en console</li>
+              <li data-i18n="detail.quixo.feature4">Interface graphique JavaFX</li>
+            </ul>
+          </section>
+        </div>
+        <aside class="project-detail-sidebar" aria-label="Informations sur le projet"
+          data-i18n-aria-label="detail.infoLabel">
+          <h2 data-i18n="detail.context">Contexte</h2>
+          <dl>
+            <div class="project-detail-fact">
+              <dt data-i18n="detail.date">Période</dt>
+              <dd data-i18n="detail.quixo.context">Mars – Juin 2025</dd>
+            </div>
+            <div class="project-detail-fact">
+              <dt data-i18n="detail.format">Réalisation</dt>
+              <dd data-i18n="detail.quixo.format">Projet universitaire réalisé en équipe de 5</dd>
+            </div>
+            <div class="project-detail-fact">
+              <dt data-i18n="detail.technologies">Technologies</dt>
+              <dd><ul class="tag-list"><li>Java</li><li>JavaFX</li></ul></dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+      <a class="project-detail-return" href="../index.html#projets"><span data-i18n="detail.back">Retour aux projets</span>
+        <span aria-hidden="true">↗</span></a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <a class="brand footer-brand" href="../index.html#accueil"><span class="brand-mark" aria-hidden="true">A</span>
+        <span>ALBAN<span class="brand-dot">.</span></span></a>
+      <p data-i18n="footer.tagline">Imaginé avec curiosité, réalisé avec attention.</p>
+      <a class="footer-cv" href="../cv-alban.pdf" download><span data-i18n="footer.cv">CV PDF</span>
+        <span aria-hidden="true">↓</span></a>
+      <span class="footer-copy">© <span id="current-year">2026</span> ALBAN</span>
+    </div>
+  </footer>
+</body>
+</html>

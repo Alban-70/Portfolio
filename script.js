@@ -1,0 +1,602 @@
+const CONTACT_EMAIL = "alban.choulet1@gmail.com";
+const CONTACT_FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
+const translations = {
+  en: {
+    "meta.description":
+      "Alban's portfolio, an IT student and developer passionate about aeronautics, space and the web.",
+    "page.title": "Alban — Portfolio",
+    skip: "Skip to content",
+    "brand.label": "Alban, back to home",
+    "nav.label": "Main navigation",
+    "nav.about": "About",
+    "nav.projects": "Projects",
+    "nav.skills": "Skills",
+    "nav.contact": "Contact",
+    "menu.open": "Open menu",
+    "menu.close": "Close menu",
+    "header.cv": "Download my CV",
+    "hero.eyebrow": "ALBAN CHOULET · WEB & APPLICATION DEVELOPER",
+    "hero.title": "FULL-STACK<br /><span>DEVELOPER</span>",
+    "hero.intro":
+      "An IT student building modern, useful and accessible applications and web experiences, from front end to back end.",
+    "hero.projects": "Explore my projects",
+    "hero.contact": "Get in touch",
+    "hero.profile": "Profile",
+    "hero.availability": "AVAILABLE FOR AN INTERNSHIP · 2026",
+    "portrait.label": "Placeholder for a portrait of Alban",
+    "portrait.hint": "Photo coming soon:",
+    "about.eyebrow": "01 / ABOUT",
+    "about.title": "What you don't see,<br /><span>but what makes it all work</span>",
+    "about.lead":
+      "I’m studying to become a <strong>full-stack developer</strong>.",
+    "about.paragraph1":
+      'Over the past few years, I’ve created several projects, which you can explore in the <a class="inline-link" href="#projets">Projects</a> section. I enjoy turning complex problems into simple tasks.',
+    "about.paragraph2":
+      "My main focus is <strong>back-end</strong> development. Even though users don’t see it, this is where I help power most of a website or application.",
+    "about.fact1": "Education<br /><strong>BUT in Computer Science · Year 3</strong>",
+    "about.fact2": "Currently seeking<br /><strong>Software developer internship · 2026</strong>",
+    "about.fact3": "Interests<br /><strong>Space · Web · Video games</strong>",
+    "projects.eyebrow": "02 / PROJECTS",
+    "projects.title": "Projects in <span>orbit.</span>",
+    "projects.aside":
+      "Four projects, from web to applications,<br />built solo or as part of a team.",
+    "projects.filters": "Filter projects",
+    "projects.all": "All",
+    "projects.web": "Web",
+    "projects.applications": "Applications",
+    "project.technologies": "Technologies used",
+    "project.github": "View on GitHub",
+    "project.details": "Explore project",
+    "project.mintonette.detailsLabel": "Explore Mintonette Cup",
+    "project.mintonette.githubLabel": "Mintonette Cup source code on GitHub",
+    "project.quixo.detailsLabel": "Explore Quixo Game",
+    "project.quixo.githubLabel": "Quixo Game source code on GitHub",
+    "project.ecommerce.detailsLabel": "Explore E-Commerce Website",
+    "project.ecommerce.githubLabel": "E-Commerce Website source code on GitHub",
+    "project.sport.detailsLabel": "Explore Sport App",
+    "project.sport.githubLabel": "Sport App source code on GitHub",
+    "detail.back": "Back to projects",
+    "detail.overview": "About the project",
+    "detail.features": "Key features",
+    "detail.context": "Context",
+    "detail.date": "Dates",
+    "detail.format": "Project format",
+    "detail.technologies": "Technologies",
+    "detail.infoLabel": "Project information",
+    "detail.mintonette.pageTitle": "Mintonette Cup — Project · Alban",
+    "detail.mintonette.meta":
+      "Discover Mintonette Cup, a volleyball tournament management platform built with Vue.js, Node.js and MySQL.",
+    "detail.mintonette.category": "WEB PLATFORM · UNIVERSITY PROJECT",
+    "detail.mintonette.title": "Mintonette Cup",
+    "detail.mintonette.summary":
+      "A platform for managing a volleyball tournament, from team organization to score and standings tracking.",
+    "detail.mintonette.overview":
+      "The project brings together tools to organize the tournament and follow its progress, from teams to results.",
+    "detail.mintonette.context": "University team project · October 2025 – March 2026",
+    "detail.mintonette.format": "University team project · 5 students",
+    "detail.mintonette.feature1": "Manage tournament teams",
+    "detail.mintonette.feature2": "Track match scores",
+    "detail.mintonette.feature3": "View tournament standings",
+    "detail.quixo.pageTitle": "Quixo Game — Project · Alban",
+    "detail.quixo.meta":
+      "Discover Quixo Game, a Java board game with console and JavaFX interfaces.",
+    "detail.quixo.category": "BOARD GAME · UNIVERSITY PROJECT",
+    "detail.quixo.title": "Quixo Game",
+    "detail.quixo.summary":
+      "A Java board game featuring turn management, game logic and win detection, available through console and JavaFX interfaces.",
+    "detail.quixo.overview":
+      "The game combines board logic, turn management and win detection. It is available through two interfaces.",
+    "detail.quixo.context": "University team project · March – June 2025",
+    "detail.quixo.format": "University team project · 5 students",
+    "detail.quixo.feature1": "Implement the game rules and board logic",
+    "detail.quixo.feature2": "Manage turns and detect wins",
+    "detail.quixo.feature3": "Play in the console",
+    "detail.quixo.feature4": "Use a JavaFX graphical interface",
+    "detail.ecommerce.pageTitle": "E-Commerce Website — Project · Alban",
+    "detail.ecommerce.meta":
+      "Discover an e-commerce website for headphones, built with Python, Flask and MySQL.",
+    "detail.ecommerce.category": "E-COMMERCE · UNIVERSITY PROJECT",
+    "detail.ecommerce.title": "E-Commerce Website",
+    "detail.ecommerce.summary":
+      "An online headphones store with shopping features and product and stock administration.",
+    "detail.ecommerce.overview":
+      "The site lets users browse and search products, manage a cart and place orders. Reviews and delivery addresses complete the shopping experience, while an administration area manages products and stock.",
+    "detail.ecommerce.context": "University team project",
+    "detail.ecommerce.format": "University team project",
+    "detail.ecommerce.feature1": "Browse and search the product catalogue",
+    "detail.ecommerce.feature2": "Manage a cart and orders",
+    "detail.ecommerce.feature3": "Handle reviews and delivery addresses",
+    "detail.ecommerce.feature4": "Administer products and stock",
+    "detail.sport.pageTitle": "Sport App — Project · Alban",
+    "detail.sport.meta":
+      "Discover Sport App, a Java desktop application for workout planning and tracking.",
+    "detail.sport.category": "DESKTOP APPLICATION · PERSONAL PROJECT",
+    "detail.sport.title": "Sport App",
+    "detail.sport.summary":
+      "A desktop application for managing profiles, generating workouts and tracking training activity.",
+    "detail.sport.overview":
+      "The application brings together workout planning and personal tracking, with statistics and a training history stored in a MySQL database.",
+    "detail.sport.context": "Personal project, designed and developed independently",
+    "detail.sport.format": "Personal project · developed independently",
+    "detail.sport.feature1": "Manage user profiles",
+    "detail.sport.feature2": "Generate random workouts",
+    "detail.sport.feature3": "View training statistics",
+    "detail.sport.feature4": "Store workout history in MySQL",
+    "project.mintonette.alt":
+      "Mintonette Cup screenshot showing a volleyball match during a tournament.",
+    "project.mintonette.preview": "01 / TOURNAMENT PLATFORM",
+    "project.mintonette.type": "FEATURED PROJECT · WEB",
+    "project.mintonette.description":
+      "A complete platform for organizing a volleyball tournament, from team management to score and standings tracking.",
+    "project.mintonette.context":
+      "University team project (5 students) · October 2025 – March 2026",
+    "project.quixo.preview": "02 / BOARD GAME",
+    "project.quixo.turn": "YOUR TURN",
+    "project.quixo.type": "GAME · TEAM OF 5",
+    "project.quixo.description":
+      "A Java board game featuring turn management, game logic and win detection, with both a console version and a JavaFX graphical interface.",
+    "project.quixo.context":
+      "University team project (5 students) · March – June 2025",
+    "project.ecommerce.alt":
+      "Screenshot of the online headphones store.",
+    "project.ecommerce.preview": "03 / AUDIO STORE",
+    "project.ecommerce.type": "WEB · UNIVERSITY PROJECT",
+    "project.ecommerce.description":
+      "An online headphones store with a product catalogue, search, cart, order management, reviews, delivery addresses and stock administration.",
+    "project.ecommerce.context": "University team project",
+    "project.sport.preview": "04 / FITNESS TRACKING",
+    "project.sport.dashboard": "MY SPACE",
+    "project.sport.date": 'NOV 21 <i aria-hidden="true">●</i>',
+    "project.sport.today": "TODAY'S WORKOUT",
+    "project.sport.greeting": "Let's get moving, Alban.",
+    "project.sport.generated": "GENERATED WORKOUT",
+    "project.sport.workout": "Full-body<br />strength",
+    "project.sport.minutes": "MIN",
+    "project.sport.progress": "WEEKLY PROGRESS",
+    "project.sport.sessions": "3 / 4 sessions",
+    "project.sport.type": "PERSONAL · SOLO",
+    "project.sport.description":
+      "A desktop app for managing user profiles, generating random workouts, viewing stats and tracking workout history in a MySQL database.",
+    "project.sport.context": "Personal project, independently designed and developed",
+    "skills.eyebrow": "03 / SKILLS",
+    "skills.title": "In my <span>toolbox.</span>",
+    "skills.lead": "Technologies I work with, and how I work.",
+    "skills.intro":
+      "From back end to front end, these are the tools I use in my projects and the qualities I bring to a team.",
+    "skills.current":
+      "<strong>Currently learning</strong><br />Dart / Flutter and CI/CD integration.",
+    "skills.development": "Development",
+    "skills.technical": "TECHNICAL",
+    "skills.tools": "Tools & environment",
+    "skills.toolsCaption": "TOOLS",
+    "skills.soft": "Soft skills",
+    "skills.soft.teamwork": "Teamwork",
+    "skills.soft.organization": "Organization",
+    "skills.soft.curiosity": "Curiosity",
+    "skills.soft.autonomy": "Autonomy",
+    "skills.soft.communication": "Communication",
+    "skills.people": "PEOPLE",
+    "skills.education": "Education",
+    "skills.educationCaption": "BACKGROUND",
+    "education.bip.date": "OCT 2026 — JAN 2027",
+    "education.bip.title":
+      "BIP Erasmus+ · Mobile Programming & Technologies",
+    "education.bip.credits": "International programme · 6 ECTS",
+    "education.bip.courses":
+      "10 weeks of online classes covering Flutter, mobile app security, Firebase and augmented reality, followed by an in-person week at Hochschule Bremen, Germany, from 18 to 22 January 2027.",
+    "education.bip.team":
+      "Develop mobile apps in English as part of international teams of 2–3 students from Germany, Poland, Portugal and France.",
+    "education.bip.technologiesLabel": "Programme technologies",
+    "education.degree": "Bachelor of Technology in Computer Science",
+    "education.degreeDescription":
+      "Application and web development track · IUT Belfort-Montbéliard",
+    "education.baccalaureate": "General Baccalaureate",
+    "education.baccalaureateDescription":
+      "Mathematics and computer science · Lycée Édouard Belin, Vesoul",
+    "contact.eyebrow": "04 / GET IN TOUCH",
+    "contact.title": "Have an idea?<br /><span>Let’s get it off the ground.</span>",
+    "contact.lead":
+      "An internship, a collaboration, or just a shared passion for space? My inbox is open.",
+    "contact.github": "GitHub",
+    "contact.linkedin": "LinkedIn",
+    "contact.formHeading": "SEND A MESSAGE",
+    "contact.formNumber": "FORM 01",
+    "contact.firstName": "First name",
+    "contact.firstNamePlaceholder": "e.g. Alex",
+    "contact.name": "Last name",
+    "contact.namePlaceholder": "e.g. Morgan",
+    "contact.email": "Your email address",
+    "contact.emailPlaceholder": "alex@example.com",
+    "contact.subject": "Subject",
+    "contact.subjectPlaceholder": "e.g. Internship inquiry",
+    "contact.message": "Your message",
+    "contact.messagePlaceholder": "Tell me about your project...",
+    "contact.submit": "Send message",
+    "contact.formHint":
+      "By submitting this form, your information is sent to FormSubmit to deliver your message. Submissions may be retained for 30 days.",
+    "contact.formSending": "Sending your message…",
+    "contact.formSuccess": "Your message has been sent. Thank you!",
+    "contact.formError":
+      "The message could not be sent. Please try again or email me directly at alban.choulet1@gmail.com.",
+    "footer.tagline": "Designed with curiosity, crafted with care.",
+    "footer.cv": "CV PDF",
+    backToTop: "Back to top",
+  },
+};
+
+const languageToggle = document.querySelector("#language-toggle");
+let currentLanguage = "fr";
+
+const translate = (key) => {
+  const translation = translations.en[key];
+  if (typeof translation !== "string") {
+    throw new Error(`Missing English translation for "${key}".`);
+  }
+  return translation;
+};
+
+const setLanguage = (language) => {
+  const isEnglish = language === "en";
+  const targetLanguage = isEnglish ? "en" : "fr";
+
+  document.documentElement.lang = targetLanguage;
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    if (!("frContent" in element.dataset)) {
+      element.dataset.frContent = element.innerHTML;
+    }
+
+    const key = element.dataset.i18n;
+    element.innerHTML = isEnglish
+      ? translate(key)
+      : element.dataset.frContent;
+  });
+
+  const translatedAttributes = [
+    ["aria-label", "data-i18n-aria-label"],
+    ["alt", "data-i18n-alt"],
+    ["content", "data-i18n-content"],
+    ["placeholder", "data-i18n-placeholder"],
+  ];
+  translatedAttributes.forEach(([attribute, keyAttribute]) => {
+    document.querySelectorAll(`[${keyAttribute}]`).forEach((element) => {
+      const key = element.getAttribute(keyAttribute);
+      const frenchValueKey = `fr${attribute
+        .split("-")
+        .map((part) => part[0].toUpperCase() + part.slice(1))
+        .join("")}`;
+      if (!(frenchValueKey in element.dataset)) {
+        element.dataset[frenchValueKey] = element.getAttribute(attribute) || "";
+      }
+
+      element.setAttribute(
+        attribute,
+        isEnglish ? translate(key) : element.dataset[frenchValueKey],
+      );
+    });
+  });
+
+  const title = document.querySelector("[data-i18n-title]");
+  if (title) {
+    if (!("frTitle" in title.dataset)) {
+      title.dataset.frTitle = title.textContent || "";
+    }
+    title.textContent = isEnglish
+      ? translate(title.dataset.i18nTitle)
+      : title.dataset.frTitle;
+  }
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  if (menuToggle) {
+    const isMenuOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute(
+      "aria-label",
+      isEnglish
+        ? translate(isMenuOpen ? "menu.close" : "menu.open")
+        : isMenuOpen
+          ? "Fermer le menu"
+          : "Ouvrir le menu",
+    );
+  }
+
+  if (languageToggle) {
+    languageToggle.textContent = isEnglish ? "FR" : "EN";
+    languageToggle.lang = isEnglish ? "fr" : "en";
+    languageToggle.setAttribute(
+      "aria-label",
+      isEnglish ? "Switch to French" : "Passer en anglais",
+    );
+  }
+
+  currentLanguage = targetLanguage;
+};
+
+if (languageToggle) {
+  languageToggle.addEventListener("click", () => {
+    setLanguage(currentLanguage === "fr" ? "en" : "fr");
+  });
+
+  let savedLanguage = "fr";
+  try {
+    savedLanguage = localStorage.getItem("portfolio-language") === "en" ? "en" : "fr";
+  } catch (error) {
+    console.warn("Could not read the saved portfolio language preference.", error);
+  }
+  setLanguage(savedLanguage);
+
+  languageToggle.addEventListener("click", () => {
+    try {
+      localStorage.setItem("portfolio-language", currentLanguage);
+    } catch (error) {
+      console.warn("Could not save the portfolio language preference.", error);
+    }
+  });
+}
+
+/* ---------- Menu mobile ---------- */
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+if (menuToggle && mainNav) {
+  const setMenu = (open) => {
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute(
+      "aria-label",
+      currentLanguage === "en"
+        ? open
+          ? translate("menu.close")
+          : translate("menu.open")
+        : open
+          ? "Fermer le menu"
+          : "Ouvrir le menu",
+    );
+    mainNav.classList.toggle("is-open", open);
+  };
+
+  menuToggle.addEventListener("click", () => {
+    setMenu(menuToggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  mainNav.addEventListener("click", (event) => {
+    if (event.target instanceof Element && event.target.closest("a"))
+      setMenu(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      menuToggle.getAttribute("aria-expanded") === "true"
+    ) {
+      setMenu(false);
+      menuToggle.focus();
+    }
+  });
+}
+
+/* ---------- Filtres de projets ---------- */
+const filterButtons = document.querySelectorAll(".filter-button");
+const projectCards = document.querySelectorAll(".project-card");
+const projectGrid = document.querySelector(".project-grid");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach((item) => {
+      const selected = item === button;
+      item.classList.toggle("is-active", selected);
+      item.setAttribute("aria-pressed", String(selected));
+    });
+
+    projectGrid.classList.toggle("is-filtered", filter !== "all");
+    projectCards.forEach((card) => {
+      card.hidden = filter !== "all" && card.dataset.category !== filter;
+    });
+  });
+});
+
+/* ---------- Défilement fluide vers les sections ---------- */
+let smoothScrollFrame = 0;
+
+const easeInOutCubic = (t) =>
+  t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2;
+
+const cancelSmoothScroll = () => {
+  cancelAnimationFrame(smoothScrollFrame);
+  smoothScrollFrame = 0;
+};
+
+const smoothScrollTo = (targetY) => {
+  cancelSmoothScroll();
+
+  const startY = window.scrollY;
+  const maxY = document.documentElement.scrollHeight - window.innerHeight;
+  const endY = Math.max(0, Math.min(maxY, targetY));
+  const distance = endY - startY;
+  if (Math.abs(distance) < 2) return;
+
+  const duration = Math.min(1200, Math.max(600, Math.abs(distance) * 0.45));
+  const startTime = performance.now();
+
+  const step = (now) => {
+    const progress = Math.min((now - startTime) / duration, 1);
+    window.scrollTo({
+      top: startY + distance * easeInOutCubic(progress),
+      behavior: "instant",
+    });
+    smoothScrollFrame = progress < 1 ? requestAnimationFrame(step) : 0;
+  };
+
+  smoothScrollFrame = requestAnimationFrame(step);
+};
+
+// Si la personne reprend la main (molette, tactile, clavier), on arrête l'animation.
+["wheel", "touchstart", "keydown"].forEach((eventName) => {
+  window.addEventListener(eventName, cancelSmoothScroll, { passive: true });
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    event.defaultPrevented ||
+    event.button !== 0 ||
+    event.metaKey ||
+    event.ctrlKey ||
+    event.shiftKey ||
+    event.altKey
+  ) {
+    return;
+  }
+
+  const link =
+    event.target instanceof Element
+      ? event.target.closest('a[href^="#"]')
+      : null;
+  if (!link) return;
+
+  const hash = link.getAttribute("href");
+  if (!hash || hash.length < 2) return;
+
+  const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+  if (!target) return;
+
+  event.preventDefault();
+
+  const scrollPadding =
+    Number.parseFloat(
+      window.getComputedStyle(document.documentElement).scrollPaddingTop,
+    ) || 0;
+  smoothScrollTo(
+    target.getBoundingClientRect().top + window.scrollY - scrollPadding,
+  );
+
+  if (window.location.hash !== hash) window.history.pushState(null, "", hash);
+
+  if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+  target.focus({ preventScroll: true });
+});
+
+/* ---------- Bouton « retour en haut » ---------- */
+const backToTop = document.querySelector(".back-to-top");
+const aboutSection = document.querySelector("#apropos");
+
+if (backToTop && aboutSection) {
+  const updateBackToTopVisibility = () => {
+    const threshold = aboutSection.offsetTop - window.innerHeight * 0.75;
+    backToTop.classList.toggle("is-visible", window.scrollY >= threshold);
+  };
+
+  window.addEventListener("scroll", updateBackToTopVisibility, {
+    passive: true,
+  });
+  window.addEventListener("resize", updateBackToTopVisibility);
+  updateBackToTopVisibility();
+}
+
+/* ---------- Lien de navigation actif ---------- */
+const sections = document.querySelectorAll("main section[id]");
+const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+
+if ("IntersectionObserver" in window) {
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((link) => {
+          const isCurrent = link.getAttribute("href") === `#${entry.target.id}`;
+          link.classList.toggle("is-current", isCurrent);
+          if (isCurrent) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      });
+    },
+    { rootMargin: "-30% 0px -60% 0px" },
+  );
+
+  sections.forEach((section) => sectionObserver.observe(section));
+}
+
+/* ---------- Apparition au scroll ---------- */
+const revealTargets = document.querySelectorAll(
+  ".hero-copy, .hero-portrait, .about .section-heading, .about-content, .about-facts > div, .projects-heading, .project-card, .project-cta, .skills-side .section-heading, .skills-intro, .skill-group, .contact-copy, .contact-form",
+);
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-revealed");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -35px 0px" },
+  );
+
+  const targets = reducedMotion.matches
+    ? document.querySelectorAll(
+        ".project-card, .about-facts > div, .skills-side .section-heading, .skills-intro, .skill-group",
+      )
+    : revealTargets;
+
+  targets.forEach((element) => {
+    element.dataset.reveal = "";
+    revealObserver.observe(element);
+  });
+  document.body.classList.add("has-reveal");
+}
+
+/* ---------- Année du pied de page ---------- */
+const yearElement = document.querySelector("#current-year");
+if (yearElement) yearElement.textContent = String(new Date().getFullYear());
+
+/* ---------- Formulaire de contact ---------- */
+const contactForm = document.querySelector("#contact-form");
+const formStatus = document.querySelector("#form-status");
+
+if (contactForm instanceof HTMLFormElement && formStatus) {
+  const setFormStatus = (key, frenchMessage) => {
+    formStatus.dataset.i18n = key;
+    formStatus.dataset.frContent = frenchMessage;
+    formStatus.innerHTML =
+      currentLanguage === "en" ? translate(key) : frenchMessage;
+  };
+
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!contactForm.reportValidity()) return;
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const formData = new FormData(contactForm);
+    submitButton.disabled = true;
+    setFormStatus("contact.formSending", "Envoi du message en cours…");
+
+    try {
+      const response = await fetch(CONTACT_FORM_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new URLSearchParams(formData),
+      });
+      const result = await response.json();
+      if (
+        !response.ok ||
+        (result.success !== "true" && result.success !== true)
+      ) {
+        throw new Error(result.message || `FormSubmit returned ${response.status}.`);
+      }
+
+      contactForm.reset();
+      setFormStatus("contact.formSuccess", "Message envoyé. Merci !");
+    } catch (error) {
+      console.error("Contact form submission failed.", error);
+      setFormStatus(
+        "contact.formError",
+        "L’envoi a échoué. Réessaie ou écris-moi directement à alban.choulet1@gmail.com.",
+      );
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+}

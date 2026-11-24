@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" data-i18n-content="detail.mintonette.meta"
+    content="Découvrez Mintonette Cup, une plateforme de gestion de tournoi de volley développée avec Vue.js, Node.js et MySQL." />
+  <meta name="theme-color" content="#07131f" />
+  <title data-i18n-title="detail.mintonette.pageTitle">Mintonette Cup — Projet · Alban</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu" data-i18n="skip">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html#accueil" aria-label="Alban, retour à l'accueil"
+      data-i18n-aria-label="brand.label">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-text"><span>ALBAN CHOULET<span class="brand-dot">.</span></span></span>
+    </a>
+    <nav class="main-nav" id="navigation-principale" aria-label="Navigation principale"
+      data-i18n-aria-label="nav.label">
+      <a href="../index.html#apropos"><span class="nav-label" data-i18n="nav.about">À propos</span></a>
+      <a href="../index.html#projets"><span class="nav-label" data-i18n="nav.projects">Projets</span></a>
+      <a href="../index.html#competences"><span class="nav-label" data-i18n="nav.skills">Compétences</span></a>
+      <a href="../index.html#contact"><span class="nav-label" data-i18n="nav.contact">Contact</span></a>
+    </nav>
+    <div class="header-actions">
+      <button class="language-toggle" id="language-toggle" type="button" lang="en" aria-label="Switch to English">EN</button>
+      <a class="nav-cv header-cv" href="../cv-alban.pdf" download>
+        <span data-i18n="header.cv">Télécharger mon CV</span><span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-principale"
+      aria-label="Ouvrir le menu" data-i18n-aria-label="menu.open">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="contenu" class="project-detail-page">
+    <article class="section-shell project-detail-shell">
+      <a class="project-detail-back" href="../index.html#projets"><span aria-hidden="true">←</span>
+        <span data-i18n="detail.back">Retour aux projets</span></a>
+      <header class="project-detail-heading">
+        <p class="eyebrow" data-i18n="detail.mintonette.category">PLATEFORME WEB · PROJET UNIVERSITAIRE</p>
+        <h1 data-i18n="detail.mintonette.title">Mintonette Cup</h1>
+        <p class="lead" data-i18n="detail.mintonette.summary">
+          Une plateforme pour organiser un tournoi de volley, de la gestion des équipes au suivi des scores et des classements.
+        </p>
+        <div class="project-detail-links">
+          <a class="project-link project-link--github" href="https://github.com/Alban-70/Mintonette-Cup"
+            target="_blank" rel="noreferrer"><span data-i18n="project.github">Voir sur GitHub</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </header>
+
+      <figure class="project-preview project-preview--mintonette project-detail-visual">
+        <img class="project-preview-image" src="../assets/mintonette-cup.webp"
+          alt="Capture d’écran de Mintonette Cup : une rencontre de volley pendant un match de tournoi."
+          data-i18n-alt="project.mintonette.alt" width="1619" height="768" decoding="async" />
+        <span class="preview-index" data-i18n="project.mintonette.preview">01 / PLATEFORME DE TOURNOI</span>
+      </figure>
+
+      <div class="project-detail-layout">
+        <div class="project-detail-copy">
+          <section aria-labelledby="detail-overview">
+            <h2 id="detail-overview" data-i18n="detail.overview">Présentation du projet</h2>
+            <p data-i18n="detail.mintonette.overview">
+              Le projet rassemble les outils nécessaires pour organiser le tournoi et suivre son déroulement, des équipes jusqu’aux résultats.
+            </p>
+          </section>
+          <section aria-labelledby="detail-features">
+            <h2 id="detail-features" data-i18n="detail.features">Fonctionnalités principales</h2>
+            <ul class="project-detail-features">
+              <li data-i18n="detail.mintonette.feature1">Gestion des équipes du tournoi</li>
+              <li data-i18n="detail.mintonette.feature2">Suivi des scores des matchs</li>
+              <li data-i18n="detail.mintonette.feature3">Consultation des classements</li>
+            </ul>
+          </section>
+        </div>
+        <aside class="project-detail-sidebar" aria-label="Informations sur le projet"
+          data-i18n-aria-label="detail.infoLabel">
+          <h2 data-i18n="detail.context">Contexte</h2>
+          <dl>
+            <div class="project-detail-fact">
+              <dt data-i18n="detail.date">Période</dt>
+              <dd data-i18n="detail.mintonette.context">Octobre 2025 – Mars 2026</dd>
+            </div>
+            <div class="project-detail-fact">
+              <dt data-i18n="detail.format">Réalisation</dt>
+              <dd data-i18n="detail.mintonette.format">Projet universitaire réalisé en équipe de 5</dd>
+            </div>
+            <div class="project-detail-fact">
+              <dt data-i18n="detail.technologies">Technologies</dt>
+              <dd><ul class="tag-list"><li>Vue.js</li><li>Node.js</li><li>MySQL</li></ul></dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+      <a class="project-detail-return" href="../index.html#projets"><span data-i18n="detail.back">Retour aux projets</span>
+        <span aria-hidden="true">↗</span></a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <a class="brand footer-brand" href="../index.html#accueil"><span class="brand-mark" aria-hidden="true">A</span>
+        <span>ALBAN<span class="brand-dot">.</span></span></a>
+      <p data-i18n="footer.tagline">Imaginé avec curiosité, réalisé avec attention.</p>
+      <a class="footer-cv" href="../cv-alban.pdf" download><span data-i18n="footer.cv">CV PDF</span>
+        <span aria-hidden="true">↓</span></a>
+      <span class="footer-copy">© <span id="current-year">2026</span> ALBAN</span>
+    </div>
+  </footer>
+</body>
+</html>
