@@ -1,5 +1,6 @@
 const CONTACT_EMAIL = "alban.choulet1@gmail.com";
-const CONTACT_FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
+const CONTACT_FORM_ID = "3da345c965762367072e0f47853244dc";
+const CONTACT_FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_FORM_ID}`;
 const translations = {
   en: {
     "meta.description":
@@ -216,6 +217,8 @@ const translations = {
       "By submitting this form, your information is sent to FormSubmit to deliver your message. Submissions may be retained for 30 days.",
     "contact.formSending": "Sending your message…",
     "contact.formSuccess": "Your message has been sent. Thank you!",
+    "contact.formActivation":
+      "Activate the form using the link FormSubmit sent to your inbox, then try again.",
     "contact.formError":
       "The message could not be sent. Please try again or email me directly at alban.choulet1@gmail.com.",
     "footer.tagline": "Designed with curiosity, crafted with care.",
@@ -584,7 +587,16 @@ if (contactForm instanceof HTMLFormElement && formStatus) {
         !response.ok ||
         (result.success !== "true" && result.success !== true)
       ) {
-        throw new Error(result.message || `FormSubmit returned ${response.status}.`);
+        const errorMessage =
+          typeof result.message === "string" ? result.message : "";
+        if (errorMessage.toLowerCase().includes("activation")) {
+          setFormStatus(
+            "contact.formActivation",
+            "Clique sur « Activate Form » dans le mail de FormSubmit, puis réessaie.",
+          );
+          return;
+        }
+        throw new Error(errorMessage || `FormSubmit returned ${response.status}.`);
       }
 
       contactForm.reset();
