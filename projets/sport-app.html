@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,6 +16,7 @@
   <link rel="stylesheet" href="../style.css" />
   <script src="../script.js" defer></script>
 </head>
+
 <body>
   <a class="skip-link" href="#contenu" data-i18n="skip">Aller au contenu</a>
   <header class="site-header">
@@ -31,7 +33,8 @@
       <a href="../index.html#contact"><span class="nav-label" data-i18n="nav.contact">Contact</span></a>
     </nav>
     <div class="header-actions">
-      <button class="language-toggle" id="language-toggle" type="button" lang="en" aria-label="Switch to English">EN</button>
+      <button class="language-toggle" id="language-toggle" type="button" lang="en"
+        aria-label="Switch to English">EN</button>
       <a class="nav-cv header-cv" href="../cv-alban.pdf" download>
         <span data-i18n="header.cv">Télécharger mon CV</span><span aria-hidden="true">↗</span>
       </a>
@@ -50,12 +53,14 @@
         <p class="eyebrow" data-i18n="detail.sport.category">APPLICATION DESKTOP · PROJET PERSONNEL</p>
         <h1 data-i18n="detail.sport.title">Sport App</h1>
         <p class="lead" data-i18n="detail.sport.summary">
-          Mon premier projet d’application desktop en JavaFX, pour planifier des séances et suivre mon activité sportive avec des
+          Mon premier projet d’application desktop en JavaFX, pour planifier des séances et suivre mon activité sportive
+          avec des
           graphiques.
         </p>
         <div class="project-detail-links">
-          <a class="project-link project-link--github" href="https://github.com/Alban-70/sportapp"
-            target="_blank" rel="noreferrer"><span data-i18n="project.github">Voir sur GitHub</span><span aria-hidden="true">↗</span></a>
+          <a class="project-link project-link--github" href="https://github.com/Alban-70/sportapp" target="_blank"
+            rel="noreferrer"><span data-i18n="project.github">Voir sur GitHub</span><span
+              aria-hidden="true">↗</span></a>
         </div>
       </header>
 
@@ -63,15 +68,21 @@
         <span class="preview-index" data-i18n="project.sport.preview">04 / SUIVI FITNESS</span>
         <div class="workout-window">
           <div class="workout-topbar"><span data-i18n="project.sport.dashboard">MON ESPACE</span>
-            <span data-i18n="project.sport.date">21 NOV. <i aria-hidden="true">●</i></span></div>
+            <span data-i18n="project.sport.date">21 NOV. <i aria-hidden="true">●</i></span>
+          </div>
           <div class="workout-greeting"><small data-i18n="project.sport.today">VOTRE SÉANCE DU JOUR</small>
-            <strong data-i18n="project.sport.greeting">On s'y met, Alban.</strong></div>
-          <div class="workout-session"><span class="workout-icon">↗</span><div>
-            <small data-i18n="project.sport.generated">PROGRAMME GÉNÉRÉ</small>
-            <strong data-i18n="project.sport.workout">Renforcement<br />complet</strong></div>
-            <b>32'<small data-i18n="project.sport.minutes">MIN</small></b></div>
+            <strong data-i18n="project.sport.greeting">On s'y met, Alban.</strong>
+          </div>
+          <div class="workout-session"><span class="workout-icon">↗</span>
+            <div>
+              <small data-i18n="project.sport.generated">PROGRAMME GÉNÉRÉ</small>
+              <strong data-i18n="project.sport.workout">Renforcement<br />complet</strong>
+            </div>
+            <b>32'<small data-i18n="project.sport.minutes">MIN</small></b>
+          </div>
           <div class="workout-progress"><span data-i18n="project.sport.progress">PROGRESSION DE LA SEMAINE</span>
-            <b data-i18n="project.sport.sessions">3 / 4 séances</b><i><em></em></i></div>
+            <b data-i18n="project.sport.sessions">3 / 4 séances</b><i><em></em></i>
+          </div>
         </div>
       </figure>
 
@@ -81,49 +92,63 @@
             <h2 id="detail-overview" data-i18n="detail.overview">Présentation du <span>projet</span></h2>
             <p data-i18n="detail.sport.overview">
               Sport App est une application desktop que j’ai conçue et développée seul. J’ai choisi le <span
-                class="text-accent">sport</span> comme thème parce que c’est un domaine qui occupe ma vie de tous les jours.
+                class="text-accent">sport</span> comme thème parce que c’est un domaine qui occupe ma vie de tous les
+              jours.
             </p>
             <p data-i18n="detail.sport.overview2">
               Ce projet m’a permis de découvrir en profondeur <span class="text-accent">JavaFX</span> : la <span
-                class="text-accent">gestion des événements</span>, la <span class="text-accent">navigation entre les écrans</span>
+                class="text-accent">gestion des événements</span>, la <span class="text-accent">navigation entre les
+                écrans</span>
               et les interactions avec l’utilisateur. C’était ma première vraie application avec une <span
                 class="text-accent">gestion de données en local</span>.
             </p>
             <p data-i18n="detail.sport.overview3">
-              Le code suit une architecture <span class="text-accent">MVC</span>, avec des classes séparées. L’application
-              planifie les séances et suit l’activité, avec des <span class="text-accent">graphiques</span> et un historique
+              Le code suit une architecture <span class="text-accent">MVC</span>, avec des classes séparées.
+              L’application
+              planifie les séances et suit l’activité, avec des <span class="text-accent">graphiques</span> et un
+              historique
               stocké dans une base <span class="text-accent">MySQL</span>.
             </p>
           </section>
           <section aria-labelledby="detail-features">
             <h2 id="detail-features" data-i18n="detail.features">Fonctionnalités <span>principales</span></h2>
             <ul class="project-detail-features">
-              <li data-i18n="detail.sport.feature1">Gestion des <span class="text-accent">profils utilisateurs</span></li>
-              <li data-i18n="detail.sport.feature2">Génération de <span class="text-accent">séances aléatoires</span></li>
+              <li data-i18n="detail.sport.feature1">Gestion des <span class="text-accent">profils utilisateurs</span>
+              </li>
+              <li data-i18n="detail.sport.feature2">Génération de <span class="text-accent">séances aléatoires</span>
+              </li>
               <li data-i18n="detail.sport.feature3">Consultation des statistiques d’entraînement sous forme de <span
                   class="text-accent">graphiques</span></li>
-              <li data-i18n="detail.sport.feature4">Historique des séances stocké dans <span class="text-accent">MySQL</span></li>
-              <li data-i18n="detail.sport.feature5">Architecture <span class="text-accent">MVC</span> avec des classes séparées</li>
+              <li data-i18n="detail.sport.feature4">Historique des séances stocké dans <span
+                  class="text-accent">MySQL</span></li>
+              <li data-i18n="detail.sport.feature5">Architecture <span class="text-accent">MVC</span> avec des classes
+                séparées</li>
             </ul>
           </section>
         </div>
         <aside class="project-detail-sidebar" aria-label="Informations sur le projet"
           data-i18n-aria-label="detail.infoLabel">
           <h2 data-i18n="detail.context">Contexte</h2>
-          <dd data-i18n="detail.sport.context">Projet personnel, conçu et développé seul pour apprendre JavaFX</dd>
           <dl>
             <div class="project-detail-fact">
               <dt data-i18n="detail.format">Réalisation</dt>
-              <dd data-i18n="detail.sport.context">Projet personnel, conçu et développé seul</dd>
+              <dd data-i18n="detail.sport.context">Projet personnel, conçu et développé seul pour apprendre JavaFX</dd>
             </div>
             <div class="project-detail-fact">
               <dt data-i18n="detail.technologies">Technologies</dt>
-              <dd><ul class="tag-list"><li>Java</li><li>JavaFX</li><li>MySQL</li></ul></dd>
+              <dd>
+                <ul class="tag-list">
+                  <li>Java</li>
+                  <li>JavaFX</li>
+                  <li>MySQL</li>
+                </ul>
+              </dd>
             </div>
           </dl>
         </aside>
       </div>
-      <a class="project-detail-return" href="../index.html#projets"><span data-i18n="detail.back">Retour aux projets</span>
+      <a class="project-detail-return" href="../index.html#projets"><span data-i18n="detail.back">Retour aux
+          projets</span>
         <span aria-hidden="true">↗</span></a>
     </article>
   </main>
@@ -139,4 +164,5 @@
     </div>
   </footer>
 </body>
+
 </html>

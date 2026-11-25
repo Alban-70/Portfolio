@@ -23,7 +23,7 @@ const translations = {
     "hero.projects": "Explore my projects",
     "hero.contact": "Get in touch",
     "hero.profile": "Profile",
-    "hero.availability": "AVAILABLE FOR AN INTERNSHIP · 2026",
+    "hero.availability": "AVAILABLE FOR AN INTERNSHIP · 7",
     "portrait.label": "Placeholder for a portrait of Alban",
     "portrait.hint": "Photo coming soon:",
     "about.eyebrow": "01 / ABOUT",
@@ -35,7 +35,7 @@ const translations = {
     "about.paragraph2":
       "My main focus is <strong>back-end</strong> development. Even though users don’t see it, this is where I help power most of a website or application.",
     "about.fact1": "Education<br /><strong>BUT in Computer Science · Year 3</strong>",
-    "about.fact2": "Currently seeking<br /><strong>Software developer internship · 2026</strong>",
+    "about.fact2": "Currently seeking<br /><strong>Software developer internship · 2027</strong>",
     "about.fact3": "Interests<br /><strong>Space · Web · Video games</strong>",
     "projects.eyebrow": "02 / PROJECTS",
     "projects.title": "Projects in <span>orbit.</span>",
@@ -153,7 +153,6 @@ const translations = {
       'This project let me explore <span class="text-accent">JavaFX</span> in depth: <span class="text-accent">event handling</span>, <span class="text-accent">navigation between screens</span> and user interactions. It was my first real application with <span class="text-accent">local data management</span>.',
     "detail.sport.overview3":
       'The code follows an <span class="text-accent">MVC</span> architecture, with separate classes. The application plans workouts and tracks activity, with <span class="text-accent">charts</span> and a history stored in a <span class="text-accent">MySQL</span> database.',
-    "detail.sport.context": "Personal project, designed and developed independently",
     "detail.sport.format": "Personal project · developed independently",
     "detail.sport.feature1": 'Manage <span class="text-accent">user profiles</span>',
     "detail.sport.feature2": 'Generate <span class="text-accent">random workouts</span>',
@@ -215,14 +214,14 @@ const translations = {
     "project.mintonette.preview": "01 / TOURNAMENT PLATFORM",
     "project.mintonette.type": "FEATURED PROJECT · WEB",
     "project.mintonette.description":
-      "A complete platform for organizing a volleyball tournament, from team management to score and standings tracking.",
+      "A full-stack website for a volleyball tournament: seat and vendor spot booking through interactive maps, with three user roles.",
     "project.mintonette.context":
       "University team project (5 students) · October 2025 – March 2026",
     "project.quixo.preview": "03 / BOARD GAME",
     "project.quixo.turn": "YOUR TURN",
     "project.quixo.type": "GAME · TEAM OF 5",
     "project.quixo.description":
-      "A Java board game featuring turn management, game logic and win detection, with both a console version and a JavaFX graphical interface.",
+      "An adaptation of the Quixo board game in Java: player-versus-player or against a three-level MinMax AI, in the console and with JavaFX, with JUnit tests.",
     "project.quixo.context":
       "University team project (5 students) · March – June 2025",
     "project.ecommerce.alt":
@@ -230,8 +229,8 @@ const translations = {
     "project.ecommerce.preview": "04 / AUDIO STORE",
     "project.ecommerce.type": "WEB · UNIVERSITY PROJECT",
     "project.ecommerce.description":
-      "An online headphones store with a product catalogue, search, cart, order management, reviews, delivery addresses and stock administration.",
-    "project.ecommerce.context": "University team project",
+      "An online headphones store built from scratch with Flask: products, accounts, addresses, cart, orders, reviews and an admin panel to manage stock and users.",
+    "project.ecommerce.context": "University team project (3 students)",
     "project.sport.preview": "05 / FITNESS TRACKING",
     "project.sport.dashboard": "MY SPACE",
     "project.sport.date": 'NOV 21 <i aria-hidden="true">●</i>',
@@ -244,8 +243,8 @@ const translations = {
     "project.sport.sessions": "3 / 4 sessions",
     "project.sport.type": "PERSONAL · SOLO",
     "project.sport.description":
-      "A desktop app for managing user profiles, generating random workouts, viewing stats and tracking workout history in a MySQL database.",
-    "project.sport.context": "Personal project, independently designed and developed",
+      "My first desktop application in JavaFX, built with an MVC architecture: user profiles, random workouts, statistics shown as charts and a history stored in a MySQL database.",
+    "project.sport.context": "Personal project, designed and built on my own to learn JavaFX",
     "project.internship.preview": "02 / INTERNSHIP · API & MULTI-DEVICE",
     "project.internship.cardTitle": "API & multimedia display",
     "project.internship.title": "API & multimedia <span>display</span>",
@@ -514,8 +513,14 @@ if (projectGrid) {
         );
       }
 
+      let visibleIndex = 0;
       projectCards.forEach((card) => {
         card.hidden = filter !== "all" && card.dataset.category !== filter;
+        card.classList.remove("is-entering");
+        if (card.hidden) return;
+        card.style.animationDelay = `${visibleIndex++ * 60}ms`;
+        void card.offsetWidth;
+        card.classList.add("is-entering");
       });
     });
   });
@@ -783,6 +788,15 @@ if (contactForm instanceof HTMLFormElement && formStatus) {
 
       contactForm.reset();
       setFormStatus("contact.formSuccess", "Message envoyé. Merci !");
+      const icon = submitButton.querySelector('[aria-hidden="true"]');
+      if (icon) {
+        icon.textContent = "✈\uFE0E";
+        icon.classList.add("is-takeoff");
+        setTimeout(() => {
+          icon.textContent = "↗";
+          icon.classList.remove("is-takeoff");
+        }, 2400);
+      }
     } catch (error) {
       console.error("Contact form submission failed.", error);
       setFormStatus(
@@ -794,3 +808,40 @@ if (contactForm instanceof HTMLFormElement && formStatus) {
     }
   });
 }
+if (projectGrid && window.matchMedia("(hover: hover)").matches && !reducedMotion.matches) {
+  projectGrid.addEventListener("pointermove", (event) => {
+    const card =
+      event.target instanceof Element ? event.target.closest(".project-card") : null;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty("--mx", `${event.clientX - rect.left}px`);
+    card.style.setProperty("--my", `${event.clientY - rect.top}px`);
+  });
+}
+const progress = document.createElement("div");
+progress.className = "scroll-progress";
+progress.setAttribute("aria-hidden", "true");
+progress.innerHTML = `
+  <div class="scroll-progress-bar"></div>
+  <svg class="scroll-progress-plane" viewBox="0 0 24 24" width="18" height="18">
+    <path fill="currentColor" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+  </svg>`;
+document.body.prepend(progress);
+
+const progressBar = progress.querySelector(".scroll-progress-bar");
+const progressPlane = progress.querySelector(".scroll-progress-plane");
+let progressFrame = 0;
+
+const updateProgress = () => {
+  progressFrame = 0;
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+  progressBar.style.transform = `scaleX(${ratio})`;
+  progressPlane.style.transform = `translate3d(${ratio * (window.innerWidth - 18)}px, 0, 0) rotate(90deg)`;
+};
+const requestProgressUpdate = () => {
+  if (!progressFrame) progressFrame = requestAnimationFrame(updateProgress);
+};
+window.addEventListener("scroll", requestProgressUpdate, { passive: true });
+window.addEventListener("resize", requestProgressUpdate);
+updateProgress();

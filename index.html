@@ -23,7 +23,7 @@
   <header class="site-header">
     <a class="brand" href="#accueil" aria-label="Alban, retour à l'accueil" data-i18n-aria-label="brand.label">
       <span class="brand-mark" aria-hidden="true">A</span>
-      <span class="brand-text"><span>ALBAN CHOULET<span class="brand-dot">.</span>
+      <span class="brand-text"><span>ALBAN CHOULET<span class="brand-dot">.</span></span></span>
     </a>
     <nav class="main-nav" id="navigation-principale" aria-label="Navigation principale"
       data-i18n-aria-label="nav.label">
@@ -62,12 +62,13 @@
         <div class="hero-meta" aria-label="Profil" data-i18n-aria-label="hero.profile">
           <span>FRONT-END · BACK-END</span>
           <span class="meta-separator" aria-hidden="true"></span>
-          <span data-i18n="hero.availability">DISPONIBLE POUR UN STAGE · 2026</span>
+          <span data-i18n="hero.availability">DISPONIBLE POUR UN STAGE · 2027</span>
         </div>
       </div>
 
       <figure class="hero-portrait">
         <div class="portrait-backdrop" aria-hidden="true">
+          <div class="orbit" aria-hidden="true"><span></span></div>
           <span class="route-label route-label--npm"># npm install</span>
           <span class="route-label route-label--html">&lt;/html&gt;</span>
           <span class="route-label route-label--java">public class PortfolioApp
@@ -109,7 +110,7 @@
           <div><span class="fact-number">01</span><span data-i18n="about.fact1">Formation<br /><strong>BUT Informatique · 3e
                 année</strong></span></div>
           <div><span class="fact-number">02</span><span data-i18n="about.fact2">En recherche<br /><strong>Stage développeur ·
-                2026</strong></span></div>
+                2027</strong></span></div>
           <div><span class="fact-number">03</span><span data-i18n="about.fact3">Veille<br /><strong>Spatial · Web · Jeux vidéos</strong></span>
           </div>
         </div>
@@ -144,12 +145,16 @@
               <div class="project-title-line">
                 <h3>Mintonette Cup</h3><span class="project-type" data-i18n="project.mintonette.type">PROJET PHARE · WEB</span>
               </div>
-              <p data-i18n="project.mintonette.description">Une plateforme complète pour organiser un tournoi de volley, de la gestion des équipes jusqu’au suivi des scores et des classements.</p>
-              <div class="project-meta"><span data-i18n="project.mintonette.context">Projet universitaire en équipe de 5 · Octobre 2025 – Mars 2026</span></div>
+              <p data-i18n="project.mintonette.description">Un site web complet, avec frontend et backend, pour un tournoi de volley :
+                réservation de places dans les gradins et d’emplacements de prestataires grâce à des cartes interactives, avec trois
+                profils d’utilisateurs.</p>
+              <div class="project-meta"><span data-i18n="project.mintonette.context">Projet universitaire en équipe de 5 · Octobre
+                  2025 – Mars 2026</span></div>
               <ul class="tag-list" aria-label="Technologies utilisées" data-i18n-aria-label="project.technologies">
                 <li>Vue.js</li>
+                <li>Pinia</li>
                 <li>Node.js</li>
-                <li>MySQL</li>
+                <li>PostgreSQL</li>
               </ul>
               <div class="project-actions">
                 <a class="project-link project-link--detail" href="projets/mintonette-cup.html"
@@ -216,12 +221,13 @@
               <div class="project-title-line">
                 <h3>Quixo Game</h3><span class="project-type" data-i18n="project.quixo.type">JEU · ÉQUIPE DE 5</span>
               </div>
-              <p data-i18n="project.quixo.description">Jeu de plateau développé en Java, avec gestion des tours, logique de jeu, détection des victoires,
-                interface console et interface graphique JavaFX.</p>
-              <div class="project-meta"><span data-i18n="project.quixo.context">Projet universitaire en équipe de 5 · Mars - Juin 2025</span></div>
+              <p data-i18n="project.quixo.description">Adaptation du jeu de plateau Quixo en Java : parties joueur contre joueur ou
+                contre une IA MinMax à trois niveaux de difficulté, en console puis avec une interface JavaFX, avec des tests JUnit.
+              </p>
               <ul class="tag-list" aria-label="Technologies utilisées" data-i18n-aria-label="project.technologies">
                 <li>Java</li>
                 <li>JavaFX</li>
+                <li>JUnit</li>
               </ul>
               <div class="project-actions">
                 <a class="project-link project-link--detail" href="projets/quixo-game.html"
@@ -249,9 +255,9 @@
               <div class="project-title-line">
                 <h3>E-Commerce Website</h3><span class="project-type" data-i18n="project.ecommerce.type">WEB · UNIVERSITAIRE</span>
               </div>
-              <p data-i18n="project.ecommerce.description">Boutique web de casques audio avec catalogue, recherche, panier, commandes, avis, adresses de livraison
-                et administration des produits et des stocks.</p>
-              <div class="project-meta"><span data-i18n="project.ecommerce.context">Projet universitaire en équipe</span></div>
+              <p data-i18n="project.ecommerce.description">Boutique web de casques audio développée de A à Z avec Flask : articles,
+                comptes, adresses, panier, commandes, avis et panel d’administration pour gérer le stock et les utilisateurs.</p>
+              <div class="project-meta"><span data-i18n="project.ecommerce.context">Projet universitaire en équipe de 3</span></div>
               <ul class="tag-list" aria-label="Technologies utilisées" data-i18n-aria-label="project.technologies">
                 <li>Python</li>
                 <li>Flask</li>
@@ -286,9 +292,10 @@
                 <div class="project-title-line">
                   <h3>Sport App</h3><span class="project-type" data-i18n="project.sport.type">PERSONNEL · APPLICATION JAVA</span>
                 </div>
-                <p data-i18n="project.sport.description">Application desktop pour gérer ses profils, générer des séances aléatoires, consulter ses statistiques
-                  et suivre son historique d'entraînement dans une base de données MySQL.</p>
-              <div class="project-meta"><span data-i18n="project.sport.context">Projet personnel, conçu et développé seul</span></div>
+                <p data-i18n="project.sport.description">Mon premier projet d’application desktop en JavaFX, en architecture MVC :
+                  profils, séances aléatoires, statistiques sous forme de graphiques et historique stocké dans une base MySQL.</p>
+                <div class="project-meta"><span data-i18n="project.sport.context">Projet personnel, conçu et développé seul pour
+                    apprendre JavaFX</span></div>
               <ul class="tag-list" aria-label="Technologies utilisées" data-i18n-aria-label="project.technologies">
                 <li>Java</li>
                 <li>JavaFX</li>
