@@ -125,28 +125,42 @@ const translations = {
     "detail.ecommerce.summary":
       "An online headphones store with shopping features and product and stock administration.",
     "detail.ecommerce.overview":
-      "The site lets users browse and search products, manage a cart and place orders. Reviews and delivery addresses complete the shopping experience, while an administration area manages products and stock.",
-    "detail.ecommerce.context": "University team project",
+      'This project involved building an e-commerce website from scratch with <span class="text-accent">Flask</span> (Python, HTML, CSS) and a <span class="text-accent">MySQL</span> database. It covers the whole shopping journey: product display, account creation, address management, cart, reviews and orders.',
+    "detail.ecommerce.overview2":
+      'An <span class="text-accent">admin panel</span> lets administrators manage stock and users. The project was carried out by a team of 3.',
+    "detail.ecommerce.context": "University team project of 3 students",
     "detail.ecommerce.format": "University team project",
-    "detail.ecommerce.feature1": "Browse and search the product catalogue",
-    "detail.ecommerce.feature2": "Manage a cart and orders",
-    "detail.ecommerce.feature3": "Handle reviews and delivery addresses",
-    "detail.ecommerce.feature4": "Administer products and stock",
+    "detail.ecommerce.feature1":
+      "Product catalogue display",
+    "detail.ecommerce.feature2":
+      'Account creation and <span class="text-accent">address</span> management',
+    "detail.ecommerce.feature3":
+      '<span class="text-accent">Cart</span> and <span class="text-accent">order</span> management',
+    "detail.ecommerce.feature4":
+      'Product <span class="text-accent">review</span> system',
+    "detail.ecommerce.feature5":
+      '<span class="text-accent">Admin panel</span> to manage stock and users',
     "detail.sport.pageTitle": "Sport App — Project · Alban",
     "detail.sport.meta":
-      "Discover Sport App, a Java desktop application for workout planning and tracking.",
+      "Discover Sport App, a Java desktop application with MVC architecture to plan workouts and track training with charts.",
     "detail.sport.category": "DESKTOP APPLICATION · PERSONAL PROJECT",
     "detail.sport.title": "Sport App",
     "detail.sport.summary":
-      "A desktop application for managing profiles, generating workouts and tracking training activity.",
+      "My first desktop application in JavaFX, to plan workouts and track my sport activity with charts.",
     "detail.sport.overview":
-      "The application brings together workout planning and personal tracking, with statistics and a training history stored in a MySQL database.",
+      'Sport App is a desktop application that I designed and built on my own. I chose <span class="text-accent">sport</span> as the theme because it is part of my everyday life.',
+    "detail.sport.overview2":
+      'This project let me explore <span class="text-accent">JavaFX</span> in depth: <span class="text-accent">event handling</span>, <span class="text-accent">navigation between screens</span> and user interactions. It was my first real application with <span class="text-accent">local data management</span>.',
+    "detail.sport.overview3":
+      'The code follows an <span class="text-accent">MVC</span> architecture, with separate classes. The application plans workouts and tracks activity, with <span class="text-accent">charts</span> and a history stored in a <span class="text-accent">MySQL</span> database.',
     "detail.sport.context": "Personal project, designed and developed independently",
     "detail.sport.format": "Personal project · developed independently",
-    "detail.sport.feature1": "Manage user profiles",
-    "detail.sport.feature2": "Generate random workouts",
-    "detail.sport.feature3": "View training statistics",
-    "detail.sport.feature4": "Store workout history in MySQL",
+    "detail.sport.feature1": 'Manage <span class="text-accent">user profiles</span>',
+    "detail.sport.feature2": 'Generate <span class="text-accent">random workouts</span>',
+    "detail.sport.feature3": 'View training statistics as <span class="text-accent">charts</span>',
+    "detail.sport.feature4": 'Store workout history in <span class="text-accent">MySQL</span>',
+    "detail.sport.feature5": '<span class="text-accent">MVC</span> architecture with separate classes',
+    "detail.sport.context": "Personal project, designed and built on my own to learn JavaFX",
     "detail.internship.pageTitle": "Appup Internship — Project · Alban",
     "detail.internship.meta":
       "Discover the API and multimedia display work completed during Alban's software development internship at Appup.",
