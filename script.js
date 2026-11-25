@@ -57,6 +57,9 @@ const translations = {
     "project.sport.detailsLabel": "Explore Sport App",
     "project.sport.githubLabel": "Sport App source code on GitHub",
     "detail.back": "Back to projects",
+    "projectNav.label": "Project navigation",
+    "projectNav.previous": "Previous project",
+    "projectNav.next": "Next project",
     "detail.imageZoom": "View image enlarged",
     "detail.imageViewer": "Enlarged image preview",
     "detail.imageClose": "Close enlarged image",
@@ -425,9 +428,10 @@ if (languageToggle) {
     setLanguage(currentLanguage === "fr" ? "en" : "fr");
   });
 
-  let savedLanguage = "fr";
+  let savedLanguage = (navigator.language || "fr").toLowerCase().startsWith("fr") ? "fr" : "en";
   try {
-    savedLanguage = localStorage.getItem("portfolio-language") === "en" ? "en" : "fr";
+    const stored = localStorage.getItem("portfolio-language");
+    if (stored === "fr" || stored === "en") savedLanguage = stored;
   } catch (error) {
     console.warn("Could not read the saved portfolio language preference.", error);
   }
