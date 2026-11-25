@@ -2,28 +2,69 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex" />
-    <title>Page introuvable — Alban</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="/Portfolio/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#07131f" />
+  <meta name="description" content="Cette page n'est pas dans l'orbite. Retrouvez les projets d'Alban Choulet." />
+  <title>404 — Signal perdu · Alban Choulet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/Portfolio/style.css" />
 </head>
 
-<body>
-    <main class="project-detail-page">
-        <article class="section-shell project-detail-shell">
-            <p class="eyebrow">ERREUR 404 · SIGNAL PERDU</p>
-            <h1 class="lead" style="font-size: clamp(36px, 7vw, 72px); font-weight: 700; letter-spacing: -0.06em">
-                Cette page a quitté <span style="color: var(--cyan)">l’orbite.</span>
-            </h1>
-            <a class="project-detail-return" href="/Portfolio/">Retour à l’accueil <span aria-hidden="true">↗</span></a>
-        </article>
-    </main>
+<body class="not-found-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="not-found-header">
+    <a class="brand" href="/Portfolio/" aria-label="Alban Choulet, retour à l'accueil">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-text"><span>ALBAN CHOULET<span class="brand-dot">.</span></span></span>
+    </a>
+    <span class="not-found-header-label">PORTFOLIO · DÉVELOPPEMENT WEB & APPLICATIONS</span>
+  </header>
+
+  <main class="not-found-main" id="contenu">
+    <section class="not-found-content" aria-labelledby="not-found-title">
+      <div class="not-found-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>ERREUR 404 · SIGNAL PERDU</p>
+        <h1 id="not-found-title">Cette page a quitté <span>l’orbite.</span></h1>
+        <p class="not-found-description">
+          On dirait que tu as suivi une mauvaise trajectoire. Pas de panique : mes projets sont toujours à portée de clic.
+        </p>
+        <div class="not-found-actions">
+          <a class="button button-primary" href="/Portfolio/#projets">
+            Explorer mes projets <span aria-hidden="true">↗</span>
+          </a>
+          <a class="not-found-home-link" href="/Portfolio/">
+            Retour à l’accueil <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <p class="not-found-signature">ALBAN CHOULET <span aria-hidden="true">/</span> ÉTUDIANT EN BUT INFORMATIQUE</p>
+      </div>
+
+      <div class="not-found-orbit" aria-hidden="true">
+        <span class="not-found-ring not-found-ring--outer"></span>
+        <span class="not-found-ring not-found-ring--middle"></span>
+        <span class="not-found-ring not-found-ring--inner"></span>
+        <span class="not-found-orbit-dot"></span>
+        <div class="not-found-orbit-center">
+          <strong>404</strong>
+          <span>PAGE INTROUVABLE</span>
+        </div>
+        <span class="not-found-orbit-caption">COORDONNÉES : 404° / 00′</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="not-found-footer">
+    <span>Portfolio d’Alban Choulet</span>
+    <a href="https://github.com/Alban-70" target="_blank" rel="noreferrer">
+      GitHub <span aria-hidden="true">↗</span>
+    </a>
+  </footer>
 </body>
 
 </html>
