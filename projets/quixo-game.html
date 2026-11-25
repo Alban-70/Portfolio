@@ -75,16 +75,31 @@
           <section aria-labelledby="detail-overview">
             <h2 id="detail-overview" data-i18n="detail.overview">Présentation du <span>projet</span></h2>
             <p data-i18n="detail.quixo.overview">
-              Le jeu combine la logique du plateau, la gestion des tours et la détection des conditions de victoire. Il est disponible avec deux interfaces.
+              Quixo Game est une adaptation du jeu de plateau Quixo, développée en <span class="text-accent">Java</span> par une
+              équipe de 5 étudiants. Le jeu a d’abord été réalisé en mode <span class="text-accent">console</span>, puis avec une
+              interface graphique <span class="text-accent">JavaFX</span>.
+            </p>
+            <p data-i18n="detail.quixo.overview2">
+              Le projet répondait à un <span class="text-accent">cahier des charges</span> rédigé par de « faux » clients. Il
+              propose des parties de <span class="text-accent">joueur contre joueur</span> et de <span class="text-accent">joueur
+                contre IA</span>, avec <span class="text-accent">trois niveaux de difficulté</span>. L’IA repose sur l’algorithme
+              <span class="text-accent">MinMax</span>, limité à 3 coups d’avance pour garder des temps de calcul raisonnables.
             </p>
           </section>
           <section aria-labelledby="detail-features">
             <h2 id="detail-features" data-i18n="detail.features">Fonctionnalités <span>principales</span></h2>
             <ul class="project-detail-features">
-              <li data-i18n="detail.quixo.feature1">Implémentation des règles et de la logique du plateau</li>
-              <li data-i18n="detail.quixo.feature2">Gestion des tours et détection des victoires</li>
-              <li data-i18n="detail.quixo.feature3">Interface en console</li>
-              <li data-i18n="detail.quixo.feature4">Interface graphique JavaFX</li>
+              <li data-i18n="detail.quixo.feature1">Implémentation des règles du Quixo, de la gestion des tours et de la détection
+                des victoires</li>
+              <li data-i18n="detail.quixo.feature2">Parties <span class="text-accent">joueur contre joueur</span>, chacun son tour
+              </li>
+              <li data-i18n="detail.quixo.feature3">Parties <span class="text-accent">joueur contre IA</span> avec trois niveaux de
+                difficulté : facile, normale et forte</li>
+              <li data-i18n="detail.quixo.feature4">IA basée sur l’algorithme <span class="text-accent">MinMax</span>, avec une
+                anticipation jusqu’à 3 coups</li>
+              <li data-i18n="detail.quixo.feature5">Version <span class="text-accent">console</span>, puis interface graphique <span
+                  class="text-accent">JavaFX</span></li>
+              <li data-i18n="detail.quixo.feature6">Tests unitaires avec <span class="text-accent">JUnit</span></li>
             </ul>
           </section>
         </div>
@@ -102,7 +117,11 @@
             </div>
             <div class="project-detail-fact">
               <dt data-i18n="detail.technologies">Technologies</dt>
-              <dd><ul class="tag-list"><li>Java</li><li>JavaFX</li></ul></dd>
+              <dd><ul class="tag-list">
+                <li>Java</li>
+                <li>JavaFX</li>
+                <li>JUnit</li>
+              </ul></dd>
             </div>
           </dl>
         </aside>

@@ -100,13 +100,23 @@ const translations = {
     "detail.quixo.summary":
       "A Java board game featuring turn management, game logic and win detection, available through console and JavaFX interfaces.",
     "detail.quixo.overview":
-      "The game combines board logic, turn management and win detection. It is available through two interfaces.",
-    "detail.quixo.context": "University team project · March – June 2025",
+      'Quixo Game is an adaptation of the Quixo board game, developed in <span class="text-accent">Java</span> by a team of 5 students. The game was first built as a <span class="text-accent">console</span> application, then with a <span class="text-accent">JavaFX</span> graphical interface.',
+    "detail.quixo.overview2":
+      'The project followed a <span class="text-accent">specification</span> written by simulated clients. It offers <span class="text-accent">player-versus-player</span> and <span class="text-accent">player-versus-AI</span> games, with <span class="text-accent">three difficulty levels</span>. The AI relies on the <span class="text-accent">MinMax</span> algorithm, limited to looking 3 moves ahead to keep computation times reasonable.',
     "detail.quixo.format": "University team project · 5 students",
-    "detail.quixo.feature1": "Implement the game rules and board logic",
-    "detail.quixo.feature2": "Manage turns and detect wins",
-    "detail.quixo.feature3": "Play in the console",
-    "detail.quixo.feature4": "Use a JavaFX graphical interface",
+    "detail.quixo.feature1":
+      "Implementation of the Quixo rules, turn management and win detection",
+    "detail.quixo.feature2":
+      '<span class="text-accent">Player-versus-player</span> games, taking turns',
+    "detail.quixo.feature3":
+      '<span class="text-accent">Player-versus-AI</span> games with three difficulty levels: easy, normal and hard',
+    "detail.quixo.feature4":
+      'AI based on the <span class="text-accent">MinMax</span> algorithm, looking up to 3 moves ahead',
+    "detail.quixo.feature5":
+      '<span class="text-accent">Console</span> version, then a <span class="text-accent">JavaFX</span> graphical interface',
+    "detail.quixo.feature6":
+      'Unit tests with <span class="text-accent">JUnit</span>',
+    "detail.quixo.context": "March – June 2025",
     "detail.ecommerce.pageTitle": "E-Commerce Website — Project · Alban",
     "detail.ecommerce.meta":
       "Discover an e-commerce website for headphones, built with Python, Flask and MySQL.",
