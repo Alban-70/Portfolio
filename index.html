@@ -51,6 +51,7 @@
       data-i18n-aria-label="nav.label">
       <a href="#apropos"><span class="nav-label" data-i18n="nav.about">À propos</span></a>
       <a href="#projets"><span class="nav-label" data-i18n="nav.projects">Projets</span></a>
+      <a href="#projets-en-cours"><span class="nav-label" data-i18n="nav.currentProjects">En cours</span></a>
       <a href="#competences"><span class="nav-label" data-i18n="nav.skills">Compétences</span></a>
       <a href="#contact"><span class="nav-label" data-i18n="nav.contact">Contact</span></a>
     </nav>
@@ -340,10 +341,52 @@
       </div>
     </section>
 
+    <section class="current-project section-shell section-space" id="projets-en-cours"
+      aria-labelledby="current-project-heading">
+      <div class="section-heading projects-heading current-project-heading">
+        <div>
+          <p class="eyebrow" data-i18n="currentProject.eyebrow">03 / PROJETS EN COURS</p>
+          <h2 id="current-project-heading" data-i18n="currentProject.heading">Un projet <span>vivant.</span></h2>
+        </div>
+        <p class="section-aside" data-i18n="currentProject.aside">Un projet en cours de développement</p>
+      </div>
+      <article class="project-card current-project-card" aria-labelledby="current-project-title">
+        <div class="current-project-summary">
+          <p class="current-project-status"><span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="currentProject.status">PROJET EN COURS</span>
+          </p>
+          <h3 id="current-project-title" data-i18n="currentProject.title">Suivi et analyse des plantes</h3>
+          <p data-i18n="currentProject.description">
+            Un système connecté pour suivre les plantes, centraliser les données de capteurs et les consulter depuis une interface web.
+            Une application mobile permet aussi de les photographier afin de transmettre les images à une IA pour analyse.
+          </p>
+          <ul class="tag-list" aria-label="Technologies utilisées" data-i18n-aria-label="project.technologies">
+            <li>Node.js · REST</li>
+            <li>Vue.js</li>
+            <li>Java · Threads</li>
+            <li>MongoDB</li>
+            <li>Flutter</li>
+            <li>Python · IA</li>
+            <li>Microcontrôleurs</li>
+            <li>Serveur multimédia</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+        <figure class="current-project-architecture" aria-labelledby="architecture-title">
+          <figcaption class="architecture-heading" id="architecture-title" data-i18n="currentProject.architecture">
+            Architecture du projet
+          </figcaption>
+          <img class="current-project-architecture-image" src="assets/architecture-plantes.png"
+            alt="Schéma de l’architecture logicielle : microcontrôleurs, application mobile, serveurs Java et multimédia, API Node.js, IA Python, interface Vue.js et MongoDB."
+            data-i18n-alt="currentProject.architectureAlt" width="863" height="768" loading="lazy" decoding="async" />
+        </figure>
+      </article>
+    </section>
+
     <section class="skills section-shell section-space" id="competences" aria-labelledby="skills-title">
       <div class="skills-side">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="skills.eyebrow">03 / COMPÉTENCES</p>
+          <p class="eyebrow" data-i18n="skills.eyebrow">04 / COMPÉTENCES</p>
           <h2 id="skills-title" data-i18n="skills.title">Mon environnement <span>technique.</span></h2>
         </div>
         <div class="skills-intro">
@@ -453,7 +496,7 @@
     <section class="contact section-space" id="contact" aria-labelledby="contact-title">
       <div class="section-shell contact-layout">
         <div class="contact-copy">
-          <p class="eyebrow" data-i18n="contact.eyebrow">04 / CONTACT AU SOL</p>
+          <p class="eyebrow" data-i18n="contact.eyebrow">05 / CONTACT AU SOL</p>
           <h2 id="contact-title" data-i18n="contact.title">Une idée en tête ?<br /><span>Faisons-la décoller.</span></h2>
           <p class="lead" data-i18n="contact.lead">Un stage, une collaboration ou juste une passion commune pour l’espace ? Ma boîte de réception
             est ouverte.</p>

@@ -11,6 +11,7 @@ const translations = {
     "nav.label": "Main navigation",
     "nav.about": "About",
     "nav.projects": "Projects",
+    "nav.currentProjects": "In progress",
     "nav.skills": "Skills",
     "nav.contact": "Contact",
     "menu.open": "Open menu",
@@ -258,7 +259,18 @@ const translations = {
       "Internship at Appup, Montbéliard · April — June 2026",
     "project.internship.kiosk": "INTERACTIVE KIOSK",
     "project.internship.detailsLabel": "Discover the Appup internship",
-    "skills.eyebrow": "03 / SKILLS",
+    "currentProject.eyebrow": "03 / IN PROGRESS",
+    "currentProject.heading": "A project <span>in bloom.</span>",
+    "currentProject.aside":
+      "A project in development",
+    "currentProject.status": "PROJECT IN PROGRESS",
+    "currentProject.title": "Plant monitoring and analysis",
+    "currentProject.description":
+      "A connected system to monitor plants, centralize sensor data and view it through a web interface. A mobile app also lets users photograph plants and send the images to an AI for analysis.",
+    "currentProject.architecture": "Project architecture",
+    "currentProject.architectureAlt":
+      "Software architecture diagram: microcontrollers, mobile app, Java and multimedia servers, Node.js API, Python AI, Vue.js interface and MongoDB.",
+    "skills.eyebrow": "04 / SKILLS",
     "skills.title": "In my <span>toolbox.</span>",
     "skills.lead": "Technologies I work with, and how I work.",
     "skills.intro":
@@ -304,7 +316,7 @@ const translations = {
     "education.baccalaureate": "General Baccalaureate",
     "education.baccalaureateDescription":
       "Mathematics and computer science · Lycée Édouard Belin, Vesoul",
-    "contact.eyebrow": "04 / GET IN TOUCH",
+    "contact.eyebrow": "05 / GET IN TOUCH",
     "contact.title": "Have an idea?<br /><span>Let’s get it off the ground.</span>",
     "contact.lead":
       "An internship, a collaboration, or just a shared passion for space? My inbox is open.",
