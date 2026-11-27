@@ -345,6 +345,7 @@ const translations = {
       "The message could not be sent. Please try again or email me directly at alban.choulet1@gmail.com.",
     "footer.tagline": "Designed with curiosity, crafted with care.",
     "footer.cv": "CV PDF",
+    "skills.marqueePlay": "Animate the logos",
     backToTop: "Back to top",
   },
 };
@@ -861,3 +862,64 @@ const requestProgressUpdate = () => {
 window.addEventListener("scroll", requestProgressUpdate, { passive: true });
 window.addEventListener("resize", requestProgressUpdate);
 updateProgress();
+
+/* ---------- Bandeaux défilants des compétences ---------- */
+document.querySelectorAll("[data-marquee]").forEach((list) => {
+  // Dans une zone masquée, les images en lazy ne se chargeraient pas.
+  list.querySelectorAll("img").forEach((img) => {
+    img.loading = "eager";
+  });
+
+  const marquee = document.createElement("div");
+  marquee.className = "marquee is-playing";
+  if (list.dataset.marquee === "reverse") marquee.classList.add("is-reverse");
+
+  const track = document.createElement("div");
+  track.className = "marquee-track";
+  const group = document.createElement("div");
+  group.className = "marquee-group";
+
+  list.before(marquee);
+  marquee.append(track);
+  track.append(group);
+  group.append(list);
+
+  const cloneList = () => {
+    const copy = list.cloneNode(true);
+    copy.removeAttribute("aria-label");
+    copy.removeAttribute("data-marquee");
+    copy.removeAttribute("data-speed");
+    copy.setAttribute("aria-hidden", "true");
+    return copy;
+  };
+
+  const listWidth = list.getBoundingClientRect().width || 1;
+  const perGroup = Math.max(
+    1,
+    Math.ceil(Math.max(window.screen.width, window.innerWidth) / listWidth),
+  );
+  for (let i = 1; i < perGroup; i += 1) group.append(cloneList());
+
+  const groupCopy = group.cloneNode(true);
+  groupCopy.setAttribute("aria-hidden", "true");
+  track.append(groupCopy);
+
+  const speed =
+    (Number(list.dataset.speed) || 45) * (reducedMotion.matches ? 0.55 : 1);
+  const setDuration = () => {
+    track.style.setProperty(
+      "--marquee-duration",
+      `${Math.max(20, Math.round(group.scrollWidth / speed))}s`,
+    );
+  };
+  setDuration();
+  window.addEventListener("load", setDuration);
+
+  marquee.addEventListener("click", () => marquee.classList.toggle("is-paused"));
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      marquee.classList.toggle("is-offscreen", !entry.isIntersecting);
+    }).observe(marquee);
+  }
+});
