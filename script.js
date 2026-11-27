@@ -24,7 +24,7 @@ const translations = {
     "hero.projects": "Explore my projects",
     "hero.contact": "Get in touch",
     "hero.profile": "Profile",
-    "hero.availability": "AVAILABLE FOR AN INTERNSHIP · 7",
+    "hero.availability": "AVAILABLE FOR AN INTERNSHIP · 2027",
     "portrait.label": "Placeholder for a portrait of Alban",
     "portrait.hint": "Photo coming soon:",
     "about.eyebrow": "01 / ABOUT",
@@ -346,6 +346,38 @@ const translations = {
     "footer.tagline": "Designed with curiosity, crafted with care.",
     "footer.cv": "CV PDF",
     "skills.marqueePlay": "Animate the logos",
+    "currentProject.gitTitle": "HISTORY · BRANCH",
+    "currentProject.step1.status": "DONE",
+    "currentProject.step1.title": "Architecture & MongoDB database",
+    "currentProject.step1.desc": "Data modeling for sensors, plants and users.",
+    "currentProject.step2.status": "DONE",
+    "currentProject.step2.title": "Node.js REST API & Java servers",
+    "currentProject.step2.desc": "Multithreaded microcontroller data ingestion and media storage.",
+    "currentProject.step3.status": "DONE",
+    "currentProject.step3.title": "Vue.js web interface",
+    "currentProject.step3.desc": "Dashboard to monitor sensor readings and real-time alerts.",
+    "currentProject.step4.title": "Flutter mobile app & Python AI analysis",
+    "currentProject.step4.desc": "Mobile photo capture and AI-powered plant health diagnosis.",
+    "currentProject.step5.status": "UPCOMING",
+    "currentProject.step5.title": "Docker containerized deployment",
+    "currentProject.step5.desc": "Service orchestration and full production rollout.",
+    "currentProject.flowTitle": "DATA FLOW",
+    "currentProject.flow1.title": "Acquisition",
+    "currentProject.flow1.desc":
+      "Sensor readings from microcontrollers and photos captured via the Flutter mobile app.",
+    "currentProject.flow2.title": "Processing & AI",
+    "currentProject.flow2.desc":
+      "Centralized through the Node.js REST API and multithreaded Java servers, then analyzed by a Python AI model.",
+    "currentProject.flow3.title": "Visualization",
+    "currentProject.flow3.desc":
+      "Stored in MongoDB and monitored in real time on the Vue.js web dashboard.",
+    "currentProject.challengesTitle": "TECHNICAL CHALLENGES",
+    "currentProject.challenge1":
+      "<strong>Multi-service communication:</strong> connecting microcontrollers, a multithreaded Java server and a Node.js API.",
+    "currentProject.challenge2":
+      "<strong>Asynchronous processing:</strong> handling photo uploads from Flutter to the Python AI model without blocking the UI.",
+    "currentProject.challenge3":
+      "<strong>Reproducible deployment:</strong> isolating and orchestrating all technical services with Docker.",
     backToTop: "Back to top",
   },
 };
@@ -863,9 +895,7 @@ window.addEventListener("scroll", requestProgressUpdate, { passive: true });
 window.addEventListener("resize", requestProgressUpdate);
 updateProgress();
 
-/* ---------- Bandeaux défilants des compétences ---------- */
 document.querySelectorAll("[data-marquee]").forEach((list) => {
-  // Dans une zone masquée, les images en lazy ne se chargeraient pas.
   list.querySelectorAll("img").forEach((img) => {
     img.loading = "eager";
   });
@@ -914,8 +944,6 @@ document.querySelectorAll("[data-marquee]").forEach((list) => {
   };
   setDuration();
   window.addEventListener("load", setDuration);
-
-  marquee.addEventListener("click", () => marquee.classList.toggle("is-paused"));
 
   if ("IntersectionObserver" in window) {
     new IntersectionObserver(([entry]) => {

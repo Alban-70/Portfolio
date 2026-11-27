@@ -8,7 +8,7 @@
     "@type": "Person",
     "name": "Alban Choulet",
     "jobTitle": "Développeur full stack, étudiant en BUT Informatique",
-    "url": "https://TON-DOMAINE/",
+    "url": "https://alban-70.github.io/Portfolio/",
     "sameAs": [
       "https://github.com/Alban-70",
       "https://www.linkedin.com/in/alban-choulet/"
@@ -99,12 +99,12 @@
         </div>
         <div class="portrait-placeholder" role="img" aria-label="Emplacement prévu pour une photo portrait d’Alban"
           data-i18n-aria-label="portrait.label">
-          <!-- <img src="assets/photo-albanCHOULET_Alban_S3A1_photo_without_bg.png"> -->
-          <svg class="portrait-silhouette" viewBox="0 0 180 220" aria-hidden="true">
+          <img src="assets/photo-albanCHOULET_Alban_S3A1_photo_without_bg.png">
+          <!-- <svg class="portrait-silhouette" viewBox="0 0 180 220" aria-hidden="true">
             <circle cx="90" cy="63" r="37" />
             <path d="M19 210c4-51 26-78 71-78s67 27 71 78z" />
           </svg>
-          <span class="portrait-hint"><span data-i18n="portrait.hint">Photo à ajouter :</span> <code>assets/portrait-alban.webp</code></span>
+          <span class="portrait-hint"><span data-i18n="portrait.hint">Photo à ajouter :</span> <code>assets/portrait-alban.webp</code></span> -->
         </div>
       </figure>
     </section>
@@ -371,6 +371,53 @@
             <li>Serveur multimédia</li>
             <li>Docker</li>
           </ul>
+          <div class="project-flow" aria-labelledby="plant-flow-title">
+            <span class="project-subblock-title" id="plant-flow-title" data-i18n="currentProject.flowTitle">FLUX DE DONNÉES</span>
+            <ol class="data-flow-steps">
+              <li class="data-flow-step">
+                <span class="flow-step-num">01</span>
+                <div>
+                  <strong data-i18n="currentProject.flow1.title">Acquisition</strong>
+                  <p data-i18n="currentProject.flow1.desc">Relevés des capteurs sur microcontrôleurs et photos prises depuis
+                    l’application mobile Flutter.</p>
+                </div>
+              </li>
+              <li class="data-flow-step">
+                <span class="flow-step-num">02</span>
+                <div>
+                  <strong data-i18n="currentProject.flow2.title">Traitement & IA</strong>
+                  <p data-i18n="currentProject.flow2.desc">Centralisation via l’API REST Node.js et le serveur Java multithread,
+                    puis analyse d’image par IA en Python.</p>
+                </div>
+              </li>
+              <li class="data-flow-step">
+                <span class="flow-step-num">03</span>
+                <div>
+                  <strong data-i18n="currentProject.flow3.title">Restitution</strong>
+                  <p data-i18n="currentProject.flow3.desc">Stockage des données dans MongoDB et consultation en temps réel sur
+                    l’interface web Vue.js.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          
+          <div class="project-challenges" aria-labelledby="plant-challenges-title">
+            <span class="project-subblock-title" id="plant-challenges-title" data-i18n="currentProject.challengesTitle">DÉFIS
+              TECHNIQUES</span>
+            <ul class="challenges-list">
+              <li data-i18n="currentProject.challenge1">
+                <strong>Communication multi-services :</strong> faire dialoguer des microcontrôleurs, un serveur Java multithread
+                et une API Node.js.
+              </li>
+              <li data-i18n="currentProject.challenge2">
+                <strong>Traitement asynchrone :</strong> gérer l’envoi des photos depuis Flutter vers le modèle d’IA Python sans
+                bloquer l’interface.
+              </li>
+              <li data-i18n="currentProject.challenge3">
+                <strong>Déploiement reproductible :</strong> isoler et orchestrer l’ensemble des briques techniques avec Docker.
+              </li>
+            </ul>
+          </div>
         </div>
         <figure class="current-project-architecture" aria-labelledby="architecture-title">
           <figcaption class="architecture-heading" id="architecture-title" data-i18n="currentProject.architecture">
