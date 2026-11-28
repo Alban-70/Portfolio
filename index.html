@@ -32,6 +32,8 @@
   <title data-i18n-title="page.title">Alban — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="assets/photo-albanCHOULET_Alban_S3A1_photo_without_bg.webp" as="image"
+    type="image/webp" fetchpriority="high" />
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
@@ -97,9 +99,10 @@
             {<br />&nbsp;&nbsp;launch();<br />}</span>
           <span class="route-label route-label--sql">SELECT * FROM projects;</span>
         </div>
-        <div class="portrait-placeholder" role="img" aria-label="Emplacement prévu pour une photo portrait d’Alban"
+        <div class="portrait-placeholder" role="img" aria-label="Portrait d’Alban Choulet"
           data-i18n-aria-label="portrait.label">
-          <img src="assets/photo-albanCHOULET_Alban_S3A1_photo_without_bg.png">
+          <img src="assets/photo-albanCHOULET_Alban_S3A1_photo_without_bg.webp" alt="" width="434" height="575"
+            decoding="async" fetchpriority="high" />
           <!-- <svg class="portrait-silhouette" viewBox="0 0 180 220" aria-hidden="true">
             <circle cx="90" cy="63" r="37" />
             <path d="M19 210c4-51 26-78 71-78s67 27 71 78z" />
@@ -423,7 +426,7 @@
           <figcaption class="architecture-heading" id="architecture-title" data-i18n="currentProject.architecture">
             Architecture du projet
           </figcaption>
-          <img class="current-project-architecture-image" src="assets/architecture-plantes.png"
+          <img class="current-project-architecture-image" src="assets/architecture-plantes.webp"
             alt="Schéma de l’architecture logicielle : microcontrôleurs, application mobile, serveurs Java et multimédia, API Node.js, IA Python, interface Vue.js et MongoDB."
             data-i18n-alt="currentProject.architectureAlt" width="863" height="768" loading="lazy" decoding="async" />
         </figure>

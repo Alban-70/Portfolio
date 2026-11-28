@@ -25,7 +25,7 @@ const translations = {
     "hero.contact": "Get in touch",
     "hero.profile": "Profile",
     "hero.availability": "AVAILABLE FOR AN INTERNSHIP · 2027",
-    "portrait.label": "Placeholder for a portrait of Alban",
+    "portrait.label": "Portrait of Alban Choulet",
     "portrait.hint": "Photo coming soon:",
     "about.eyebrow": "01 / ABOUT",
     "about.title": "What you don't see,<br /><span>but what makes it all work</span>",
@@ -378,6 +378,21 @@ const translations = {
       "<strong>Asynchronous processing:</strong> handling photo uploads from Flutter to the Python AI model without blocking the UI.",
     "currentProject.challenge3":
       "<strong>Reproducible deployment:</strong> isolating and orchestrating all technical services with Docker.",
+    "notFound.meta":
+      "This page drifted off course. Find Alban Choulet's projects here.",
+    "notFound.title": "404 — Lost signal · Alban Choulet",
+    "notFound.headerLabel": "PORTFOLIO · WEB & SOFTWARE DEVELOPMENT",
+    "notFound.eyebrow": "ERROR 404 · LOST SIGNAL",
+    "notFound.heading": "This page has left <span>orbit.</span>",
+    "notFound.description":
+      "Looks like you followed the wrong trajectory. No worries: my projects are still just a click away.",
+    "notFound.projects": "Explore my projects",
+    "notFound.home": "Back to home",
+    "notFound.signature":
+      'ALBAN CHOULET <span aria-hidden="true">/</span> COMPUTER SCIENCE STUDENT',
+    "notFound.pageMissing": "PAGE NOT FOUND",
+    "notFound.coordinates": "COORDINATES: 404° / 00′",
+    "notFound.footer": "Portfolio by Alban Choulet",
     backToTop: "Back to top",
   },
 };
@@ -534,10 +549,10 @@ if (menuToggle && mainNav) {
 /* ---------- Filtres de projets ---------- */
 /* ---------- Filtres de projets ---------- */
 const filterButtons = document.querySelectorAll(".filter-button");
-const projectCards = document.querySelectorAll(".project-card");
 const projectGrid = document.querySelector(".project-grid");
 
 if (projectGrid) {
+  const projectCards = projectGrid.querySelectorAll(".project-card");
   const internshipCard = projectGrid.querySelector(".project-card--internship");
   const featuredProject = projectGrid.querySelector(".project-card--featured");
 

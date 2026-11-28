@@ -6,43 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#07131f" />
-  <meta name="description" content="Cette page n'est pas dans l'orbite. Retrouvez les projets d'Alban Choulet." />
-  <title>404 — Signal perdu · Alban Choulet</title>
+  <meta name="description" data-i18n-content="notFound.meta"
+    content="Cette page n'est pas dans l'orbite. Retrouvez les projets d'Alban Choulet." />
+  <title data-i18n-title="notFound.title">404 — Signal perdu · Alban Choulet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="/Portfolio/style.css" />
+  <script src="/Portfolio/script.js" defer></script>
 </head>
 
 <body class="not-found-page">
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <a class="skip-link" href="#contenu" data-i18n="skip">Aller au contenu</a>
   <header class="not-found-header">
-    <a class="brand" href="/Portfolio/" aria-label="Alban Choulet, retour à l'accueil">
+    <a class="brand" href="/Portfolio/" aria-label="Alban Choulet, retour à l'accueil"
+      data-i18n-aria-label="brand.label">
       <span class="brand-mark" aria-hidden="true">A</span>
       <span class="brand-text"><span>ALBAN CHOULET<span class="brand-dot">.</span></span></span>
     </a>
-    <span class="not-found-header-label">PORTFOLIO · DÉVELOPPEMENT WEB & APPLICATIONS</span>
+    <span class="not-found-header-label" data-i18n="notFound.headerLabel">PORTFOLIO · DÉVELOPPEMENT WEB & APPLICATIONS</span>
+    <button class="language-toggle" id="language-toggle" type="button" lang="en" aria-label="Passer en anglais">
+      EN
+    </button>
   </header>
 
   <main class="not-found-main" id="contenu">
     <section class="not-found-content" aria-labelledby="not-found-title">
       <div class="not-found-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>ERREUR 404 · SIGNAL PERDU</p>
-        <h1 id="not-found-title">Cette page a quitté <span>l’orbite.</span></h1>
-        <p class="not-found-description">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="notFound.eyebrow">ERREUR 404 · SIGNAL PERDU</span></p>
+        <h1 id="not-found-title" data-i18n="notFound.heading">Cette page a quitté <span>l’orbite.</span></h1>
+        <p class="not-found-description" data-i18n="notFound.description">
           On dirait que tu as suivi une mauvaise trajectoire. Pas de panique : mes projets sont toujours à portée de clic.
         </p>
         <div class="not-found-actions">
           <a class="button button-primary" href="/Portfolio/#projets">
-            Explorer mes projets <span aria-hidden="true">↗</span>
+            <span data-i18n="notFound.projects">Explorer mes projets</span> <span aria-hidden="true">↗</span>
           </a>
           <a class="not-found-home-link" href="/Portfolio/">
-            Retour à l’accueil <span aria-hidden="true">→</span>
+            <span data-i18n="notFound.home">Retour à l’accueil</span> <span aria-hidden="true">→</span>
           </a>
         </div>
-        <p class="not-found-signature">ALBAN CHOULET <span aria-hidden="true">/</span> ÉTUDIANT EN BUT INFORMATIQUE</p>
+        <p class="not-found-signature" data-i18n="notFound.signature">ALBAN CHOULET <span aria-hidden="true">/</span> ÉTUDIANT EN BUT INFORMATIQUE</p>
       </div>
 
       <div class="not-found-orbit" aria-hidden="true">
@@ -52,15 +58,15 @@
         <span class="not-found-orbit-dot"></span>
         <div class="not-found-orbit-center">
           <strong>404</strong>
-          <span>PAGE INTROUVABLE</span>
+          <span data-i18n="notFound.pageMissing">PAGE INTROUVABLE</span>
         </div>
-        <span class="not-found-orbit-caption">COORDONNÉES : 404° / 00′</span>
+        <span class="not-found-orbit-caption" data-i18n="notFound.coordinates">COORDONNÉES : 404° / 00′</span>
       </div>
     </section>
   </main>
 
   <footer class="not-found-footer">
-    <span>Portfolio d’Alban Choulet</span>
+    <span data-i18n="notFound.footer">Portfolio d’Alban Choulet</span>
     <a href="https://github.com/Alban-70" target="_blank" rel="noreferrer">
       GitHub <span aria-hidden="true">↗</span>
     </a>
